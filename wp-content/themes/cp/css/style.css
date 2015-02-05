@@ -1,0 +1,125 @@
+
+/* HEADER */
+h1.logo {margin:60px auto 40px;
+    text-align: center;
+}
+
+a { color: #414141; text-decoration: none;}
+a:hover{color:#666}
+/* NAV */
+.deco{ border-bottom:1px solid #222; width: 100%; margin: 0 auto;
+}
+nav { margin-bottom: 16px;
+    text-align: center;
+}
+nav ul {
+   font-size: 1.6em;
+}
+nav ul {
+    display: table;
+    margin: 0 auto;
+    width: 491px;
+}
+nav li {
+    display: table-cell;
+}
+
+nav li a  { color:#252525; text-decoration: 
+none}
+nav li a:hover { color:#666;}
+
+
+/* Sidebar */
+aside ul {
+    font-size: 1.455em;
+    list-style: outside none none;
+    border-top:1px solid #222;
+}
+
+aside ul li {
+    border-bottom: 1px solid #666;
+    margin: 0;
+    padding: 8px 0;
+}
+/* twitter */
+  #jstwitter {
+    position: relative;
+}
+#jstwitter .item {
+    border-bottom: 1px solid #ccc;
+    font-size: 1.6em;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+#jstwitter .tweet-wrapper {
+    line-height: 140%;
+}
+#jstwitter .item a {
+}
+#jstwitter .item img {
+    width: 100%;
+}
+#jstwitter .item a:hover {
+    text-decoration: underline;
+}
+#jstwitter .item .text {
+    color: #414141;
+    display: block;
+    font-size: 0.9em;
+}
+#jstwitter .item .time, #jstwitter .tweet .user {
+    color: #ccc;
+}
+.time a, .user {
+    color: #999;
+    font-size: 0.8em;
+}
+
+.container.section { margin:60px auto;}
+.postlist {
+    display: inline-block;
+    margin: 0 0 24px;
+}
+.blog_img {margin-bottom: 32px}
+.gallery{background-color:}
+
+.readmore-social { font-size:1.45em; color: #222;  border-top: 1px solid #222;border-bottom: 1px solid #222; padding: 16px 0}
+
+.footer{ background-color: #414141}
+
+.footer p{ margin: 40px 0; color: #fff;
+}
+
+
+.containergallery {
+  background: #eee;
+}
+/* clearfix */
+
+.containergallery:before,
+
+.containergallery:after {
+    content: "";
+    display: table;
+}
+
+.containergallery:after {
+    clear: both;
+}
+
+.item {
+  float: left;
+  margin-bottom: 10px; 
+}
+.item img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: bottom;
+}
+.first-item {
+  clear: both;
+}
+/* remove margin bottom on last row */
+.last-row, .last-row ~ .item {
+  margin-bottom: 0;
+}

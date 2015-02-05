@@ -73,7 +73,8 @@ define('WP_DEBUG', false);
 //WP-CONTENT outside core
 if ( !defined('WP_CONTENT_DIR') )
 	define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content' );
-
+if ( !defined('WP_CONTENT_URL') )
+	define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/wp-content');
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
@@ -83,6 +84,3 @@ if ( !defined('ABSPATH') )
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
 
-//WP-CONTENT outside core
-if ( !defined('WP_CONTENT_URL') )
-	define( 'WP_CONTENT_URL', get_option('siteurl') . '/wp-content');
