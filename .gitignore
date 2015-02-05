@@ -1,3 +1,4 @@
 wp/
 vendor/
 composer.lock
+/**/*.sql
