@@ -15,46 +15,26 @@
         <div class="row">
             <div class="eight columns">
                 <h3>Reciente</h3>
+                <?php query_posts( array('category__in' => '2', 'post_status' => 'publish', 'posts_per_page' => 10, 'order' => 'DESC') ); ?>
+                <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                 <article class="postlist">
                     <div class="four columns">
 
-                     <a href="">   <img src="<?php bloginfo( 'template_directory' ); ?>/content/thumb1.jpg"></a> 
+                     <a href="<?php the_permalink() ?>">
+                        <?php $image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
+                        <img src="<?php if ( has_post_thumbnail() ) echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="" style="width: 220px;">
+                     </a> 
 
                     </div>
                     <div class="eight columns">
 
-                        <h2><a href="" >Sed diam nonummy nibh euismod tincidunt aut laoreet dolore magna aliquam</a> </h2>
+                        <h2><a href="<?php the_permalink() ?>" ><?php the_title() ?></a> </h2>
 
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat&nbsp;olutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis.</p>
+                        <?php the_excerpt() ?>
                     </div>
 
                 </article>
-                <article class="postlist">
-                    <div class="four columns">
-                       <a href=""> <img src="<?php bloginfo( 'template_directory' ); ?>/content/thumb2.jpg"></a> 
-                    </div>
-                    <div class="eight columns">
-
-                        <h2><a href="">Sed diam nonummy nibh euismod tincidunt aut laoreet dolore magna aliquam </a></h2>
-
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                    </div>
-
-                </article>
-                <article class="postlist">
-                    <div class="four columns">
-                       <a href=""> <img src="<?php bloginfo( 'template_directory' ); ?>/content/thumb1.jpg"></a> 
-                    </div>
-                    <div class="eight columns">
-
-                        <h2><a href=""> Sed diam nonummy nibh euismod tincidunt aut laoreet dolore magna aliquam</a></h2>
-
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.</p>
-                    </div>
-
-                </article>
-
-                <a href=""></a>
+                <?php endwhile; wp_reset_query(); ?>
             </div>
 
             <div class="four  columns">

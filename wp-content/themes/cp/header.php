@@ -61,7 +61,7 @@
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/instafeed.min.js"></script>
 
 
-
+    <?php if ( is_home() ) { ?>
     <script type="text/javascript">
     $(document).ready(function($) {
         $('#slider').sliderPro({
@@ -88,7 +88,9 @@
         });
     });
     </script>
+    <?php } ?>
 
+    <?php if( is_home() || in_category( array(2,3,4,5,6) ) ) { ?>
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.jstwitter.js"></script>
     <script type="text/javascript">
     $(function() {
@@ -96,6 +98,7 @@
         JQTWEET.loadTweets();
     });
     </script>
+    <?php } ?>
 
 <!-- instanfeed-->
     <script type="text/javascript">
@@ -120,7 +123,7 @@
     <div class="deco">
     <div class="container">
         <header class="row">
-            <h1 class="logo"><a href="index.html"><img src="<?php bloginfo( 'template_directory' ); ?>/images/carolina_parsons.png"></a></h1>
+            <h1 class="logo"><a href="<?php bloginfo( 'siteurl' ); ?>"><img src="<?php bloginfo( 'template_directory' ); ?>/images/carolina_parsons.png"></a></h1>
             <nav>
                 <ul>
                     <li><a href="blog.html">Blog</a>

@@ -33,3 +33,9 @@ add_theme_support('post-thumbnails');
 // http://codex.wordpress.org/Post_Formats
 // add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));
 add_theme_support('post-formats');
+
+/** 
+ *
+ *Home functions
+ * 
+ */
