@@ -125,25 +125,7 @@
         <header class="row">
             <h1 class="logo"><a href="<?php bloginfo( 'siteurl' ); ?>"><img src="<?php bloginfo( 'template_directory' ); ?>/images/carolina_parsons.png"></a></h1>
             <nav>
-                <ul>
-                    <li><a href="blog.html">Blog</a>
-                    </li>
-                    <li><a href="campanas.html">Campañas</a>
-                    </li>
-
-                    <li><a href="editorial.html">Editorial</a>
-                    </li>
-
-                    <li><a href="portadas.html">Portadas</a>
-                    </li>
-
-                    <li><a href="bio.html">Bio</a>
-                    </li>
-                    <li><a href="contacto.html">Contacto</a>
-                    </li>
-
-                </ul>
-
+                <?php wp_nav_menu( array('theme_location' => 'header-menu') ); ?>
             </nav>
 
         </header>

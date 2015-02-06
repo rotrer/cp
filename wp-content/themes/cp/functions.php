@@ -36,6 +36,15 @@ add_theme_support('post-formats');
 
 /** 
  *
- *Home functions
+ *Theme functions
  * 
  */
+function menus_register() {
+  register_nav_menus(
+    array(
+      'header-menu' => __( 'Menu Principal' ),
+      // 'extra-menu' => __( 'Extra Menu' )
+    )
+  );
+}
+add_action( 'init', 'menus_register' );
