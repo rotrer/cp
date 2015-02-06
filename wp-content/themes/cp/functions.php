@@ -26,3 +26,10 @@ if( function_exists('acf_add_options_page') ) {
 	// ));
 
 }
+
+add_theme_support('post-thumbnails');
+
+// Add post formats
+// http://codex.wordpress.org/Post_Formats
+// add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));
+add_theme_support('post-formats');

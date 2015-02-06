@@ -1,29 +1,11 @@
 <?php get_header(); ?>
 	<div id="slider" class="slider-pro">
         <div class="sp-slides">
-
+        <?php if ( get_field('fotos_slider_home', 'options') ) foreach (get_field('fotos_slider_home', 'options') as $key => $item) { ?>
             <div class="sp-slide">
-                <img src="<?php bloginfo( 'template_directory' ); ?>/content/1.jpg">
+                <img src="<?php echo $item['foto_slider_h']; ?>">
             </div>
-            <div class="sp-slide">
-                <img src="<?php bloginfo( 'template_directory' ); ?>/content/2.jpg">
-            </div>
-            <div class="sp-slide">
-                <img src="<?php bloginfo( 'template_directory' ); ?>/content/3.jpg">
-            </div>
-            <div class="sp-slide">
-                <img src="<?php bloginfo( 'template_directory' ); ?>/content/4.jpg">
-            </div>
-            <div class="sp-slide">
-                <img src="<?php bloginfo( 'template_directory' ); ?>/content/5.jpg">
-            </div>
-            <div class="sp-slide">
-                <img src="<?php bloginfo( 'template_directory' ); ?>/content/6.jpg">
-            </div>
-            <div class="sp-slide">
-                <img src="<?php bloginfo( 'template_directory' ); ?>/content/7.jpg">
-            </div>
-
+        <?php } ?>
         </div>
     </div>
 
