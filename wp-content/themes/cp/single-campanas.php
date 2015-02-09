@@ -22,7 +22,7 @@ get_header();
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 				<?php
 					$photo = get_field('foto_grande_galeria');
-					$thumbs[] = ( !empty( get_field('foto_pequena_galeria') ) ) ? get_field('foto_pequena_galeria') : $photo['sizes']['galeria-small'];
+					$thumbs[] = ( isset( get_field('foto_pequena_galeria') && !empty( get_field('foto_pequena_galeria') ) ) ? get_field('foto_pequena_galeria') : $photo['sizes']['galeria-small'];
 				?>
             <div class="sp-slide">
                 <img class="sp-image" src="" data-src="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-small="<?php echo $photo['sizes']['galeria-small'] ?>" data-medium="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-large="<?php echo $photo['sizes']['galeria-large'] ?>" data-retina="<?php echo $photo['sizes']['galeria-large'] ?>" />
