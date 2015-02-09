@@ -74,7 +74,7 @@ define('WP_DEBUG', false);
 if ( !defined('WP_CONTENT_DIR') )
 	define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content' );
 if ( !defined('WP_CONTENT_URL') )
-	define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/wp-content');
+	define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/cp/wp-content');
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

@@ -30,24 +30,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+ 
 
     <!-- Mobile Specific Metas
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- FONT
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-
-
     <!-- CSS
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/normalize.css">
-    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/skeleton.css">
-    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css">
-    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/slider-pro.min.css">
-
+ 
+    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style-min.css">
 
     <!-- Favicon
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -124,7 +116,7 @@
     <div class="container">
         <header class="row">
             <h1 class="logo"><a href="<?php bloginfo( 'siteurl' ); ?>"><img src="<?php bloginfo( 'template_directory' ); ?>/images/carolina_parsons.png"></a></h1>
-            <nav>
+            <nav class="nav-collapse">
                 <?php wp_nav_menu( array('theme_location' => 'header-menu') ); ?>
             </nav>
 

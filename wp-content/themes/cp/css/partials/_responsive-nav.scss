@@ -1,0 +1,140 @@
+.nav-collapse {
+  .disable-pointer-events {
+    pointer-events: none !important;
+  }
+  z-index: 1;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+  float: left;
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  ul {
+    float: left;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  li {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+  a {
+    background-color: #f1f1f1;
+    color: black;
+    float: left;
+    font-size: 94%;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    :focus {
+      background: none repeat scroll 0 0 #ca2d09;
+      outline: medium none;
+    }
+  }
+}
+
+@media screen and (min-width: 58em) {
+  .nav-collapse {
+    text-align: center;
+    ul {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 58em) {
+  .nav-collapse li {
+    display: inline-block;
+    float: none;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 58em) {
+  .nav-collapse a {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #37302a;
+    font-size: 1.0558em;
+    margin: 0;
+    padding: 0.5em;
+    transition: background 0.5s ease 0s;
+    :hover, :focus {
+      background: none repeat scroll 0 0 #e7e5e3;
+    }
+  }
+}
+
+@media screen and (min-width: 58em) {
+  .nav-collapse .active a {
+    background: none repeat scroll 0 0 #f43c12;
+    color: white;
+    :hover {
+      text-decoration: none;
+    }
+    :focus {
+      background: none repeat scroll 0 0 #ca2d09;
+    }
+  }
+}
+
+.js .nav-collapse {
+  clip: rect(0px, 0px, 0px, 0px);
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+@media screen and (min-width: 58em) {
+  .js .nav-collapse {
+    max-height: none;
+    position: relative !important;
+  }
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  -moz-user-select: none;
+  background: url("../images/hamburger.gif") no-repeat scroll 50% 33% #000000;
+  display: block;
+  float: right;
+  height: 55px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 70px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media not all, screen and (min--moz-device-pixel-ratio: 1.3), not all, not all, screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .nav-toggle {
+    background-image: url("../images/hamburger-retina.gif");
+    background-size: 100px 100px !important;
+  }
+}
+
+@media screen and (min-width: 58em) {
+  .nav-toggle {
+    display: none;
+  }
+}
