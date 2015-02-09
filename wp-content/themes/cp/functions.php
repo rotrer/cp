@@ -48,3 +48,55 @@ function menus_register() {
   );
 }
 add_action( 'init', 'menus_register' );
+
+// custom post campanas
+function register_custom_post_type_campanas() {
+	$args = array(
+		'public'   => true,
+		'label'    => 'Campañas',
+		'menu_position' => 5,
+		'hierarchical' => true,
+		'supports' => array( 'title', 'editor', 'page-attributes', 'thumbnail'),
+		'taxonomies' => array('category', 'post_tag')
+	);
+	register_post_type( 'campanas', $args );
+}
+
+add_action( 'init', 'register_custom_post_type_campanas' );
+
+// custom post portadas
+function register_custom_post_type_editorial() {
+	$args = array(
+		'public'   => true,
+		'label'    => 'Editorial',
+		'menu_position' => 5,
+		'hierarchical' => true,
+		'supports' => array( 'title', 'editor', 'page-attributes', 'thumbnail'),
+		'taxonomies' => array('category', 'post_tag')
+	);
+	register_post_type( 'editorial', $args );
+}
+
+add_action( 'init', 'register_custom_post_type_editorial' );
+
+// custom post portadas
+function register_custom_post_type_portadas() {
+	$args = array(
+		'public'   => true,
+		'label'    => 'Portadas',
+		'menu_position' => 5,
+		'hierarchical' => true,
+		'supports' => array( 'title', 'editor', 'page-attributes', 'thumbnail'),
+		'taxonomies' => array('category', 'post_tag')
+	);
+	register_post_type( 'portadas', $args );
+}
+
+add_action( 'init', 'register_custom_post_type_portadas' );
+
+function register_add_image_size_cp() {
+	add_image_size( 'galeria-normal-medium', 800);
+	add_image_size( 'galeria-small', 226);
+	add_image_size( 'galeria-large', 1500);
+}
+add_action( 'init', 'register_add_image_size_cp' );
