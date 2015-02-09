@@ -38,14 +38,6 @@
                         <a href="galeria-interior.html"><img src="/front/content/conten1.jpg"></a>
                     </div>
 
-                    <div class="item" data-w="500" data-h="500">
-                    	<a href="galeria-interior.html"><img wsrc="/front/content/5.jpg"></a>
-                    </div>
-
-                    <div class="item" data-w="719" data-h="600">
-                    	<a href="galeria-interior.html"><img src="/front/content/content2.jpg"></a>
-                    </div>
-
 
                 </div>
             </div>
