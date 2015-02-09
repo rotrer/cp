@@ -17,8 +17,15 @@
     <!-- End Document
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.gridalicious.min.js"></script>
+    <!-- Flexsslider
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <?php if ( is_page( array('Campañas', 'Editorial', 'Portadas') ) ) { ?>
+    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/jquery.flex-images.css">
+    <script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.flex-images.min.js"></script>
+    <script>
+        $('#demo1').flexImages({rowHeight: 250});
+    </script>
+    <?php } ?>
 
 
 </body>

@@ -236,10 +236,12 @@
     padding: 10px
 }
 .sp-grab {
-    cursor: url(images/openhand.cur), move
+    cursor: move;
+    /*cursor: url(images/openhand.cur), move*/
 }
 .sp-grabbing {
-    cursor: url(images/closedhand.cur), move
+    cursor: move;
+    /*cursor: url(images/closedhand.cur), move*/
 }
 .sp-selectable {
     cursor: default
