@@ -3,3 +3,4 @@ vendor/
 composer.lock
 /**/*.sql
 wp-content/themes/cp/css/slider-pro.min.css
+wp-content/uploads/ai-cache/
