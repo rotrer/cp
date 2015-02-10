@@ -1,0 +1,155 @@
+diff --git boxes/save.php boxes/save.php
+index 4ab95c7..81ab943 100644
+--- boxes/save.php
++++ boxes/save.php
+@@ -1,6 +1,8 @@
+ <ul>
+   <li><?php _e('Created by'); ?> <a href=""><?php echo $content['createdby']; ?></a> on <span class="status-display"><?php echo date('m/d/Y',$content['created']); ?></span></li>
++  <?php if ( ! empty( $content['updatedby'] ) ) : ?>
+   <li><?php _e('Updated last by'); ?> <a href=""><?php echo $content['updatedby']; ?></a> on <span class="status-display"><?php echo date('m/d/Y',$content['updated']); ?></span></li>
++  <?php endif; ?>
+ </ul>
+ <div id="major-publishing-actions" class="submitbox">
+   <div id="delete-action"><a href="Javascript:custom_type_delete_content(<?php $this->json_delete_content($content['systemkey']); ?>);" class="submitdelete deletion"><?php _e('Delete'); ?></a></div>
+diff --git classes/custom-datefield/custom-datefield.php classes/custom-datefield/custom-datefield.php
+index 3d00bf7..6b46a9f 100644
+--- classes/custom-datefield/custom-datefield.php
++++ classes/custom-datefield/custom-datefield.php
+@@ -43,7 +43,8 @@ class CustomFields_DateField {
+             );
+ 
+         load_plugin_textdomain('cct', false, dirname( plugin_basename( __FILE__ ) )  );
+-        add_action( 'init', array($this, 'init' ));
++        add_action( 'admin_print_styles-post.php', array($this, 'init' ));
++        add_action( 'admin_print_styles-post-new.php', array($this, 'init' ));
+         add_action('ct_load_types', array($this, 'load_type'));
+     }
+ 
+@@ -151,12 +152,9 @@ class CustomFields_DateField {
+     }
+ 
+     public function init() {
+-    	  if(is_admin()) {
+-	        wp_enqueue_script('custom-datefield-ui', $this->httpRoot . 'ui.datepicker.js', array('jquery'));
+-	        wp_enqueue_script('custom-datefield', $this->httpRoot . 'custom-datefield.js');
+-	        wp_enqueue_style('custom-datefield-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css');
++        wp_enqueue_script('custom-datefield', $this->httpRoot . 'custom-datefield.js', array( 'jquery-ui-datepicker' ) );
++        wp_enqueue_style('custom-datefield-style', '//ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css');
+ 	        wp_enqueue_style($this->getId().'-style', $this->httpRoot. 'style.css');
+     	  }
+-    }
+ }
+ $cf_datefield= new CustomFields_DateField();
+\ No newline at end of file
+diff --git classes/custom-datefield/theme-datefield-admin.php classes/custom-datefield/theme-datefield-admin.php
+index 874e9ff..b21a0c7 100644
+--- classes/custom-datefield/theme-datefield-admin.php
++++ classes/custom-datefield/theme-datefield-admin.php
+@@ -21,7 +21,7 @@
+     </tr>
+     <tr>
+       <th><?php _e('Enter custom format:','cct'); ?></th>
+-      <td><input type="text" name="custom_date_format" value="<?php echo $values['extra']['custom_date_format']; ?>" /></td>
++      <td><input type="text" name="custom_date_format" value="<?php if ( isset( $values['extra']['custom_date_format'] ) ) echo $values['extra']['custom_date_format']; ?>" /></td>
+     </tr>
+   </tbody>
+ </table>
+diff --git classes/custom-referencefield/theme-referencefield-admin.php classes/custom-referencefield/theme-referencefield-admin.php
+index 119cb16..859a608 100644
+--- classes/custom-referencefield/theme-referencefield-admin.php
++++ classes/custom-referencefield/theme-referencefield-admin.php
+@@ -1,6 +1,6 @@
+ <?php
+ $types=get_post_types();
+-if (!is_array($values['extra']['reference_type']))
++if ( ! isset( $values['extra']['reference_type'] ) || ! is_array( $values['extra']['reference_type'] ) )
+     $values['extra']['reference_type']=array();
+ ?>
+ <table>
+diff --git custom-type.php custom-type.php
+index c6aea82..b2b19cb 100644
+--- custom-type.php
++++ custom-type.php
+@@ -481,17 +481,17 @@ class CustomFields {
+             header("location:".admin_url('admin.php').'?'.$_SERVER['QUERY_STRING']);
+             return;
+         }
+-        if ($_POST['save_field']) {
++        if ( ! empty( $_POST['save_field'] ) ) {
+             if (empty($_POST['content_type'])) return;
+             $this->saveField();
+             header("location:".admin_url('admin.php').'?'.$_SERVER['QUERY_STRING']);
+         }
+-        if ($_POST['save_category']) {
++        if ( ! empty( $_POST['save_category'] ) ) {
+             if (empty($_POST['content_type'])) return;
+             //$this->saveCategory();
+             header("location:".admin_url('admin.php').'?'.$_SERVER['QUERY_STRING']);
+         }
+-        if ($_POST['doaction']) {
++        if ( ! empty( $_POST['doaction'] ) ) {
+             $action=$_POST['action'];
+             if (isset($_POST['delete_content_type'])) {
+                 $cts=$_POST['delete_content_type'];
+@@ -1029,7 +1029,7 @@ class CustomFields {
+         $field_key = empty($_POST['field_name']) ? $this->sanitize_key($_POST['name']) : $this->sanitize_key($_POST['field_name']);
+         $field_type = $_POST['ct_name'];
+         $field_name = $_POST['name'];
+-        $add_as_column = !!$_POST['show_list'];
++        $add_as_column = ( empty( $_POST['show_list'] ) || ( false == $_POST['show_list'] ) ) ? false : true;
+         $extra = $_POST;
+         
+         $field = $this->update_field($content_type, $field_key, $field_type, $field_name, $add_as_column, $extra);
+@@ -1283,6 +1283,9 @@ class CustomFields {
+     }
+ 
+     public function save_content_type() {
++        if ( ! isset( $this->fields_info['categories'] ) )
++            $this->fields_info['categories'] = '';
++
+         update_option('ct_content_types', $this->fields_info['types']);
+         update_option('ct_fields_types', $this->fields_info['fields']);
+         update_option('ct_categories_types', $this->fields_info['categories']);
+@@ -1353,7 +1356,10 @@ class CustomFields {
+                 $this->fields_info['types'][$key]['supports']=$sup;
+                 
+                 // give the menu icon a working URL here
++                if ( ! empty( $this->fields_info['types'][$key]['menu_icon'] ) )
+                 $menu_icon = $this->fields_info['types'][$key]['menu_icon'];
++                else
++                    $menu_icon = '';
+                 
+                 if(!empty($menu_icon)){
+                   $this->fields_info['types'][$key]['menu_icon'] = EASYPOSTTYPES_ICONS_URL.$menu_icon;
+@@ -1460,6 +1466,9 @@ class CustomFields {
+     }
+ 
+     public function save_postdata( $post_id ) {
++      if ( empty( $_POST['post_type'] ) )
++          return $post_id;
++
+       // verify this came from the our screen and with proper authorization,
+       // because save_post can be triggered at other times
+       $nonce=$_POST['post_type'].'_nonce';
+@@ -1534,6 +1543,8 @@ class CustomFields {
+          
+         $index=0;
+         foreach($this->fields_info['fields'][$post->post_type] as $field) {
++          if ( ! is_array( $field ) || empty( $field['type'] ) )
++              continue;
+           
+           if ($field['type']=='_fieldset') {
+               // CODE FOR FIELDSET GROUP
+diff --git templates/field-form.php templates/field-form.php
+index a25ebe4..2a8430e 100644
+--- templates/field-form.php
++++ templates/field-form.php
+@@ -86,7 +86,7 @@ if (empty($type)) {
+     <fieldset id="field-type-settings">
+       <?php 
+       $fieldSettings = !empty($values) ? $values : array();
+-      $this->edit_field_form_type_fields($type, $content_type, $fieldSettings); ?>
++      $this->edit_field_form_type_fields($type, $_POST['content_type'], $fieldSettings); ?>
+     </fieldset>
+       <?php /*_e '<input type="submit" name="save_field" value="Save Field" />';*/ ?>
+   
