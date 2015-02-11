@@ -3,4 +3,15 @@ vendor/
 composer.lock
 /**/*.sql
 wp-content/themes/cp/css/slider-pro.min.css
+<<<<<<< HEAD
 wp-content/uploads/ai-cache/
+=======
+
+wp-config.php
+
+wp-content/themes/cp/header.php
+>>>>>>> estilos-form
+
+wp-config.php
+
+wp-config.php

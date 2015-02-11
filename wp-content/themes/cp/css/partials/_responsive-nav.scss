@@ -58,6 +58,7 @@
     margin-left: 0.2em;
     margin-right: 0.2em;
     width: auto;
+    margin-bottom:0;
   }
 }
 
@@ -65,8 +66,7 @@
   .nav-collapse a {
     background: none repeat scroll 0 0 transparent;
     border: 0 none;
-    color: #37302a;
-    font-size: 1.0558em;
+    color: $primary-color;
     margin: 0;
     padding: 0.5em;
     transition: background 0.5s ease 0s;

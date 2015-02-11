@@ -2,15 +2,24 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "18493",
 "files": {
-	"\/parts\/custom.scss": {
+	"\/css\/style.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/partials\/_custom.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/parts\/custom.scss",
-		"outputAbbreviatedPath": "\/css\/custom.css",
+		"inputAbbreviatedPath": "\/partials\/_custom.scss",
+		"outputAbbreviatedPath": "\/css\/_custom.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
@@ -18,15 +27,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/parts\/jquery.flex-images.scss": {
+	"\/partials\/_jquery.flex-images.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/parts\/jquery.flex-images.scss",
-		"outputAbbreviatedPath": "\/css\/jquery.flex-images.css",
+		"inputAbbreviatedPath": "\/partials\/_jquery.flex-images.scss",
+		"outputAbbreviatedPath": "\/css\/_jquery.flex-images.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
@@ -34,15 +43,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/parts\/normalize.scss": {
+	"\/partials\/_normalize.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/parts\/normalize.scss",
-		"outputAbbreviatedPath": "\/css\/normalize.css",
+		"inputAbbreviatedPath": "\/partials\/_normalize.scss",
+		"outputAbbreviatedPath": "\/css\/_normalize.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
@@ -50,15 +59,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/parts\/responsive-nav.scss": {
+	"\/partials\/_responsive-nav.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/parts\/responsive-nav.scss",
-		"outputAbbreviatedPath": "\/css\/responsive-nav.css",
+		"inputAbbreviatedPath": "\/partials\/_responsive-nav.scss",
+		"outputAbbreviatedPath": "\/css\/_responsive-nav.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
@@ -66,15 +75,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/parts\/skeleton.scss": {
+	"\/partials\/_skeleton.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/parts\/skeleton.scss",
-		"outputAbbreviatedPath": "\/css\/skeleton.css",
+		"inputAbbreviatedPath": "\/partials\/_skeleton.scss",
+		"outputAbbreviatedPath": "\/css\/_skeleton.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
@@ -82,15 +91,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/parts\/slider-pro.min.scss": {
+	"\/partials\/_slider-pro.min.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/parts\/slider-pro.min.scss",
-		"outputAbbreviatedPath": "\/css\/slider-pro.min.css",
+		"inputAbbreviatedPath": "\/partials\/_slider-pro.min.scss",
+		"outputAbbreviatedPath": "\/css\/_slider-pro.min.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
@@ -98,14 +107,14 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/parts\/style.scss": {
+	"\/partials\/style.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/parts\/style.scss",
+		"inputAbbreviatedPath": "\/partials\/style.scss",
 		"outputAbbreviatedPath": "\/style-min.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
@@ -113,6 +122,15 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
+		},
+	"\/slider-pro.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/slider-pro.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/style-min.css": {
 		"fileType": 16,

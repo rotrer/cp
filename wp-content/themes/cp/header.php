@@ -1,52 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <!-- Basic Page Needs
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <title><?php
-		/*
-		 * Print the <title> tag based on what is being viewed.
-		 */
-		global $page, $paged;
+        /*
+         * Print the <title> tag based on what is being viewed.
+         */
+        global $page, $paged;
 
-		wp_title( '|', true, 'right' );
+        wp_title( '|', true, 'right' );
 
-		// Add the blog name.
-		bloginfo( 'name' );
+        // Add the blog name.
+        bloginfo( 'name' );
 
-		// Add the blog description for the home/front page.
-		$site_description = get_bloginfo( 'description', 'display' );
-		if ( $site_description && ( is_home() || is_front_page() ) )
-			echo " | $site_description";
+        // Add the blog description for the home/front page.
+        $site_description = get_bloginfo( 'description', 'display' );
+        if ( $site_description && ( is_home() || is_front_page() ) )
+            echo " | $site_description";
 
-		// Add a page number if necessary:
-		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() )
-			echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
+        // Add a page number if necessary:
+        if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() )
+            echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
 
-		?></title>
+        ?></title>
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
  
 
     <!-- Mobile Specific Metas
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
  
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style-min.css">
 
     <!-- Favicon
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/images/favicon.png" />
 
     <!-- JS
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <!--<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/libs/jquery-1.11.0.min.js"></script>-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/libs/fancybox/jquery.fancybox.pack.js"></script>
@@ -113,7 +114,7 @@
 <body <?php body_class(); ?>>
 
     <!-- Primary Page Layout
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="deco">
     <div class="container">
         <header class="row">
@@ -126,4 +127,4 @@
 
     </div>
 
-    </div>
+    </div> 
