@@ -2,6 +2,7 @@ wp/
 vendor/
 composer.lock
 /**/*.sql
+**/ai-cache/
 wp-content/themes/cp/css/slider-pro.min.css
 <<<<<<< HEAD
 wp-content/uploads/ai-cache/
