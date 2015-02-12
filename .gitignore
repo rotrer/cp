@@ -5,3 +5,5 @@ composer.lock
 **/ai-cache/
 wp-content/themes/cp/css/slider-pro.min.css
 wp-config.php
+
+index.html_.html
