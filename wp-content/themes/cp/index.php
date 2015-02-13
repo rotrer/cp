@@ -22,7 +22,7 @@
 
                      <a href="<?php the_permalink() ?>">
                         <?php $image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
-                        <img src="<?php if ( has_post_thumbnail() ) echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="" style="width: 220px;">
+                        <img src="<?php if ( has_post_thumbnail() ) echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="" >
                      </a> 
 
                     </div>

@@ -4,7 +4,7 @@
 <div class="container section">
   <div class="row">
     <div class=" twelve column">
-      
+      <h2><?php the_title(); ?></h2>
       <div id="demo1" class="flex-images">
         <?php 
         $type = '';
@@ -19,9 +19,9 @@
         query_posts( array('post_type' => $type) ); 
         if ( have_posts() ) while ( have_posts() ) : the_post();
         ?>
-        <?php $photo = get_field('foto_grande_galeria'); ?>
-        <div class="item" data-w="<?php echo $photo['width'] ?>" data-h="<?php echo $photo['height'] ?>">
-          <a href="<?php the_permalink(); ?>"><img  src="<?php echo $photo['url'] ?>"></a>
+      	<?php $photo = get_field('foto_grande_galeria'); ?>
+      	<div class="item" data-w="<?php echo $photo['width'] ?>" data-h="<?php echo $photo['height'] ?>">
+        	<a href="<?php the_permalink(); ?>"><img  src="<?php echo $photo['url'] ?>"></a>
         </div>
 
         <?php endwhile; wp_reset_query(); ?>

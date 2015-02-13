@@ -9,6 +9,7 @@
   position: relative;
 }
 
+.slider-pro{ margin:40px auto;}
 .sp-mask {
   position: relative;
   overflow: hidden;
@@ -305,10 +306,14 @@
   background-color: #000;
 }
 
+
+
+
+
 .sp-full-screen-button {
-  bottom: 17px;
+top: 22px;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 1;
   position: absolute;
   right: 22px;
@@ -317,7 +322,7 @@
   transform: rotate(45deg);
   &:before {
     content: '\2195';
-    color: $secondary-color;
+    color: #ccc;
   }
 }
 
@@ -419,6 +424,7 @@
 }
 
 .sp-horizontal {
+  margin-top:0 ;
   .sp-previous-arrow {
     left: 20px;
   }
