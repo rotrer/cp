@@ -23,7 +23,19 @@
 					</div>
 				
 				<div class ="eleven columns u-pull-right readmore-social">
-					<?php do_action('crafty-social-share-buttons'); ?> <!--<span class="u-pull-right"><a href="<?php the_permalink(); ?>">Comentarios <?php echo get_comments_number() ?></a></span>-->
+
+				<!-- Aca va el plugin social tiene un atado con el popup
+				 -->
+
+					<span>Compartir:</span> <?php do_action('crafty-social-share-buttons'); ?>
+
+					<!--
+
+					esto no lo utilizaremos
+
+
+
+					<span class="u-pull-right"><a href="<?php the_permalink(); ?>">Comentarios <?php echo get_comments_number() ?></a></span>-->
 				</div>
 
 				</article>
