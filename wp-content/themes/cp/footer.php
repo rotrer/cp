@@ -20,10 +20,13 @@
     <!-- Flexsslider
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <?php if ( is_page( array('Campañas', 'Editorial', 'Portadas') ) ) { ?>
-    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/jquery.flex-images.css">
     <script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.flex-images.min.js"></script>
     <script>
-        $('#demo1').flexImages({rowHeight: 250});
+        $('#collage').flexImages({
+            rowHeight: 300,
+
+
+        });
     </script>
     <?php } ?>
 

@@ -46,6 +46,10 @@ get_header();
 			?>
             <div class="sp-slide">
                 <img class="sp-image" src="" data-src="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-small="<?php echo $photo['sizes']['galeria-small'] ?>" data-medium="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-large="<?php echo $photo['sizes']['galeria-large'] ?>" data-retina="<?php echo $photo['sizes']['galeria-large'] ?>" />
+           
+            <!-- descripcion imagen --> 
+             <div class="description"><h3>Descipcion</h3></div>
+            
             </div>
    			<?php $i++; endwhile; wp_reset_query(); ?>
 

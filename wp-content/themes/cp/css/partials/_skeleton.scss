@@ -335,6 +335,10 @@ a {
 /* Buttons 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+#FSContact3 input, #FSContact3 textarea {
+    max-width: 100% !important;
+}
+
 .button, button, .reply a {
  background-color: transparent;
     border: 1px solid $alink-color;
@@ -355,7 +359,7 @@ a {
     width: auto;
 }
 
-input {
+#FSContact3 input {
   &[type="submit"], &[type="reset"], &[type="button"] {
  background-color: transparent;
     border: 1px solid $alink-color;

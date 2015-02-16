@@ -5,7 +5,7 @@
   <div class="row">
     <div class=" twelve column">
       
-      <div id="demo1" class="flex-images">
+      <div id="collage" class="flex-images">
         <?php 
         $type = '';
         if ( is_page('Campañas') ) {
@@ -21,7 +21,11 @@
         ?>
         <?php $photo = get_field('foto_grande_galeria'); ?>
         <div class="item" data-w="<?php echo $photo['width'] ?>" data-h="<?php echo $photo['height'] ?>">
-          <a href="<?php the_permalink(); ?>"><img  src="<?php echo $photo['url'] ?>"></a>
+          <a href="<?php the_permalink(); ?>"><img  src="<?php echo $photo['url'] ?>"> 
+
+            <!-- descripcion imagen --> 
+           <div class="description"><h3>Descipcion</h3></div></a>
+
         </div>
 
         <?php endwhile; wp_reset_query(); ?>
