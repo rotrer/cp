@@ -1,3 +1,19 @@
+function GetIEVersion() {
+  var sAgent = window.navigator.userAgent;
+  var Idx = sAgent.indexOf("MSIE");
+
+  // If IE, return version number.
+  if (Idx > 0) 
+    return parseInt(sAgent.substring(Idx+ 5, sAgent.indexOf(".", Idx)));
+
+  // If IE 11 then look for Updated user agent string.
+  else if (!!navigator.userAgent.match(/Trident\/7\./)) 
+    return 11;
+
+  else
+    return 0; //It is not IE
+}
+
 $(function() {		
 				
 	JQTWEET = {
@@ -10,7 +26,7 @@ $(function() {
 	    user: 'caroparsons', //username
 	    numTweets: 3, //number of tweets
 	    appendTo: '#jstwitter',
-	    useGridalicious: true,
+	    useGridalicious: false,
 	    template: '<div class="item">{IMG}<div class="tweet-wrapper"><span class="text">{TEXT}</span>\
 	               <span class="time"><a href="{URL}" target="_blank">{AGO}</a></span>\
 	               - <span class="user"><a href="https://twitter.com/caroparsons/" target="_blank">{USER}</a></span></div></div>',
@@ -102,7 +118,7 @@ $(function() {
 	        var rightNow = new Date();
 	        var then = new Date(dateString);
 	         
-	        if ($.browser.msie) {
+	        if (GetIEVersion() > 0) {
 	            // IE can't parse these crazy Ruby dates
 	            then = Date.parse(dateString.replace(/( \+)/, ' UTC$1'));
 	        }
