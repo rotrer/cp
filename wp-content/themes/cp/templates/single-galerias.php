@@ -23,45 +23,54 @@ get_header();
     $star_slide = 0;
     $count_photos = 0;
 ?>
- <div class="container section">
-<div class="row">
-<div class="twelve colummns">
-	<!-- Primary Page Layout
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div id="slider" class="slider-pro gallery">
-		<div class="sp-slides">
+<div class="container section">
+    <div class="row">
+        <div class="twelve colummns">
+        	<!-- Primary Page Layout
+            –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+            <div id="slider" class="slider-pro gallery">
+        		<div class="sp-slides">
 
-			<?php query_posts( array('post_type' => $post_type, 'category__in' => $filter_cat) ); ?>
-			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-			<?php
-				$photo = get_field('foto_grande_galeria');
-				$thumb = get_field('foto_pequena_galeria');
-				$thumbs[] = ( !empty( $thumb ) ) ? $thumb : $photo['sizes']['galeria-small'];
+        			<?php query_posts( array('post_type' => $post_type, 'category__in' => $filter_cat) ); ?>
+        			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+        			<?php
+        				$photo = get_field('foto_grande_galeria');
+        				$thumb = get_field('foto_pequena_galeria');
+        				$thumbs[] = ( !empty( $thumb ) ) ? $thumb : $photo['sizes']['galeria-small'];
 
-                #Indice foto
-                if ($post->ID === $post_id) {
-                    $star_slide = $count_photos;
-                }
-                $count_photos++;
-			?>
-            <div class="sp-slide">
-                <img class="sp-image" src="" data-src="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-small="<?php echo $photo['sizes']['galeria-small'] ?>" data-medium="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-large="<?php echo $photo['sizes']['galeria-large'] ?>" data-retina="<?php echo $photo['sizes']['galeria-large'] ?>" />
+                        #Indice foto
+                        if ($post->ID === $post_id) {
+                            $star_slide = $count_photos;
+                        }
+                        $count_photos++;
+        			?>
+                    <div class="sp-slide">
+                        <img class="sp-image" src="" data-src="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-small="<?php echo $photo['sizes']['galeria-small'] ?>" data-medium="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-large="<?php echo $photo['sizes']['galeria-large'] ?>" data-retina="<?php echo $photo['sizes']['galeria-large'] ?>" />
+                    </div>
+           			<?php $i++; endwhile; wp_reset_query(); ?>
+
+           		</div>
+
+                <div class="sp-thumbnails">
+                <?php if( $thumbs ) foreach ($thumbs as $key => $thumb) { ?>
+                    <img class="sp-thumbnail" src="<?php echo $thumb ?>"/>
+                <?php } ?>
+                </div>
+                
             </div>
-   			<?php $i++; endwhile; wp_reset_query(); ?>
+            <div class ="eleven columns u-pull-right readmore-social">
+                <div class="pagination">
+                <?php
+                    echo get_previous_post_link('%link', 'Anterior');
+                    echo get_next_post_link('%link', 'Siguiente');
+                ?>
+                </div>
+            </div>
 
-   		</div>
-
-        <div class="sp-thumbnails">
-        <?php if( $thumbs ) foreach ($thumbs as $key => $thumb) { ?>
-            <img class="sp-thumbnail" src="<?php echo $thumb ?>"/>
-        <?php } ?>
         </div>
-        
     </div>
-
 </div>
-</div>
-</div>
+    
     <!-- Content -->
     <div class="container section">
         <div class="row">
