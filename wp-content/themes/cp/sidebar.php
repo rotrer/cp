@@ -36,10 +36,14 @@ var feed = new Instafeed({
 });
 feed.run();
 </script>
+<<<<<<< HEAD
 <h3 class="socialtitle">Instagram</h3>
 <div class="followbutton">
 
 </div>
+=======
+<h3>Instagram</h3>
+>>>>>>> FETCH_HEAD
 <div id="instafeed"></div>
 
 <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.gridalicious.min.js"></script>

@@ -27,7 +27,7 @@
 				<!-- Aca va el plugin social tiene un atado con el popup
 				 -->
 
-					<span>Compartir:</span> <?php do_action('crafty-social-share-buttons'); ?>
+					<span>Compartir:</span> 
 
 					<!--
 
