@@ -11,8 +11,8 @@ get_header();
 	foreach ($catgories as $key => $cat) {
 		if ( $cat->category_parent > 0 ) {
 			$filter_cat[] = $cat->term_id;
-		} elseif ( $cat->term_id == 15 ) {#excepcion para filtro de portadas
-            #$filter_cat[] = $cat->term_id;
+		} elseif ( $cat->term_id == 17 ) {#excepcion para filtro de portadas
+            $filter_cat[] = $cat->term_id;
         }
 	}
 
@@ -46,10 +46,6 @@ get_header();
 			?>
             <div class="sp-slide">
                 <img class="sp-image" src="" data-src="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-small="<?php echo $photo['sizes']['galeria-small'] ?>" data-medium="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-large="<?php echo $photo['sizes']['galeria-large'] ?>" data-retina="<?php echo $photo['sizes']['galeria-large'] ?>" />
-           
-            <!-- descripcion imagen --> 
-             <div class="description"><h3>Descipcion</h3></div>
-            
             </div>
    			<?php $i++; endwhile; wp_reset_query(); ?>
 
