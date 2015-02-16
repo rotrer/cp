@@ -7,33 +7,27 @@
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
-				<article class="postinterior">
+				<article class="postlist">
 					<?php if ( has_post_thumbnail() ) { ?>
 					<div class="twelve columns blog_img">
-						
+						<a href="<?php the_permalink(); ?>">
 							<?php $image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
 							<img src="<?php if ( has_post_thumbnail() ) echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="">
-						
+						</a> 
 					</div>
 					<?php } ?>
 					<div class="eleven columns u-pull-right ">
-						<h2><?php the_title(); ?> </h2>
+						<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a> </h2>
 						
 						<?php the_content(); ?>
 					</div>
-				
-				<div class ="eleven columns u-pull-right readmore-social">
-					<?php do_action('crafty-social-share-buttons'); ?> <!--<span class="u-pull-right"><a href="<?php the_permalink(); ?>">Comentarios <?php echo get_comments_number() ?></a></span>-->
-				</div>
 
 				</article>
-				
-
 				<div class="comments">
 					<?php if ( get_comments() ) : ?>
-
-						
-
+						<h2 class="comments-title">
+							<p>Cantidad de comentarios <?php echo get_comments_number() ?></p>
+						</h2>
 
 						<ol class="comment-list">
 							<?php
@@ -49,7 +43,7 @@
 						// If comments are closed and there are comments, let's leave a little note, shall we?
 						if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 					?>
-						<p class="no-comments">Comentarios cerrados</p>
+						<p class="no-comments">Comentarios cerrardos</p>
 					<?php endif; ?>
 
 					<?php

@@ -19,9 +19,7 @@ get_header();
     #obtener post type del post
     $post_type = get_post_type( $post->ID );
 ?>
- <div class="container section">
-<div class="row">
-<div class="twelve colummns">
+
 	<!-- Primary Page Layout
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div id="slider" class="slider-pro gallery">
@@ -49,9 +47,6 @@ get_header();
         
     </div>
 
-</div>
-</div>
-</div>
     <!-- Content -->
     <div class="container section">
         <div class="row">
@@ -64,16 +59,16 @@ get_header();
 	<script type="text/javascript">
     $(document).ready(function($) {
         $('#slider').sliderPro({
-            width: 1100,
-            height:650,
+            width: 800,
+            height:500,
             fade: true,
             arrows: true,
             buttons: false,
             fullScreen: true,
             shuffle: false,
-            smallSize: 226,
-            mediumSize: 800,
-            largeSize: 1600,
+            smallSize: 500,
+            mediumSize: 1000,
+            largeSize: 3000,
             thumbnailArrows: true,
             autoplay: false,
             //autoHeight:true,

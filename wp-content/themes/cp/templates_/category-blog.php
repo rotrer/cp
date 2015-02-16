@@ -24,7 +24,7 @@
 
 				</article>
 				<div class ="eleven columns u-pull-right readmore-social">
-					<span class="u-pull-right"><a href="<?php the_permalink(); ?>">Comentarios <?php comments_number( '0' ); ?></a></span><span class="u-pull-left readmore"><a href="<?php the_permalink(); ?>">Continuar leyendo</a></span>
+					<span class="u-pull-right"><a href="<?php the_permalink(); ?>">Comentarios <?php comments_number( '0' ); ?></a></span><span class="u-pull-left "><a href="<?php the_permalink(); ?>">Continuar leyendo</a></span>
 				</div>
 				<?php endwhile; ?>
 			<?php else : ?>
