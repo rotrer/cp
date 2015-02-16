@@ -71,6 +71,7 @@ $(function() {
 	                  }
                   
                   } catch (e) {
+                  	console.log(e);
 	                  //item is less than item count
                   }
                   

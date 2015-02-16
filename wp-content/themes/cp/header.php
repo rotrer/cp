@@ -48,11 +48,10 @@
 
     <!-- JS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-   <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/libs/jquery-1.11.0.min.js"></script>
-    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>-->
+    <!--<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/libs/jquery-1.11.0.min.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/libs/fancybox/jquery.fancybox.pack.js"></script>
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/sliderpro-min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/instafeed.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/responsive-nav.min.js"></script>
 
     <!-- Adaptative images
@@ -89,27 +88,6 @@
     });
     </script>
     <?php } ?>
-
-    <?php if( is_home() || in_category( array(2,3,4,5,6) ) ) { ?>
-    <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.jstwitter.js"></script>
-    <script type="text/javascript">
-    $(function() {
-        // start jqtweet!
-        JQTWEET.loadTweets();
-    });
-    </script>
-    <?php } ?>
-
-    <!-- instanfeed-->
-    <script type="text/javascript">
-    // var feed = new Instafeed({
-    //     get: 'carolinaparsons',
-    //     tagName: 'carolinaparsons',
-    //     user: 'carolinaparsons',
-    //     clientId: '0f404326695b4f8cb29b0f45c49880af'
-    // });
-    // feed.run();
-    </script>
     <?php wp_head(); ?>
 
     
