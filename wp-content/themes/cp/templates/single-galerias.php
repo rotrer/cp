@@ -12,7 +12,7 @@ get_header();
 		if ( $cat->category_parent > 0 ) {
 			$filter_cat[] = $cat->term_id;
 		} elseif ( $cat->term_id == 15 ) {#excepcion para filtro de portadas
-            $filter_cat[] = $cat->term_id;
+            #$filter_cat[] = $cat->term_id;
         }
 	}
 
