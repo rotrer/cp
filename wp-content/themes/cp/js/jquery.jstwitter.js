@@ -79,7 +79,6 @@ $(function() {
 			                //run grid-a-licious
 											$(JQTWEET.appendTo).gridalicious({
 												gutter:0, 
-												width: 200, 
 												animate: true
 											});	                   
 										}                  

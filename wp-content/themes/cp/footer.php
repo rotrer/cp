@@ -17,6 +17,11 @@
     <!-- End Document
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
+    <script>
+      var navigation = responsiveNav(".nav-collapse");
+    </script>
+
+
     <!-- Flexsslider
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <?php if ( is_page( array('Campañas', 'Editorial', 'Portadas') ) ) { ?>

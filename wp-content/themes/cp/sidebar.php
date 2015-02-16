@@ -5,8 +5,24 @@ $(document).ready(function(){
     JQTWEET.loadTweets();
 });
 </script>
-<h3>Twitter</h3>
+
+<div class="twelve column">
+<h3 class="socialtitle">Twitter</h3>
+
+<div class="followbutton">
+<a class="twitter-follow-button"
+  href="https://twitter.com/caroparsons"
+  data-show-count="false"
+  data-lang="en">
+Seguir @caroparsons
+</a></div>
+</div>
+<script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
+
+
 <div id="jstwitter"></div>
+
+
 
 <!-- instanfeed-->
 <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/instafeed.min.js"></script>
@@ -20,6 +36,10 @@ var feed = new Instafeed({
 });
 feed.run();
 </script>
+<h3 class="socialtitle">Instagram</h3>
+<div class="followbutton">
+
+</div>
 <div id="instafeed"></div>
 
 <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.gridalicious.min.js"></script>

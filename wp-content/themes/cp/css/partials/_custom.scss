@@ -4,6 +4,7 @@
 	position: relative;
 }
 
+@media (min-width: 769px)  {
 h1.logo {
 	text-align: center;
 	margin: 0;
@@ -16,15 +17,15 @@ h1.logo {
 		}
 	}
 }
-
-@media (min-width: 320px) and (max-width: 462px) {
+}
+@media (min-width: 320px) and (max-width: 480px) {
 	h1.logo {
 		display: block;
 		float: left;
 		margin: 0;
 		text-align: left;
 		a {
-			margin: 1.6em auto;
+			margin: 1em auto;
 			display: block;
 			img {
 				width: 265px;
@@ -35,21 +36,34 @@ h1.logo {
 		width: 100%;
 		margin: 0;
 	}
+
+		.nav-toggle{
+		margin-top: 42px;
+
+
+	}	
 }
 
-@media (min-width: 462px) and (max-width: 926px) {
+@media (min-width: 481px) and (max-width: 767px) {
 	h1.logo {
-		display: block;
-		float: left;
-		margin: 0;
-		text-align: left;
-		a img {
-			width: 350px;
-		}
-	}
-	.nav-toggle {
+			display: block;
+			float: left;
+			margin: 0;
+			text-align: left;
+				a {
+					margin: 40px auto;
+					display: block;
+					img {
+						width: 325px;
+						}
+					}
+			}
+
+	.nav-toggle{
 		margin-top: 40px;
-	}
+
+
+	}		
 }
 
 
@@ -102,6 +116,7 @@ aside ul {
 
 #jstwitter {
 	position: relative;
+	 margin-bottom: 40px;
 	font-style: italic;
 	.item {
 		border-bottom: 1px solid #ccc;
@@ -133,11 +148,22 @@ aside ul {
 	}
 }
 
+
+#instafeed img{ width:100%;}
 .time a, .user a{
 	color: #999;
 
 }
 
+
+.socialtitle {
+    display: block;
+    float: left;
+}
+.followbutton {
+    float: right;
+    margin-top: 5px;
+}
 .container.section {
 	margin: 60px auto;
 }
