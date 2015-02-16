@@ -18,6 +18,10 @@ get_header();
 
     #obtener post type del post
     $post_type = get_post_type( $post->ID );
+    #Current post id
+    $post_id = $post->ID;
+    $star_slide = 0;
+    $count_photos = 0;
 ?>
  <div class="container section">
 <div class="row">
@@ -33,11 +37,17 @@ get_header();
 				$photo = get_field('foto_grande_galeria');
 				$thumb = get_field('foto_pequena_galeria');
 				$thumbs[] = ( !empty( $thumb ) ) ? $thumb : $photo['sizes']['galeria-small'];
+
+                #Indice foto
+                if ($post->ID === $post_id) {
+                    $star_slide = $count_photos;
+                }
+                $count_photos++;
 			?>
             <div class="sp-slide">
                 <img class="sp-image" src="" data-src="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-small="<?php echo $photo['sizes']['galeria-small'] ?>" data-medium="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-large="<?php echo $photo['sizes']['galeria-large'] ?>" data-retina="<?php echo $photo['sizes']['galeria-large'] ?>" />
             </div>
-   			<?php endwhile; wp_reset_query(); ?>
+   			<?php $i++; endwhile; wp_reset_query(); ?>
 
    		</div>
 
@@ -60,7 +70,6 @@ get_header();
             </div>
         </div>
     </div>
-
 	<script type="text/javascript">
     $(document).ready(function($) {
         $('#slider').sliderPro({
@@ -78,6 +87,7 @@ get_header();
             autoplay: false,
             //autoHeight:true,
             imageScaleMode:'contain',
+            startSlide: <?php echo $star_slide; ?>,
             //centerImage:false,
         });
     });
