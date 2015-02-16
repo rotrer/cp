@@ -53,6 +53,7 @@
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/libs/fancybox/jquery.fancybox.pack.js"></script>
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/sliderpro-min.js"></script>
     <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/instafeed.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/responsive-nav.min.js"></script>
 
     <!-- Adaptative images
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -63,11 +64,12 @@
     <script type="text/javascript">
     $(document).ready(function($) {
         $('#slider').sliderPro({
-            width: '490px',
-            height: 500,
+            width: '500px',
+            height: '500px',
             aspectRatio: 1,
             visibleSize: '100%',
-            forceSize: 'fullWidth'
+            //forceSize: 'fullWidth'
+            slideDistance :0,   
         });
 
         // instantiate fancybox when a link is clicked
@@ -109,6 +111,8 @@
     // feed.run();
     </script>
     <?php wp_head(); ?>
+
+    
 </head>
 
 <body <?php body_class(); ?>>

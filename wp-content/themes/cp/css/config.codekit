@@ -123,15 +123,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/slider-pro.min.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/slider-pro.min.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/style-min.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -742,7 +733,7 @@
 	"lessCreateSourceMap": 0,
 	"lessDisableJavascript": 0,
 	"lessIeCompatibility": 1,
-	"lessOutputStyle": 2,
+	"lessOutputStyle": 0,
 	"lessRelativeURLS": 0,
 	"lessStrictImports": 0,
 	"lessStrictMath": 0,
@@ -766,7 +757,7 @@
 	"sassCreateSourceMap": 0,
 	"sassDebugStyle": 0,
 	"sassDecimalPrecision": 10,
-	"sassOutputStyle": 3,
+	"sassOutputStyle": 0,
 	"sassUseLibsass": 0,
 	"shouldRunAutoprefixer": 0,
 	"shouldRunBless": 0,
@@ -827,7 +818,7 @@
 			"flagValue": -1
 			},
 		"comments": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"comparisons": {
