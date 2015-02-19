@@ -29,12 +29,13 @@
 
 					<span>Compartir:</span> 
 
+					<ul class="socialshare">
+						<li class="facebook"><a href="">Facebook</a></li>
+						<li class="twitter"><a href="">twitter</a></li>
+						<li class="google"><a href="">googple plus</a></li>
+					</ul>
 					<!--
-
 					esto no lo utilizaremos
-
-
-
 					<span class="u-pull-right"><a href="<?php the_permalink(); ?>">Comentarios <?php echo get_comments_number() ?></a></span>-->
 				</div>
 
