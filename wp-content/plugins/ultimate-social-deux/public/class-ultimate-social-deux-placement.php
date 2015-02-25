@@ -51,8 +51,6 @@ class UltimateSocialDeuxPlacement {
 	 */
 	private function __construct() {
 
-		add_action( 'init', array( $this, 'load_textdomain' ) );
-
 		add_filter( 'the_content', array( $this, 'buttons_pages_top'), 15 );
 
 		add_filter( 'the_content', array( $this, 'buttons_pages_bottom'), 15 );
@@ -212,20 +210,6 @@ class UltimateSocialDeuxPlacement {
 		}
 
 		return self::$instance;
-	}
-
-	/**
-	 * Load the plugin text domain for translation.
-	 *
-	 * @since	1.0.0
-	 */
-	public function load_textdomain() {
-
-		$domain = $this->plugin_slug;
-		$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
-
-		load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' );
-
 	}
 
 	/**
@@ -1144,7 +1128,7 @@ class UltimateSocialDeuxPlacement {
 
 		$custom_content = '';
 
-		if( !in_array($post->ID, $exclude, false) && in_array(get_post_type( $post->ID ), $cpt, false) && ( $networks ) ) {
+		if( !in_array($post->ID, $exclude, false) && in_array(get_post_type( $post->ID ), $cpt, false) && is_array($networks) && !empty($networks) ) {
 
 			$custom_content .= sprintf('<div class="us_cpt_top" style="margin-top:%spx;margin-bottom:%spx;">', $margin_top, $margin_bottom);
 
@@ -1207,7 +1191,7 @@ class UltimateSocialDeuxPlacement {
 
 		$custom_content = '';
 
-		if( !in_array($post->ID, $exclude, false) && in_array(get_post_type( $post->ID ), $cpt, false) && ( $networks ) ) {
+		if( !in_array($post->ID, $exclude, false) && in_array(get_post_type( $post->ID ), $cpt, false) && is_array($networks) && !empty($networks) ) {
 
 			$custom_content .= $content;
 
@@ -1240,9 +1224,9 @@ class UltimateSocialDeuxPlacement {
 
 		$sharetext = UltimateSocialDeux::opt('us_buddypress_group_share_text');
 
-		$count = ( in_array('hide_count', $options ) ) ? false : true;
+		$count = ( !is_string($options) && in_array('hide_count', $options ) ) ? false : true;
 
-		$native = ( in_array('native', $options ) ) ? true : false;
+		$native = ( !is_string($options) && in_array('native', $options ) ) ? true : false;
 
 		$url = '';
 
@@ -1256,7 +1240,7 @@ class UltimateSocialDeuxPlacement {
 
 		$custom_content = '';
 
-		if( $networks ) {
+		if( is_array($networks) && !empty($networks) ) {
 
 			$custom_content .= sprintf('<div class="us_buddypress_group" style="margin-top:%spx;margin-bottom:%spx;">', $margin_top, $margin_bottom);
 
@@ -1299,7 +1283,7 @@ class UltimateSocialDeuxPlacement {
 
 		$custom_content = '';
 
-		if( $networks ) {
+		if( is_array($networks) && !empty($networks) ) {
 
 			$custom_content .= sprintf('<div class="us_buddypress_activity" style="margin-top:%spx;margin-bottom:%spx;">', $margin_top, $margin_bottom);
 
@@ -1342,7 +1326,7 @@ class UltimateSocialDeuxPlacement {
 
 		$custom_content = '';
 
-		if( $networks ) {
+		if( is_array($networks) && !empty($networks) ) {
 
 			$custom_content .= sprintf('<div class="us_bbpress_before_replies" style="margin-top:%spx;margin-bottom:%spx;">', $margin_top, $margin_bottom);
 
@@ -1385,7 +1369,7 @@ class UltimateSocialDeuxPlacement {
 
 		$custom_content = '';
 
-		if( $networks ) {
+		if( is_array($networks) && !empty($networks) ) {
 
 			$custom_content .= sprintf('<div class="us_bbpress_after_replies" style="margin-top:%spx;margin-bottom:%spx;">', $margin_top, $margin_bottom);
 
@@ -1428,7 +1412,7 @@ class UltimateSocialDeuxPlacement {
 
 		$custom_content = '';
 
-		if( $networks ) {
+		if( is_array($networks) && !empty($networks) ) {
 
 			$custom_content .= sprintf('<div class="us_bbpress_before_topics" style="margin-top:%spx;margin-bottom:%spx;">', $margin_top, $margin_bottom);
 
@@ -1471,7 +1455,7 @@ class UltimateSocialDeuxPlacement {
 
 		$custom_content = '';
 
-		if( $networks ) {
+		if( is_array($networks) && !empty($networks) ) {
 
 			$custom_content .= sprintf('<div class="us_bbpress_after_topics" style="margin-top:%spx;margin-bottom:%spx;">', $margin_top, $margin_bottom);
 

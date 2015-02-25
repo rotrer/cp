@@ -4,20 +4,25 @@
 
 		<div class="container  ">
 			<div class="row">
-				<ul class="socialbuttons">
-					<li class="facebook" target="_blank"><a href="" >Facebook</a></li>
-					<li class="twitter"><a href="" target="_blank">twitter</a></li>
-					<li class="google"><a href="" target="_blank">googple plus</a></li>
-				</ul>
+
 			</div>
 		</div>
 		<!-- Footer -->
 		<div class="footer">
 			<div class="container  ">
 				<div class="row">
-					<div class="twelve columns">
+					<div class="six columns">
 						<p>Carolina Parsons © Todos los derechos reservados 2015 </p>
 					</div>	
+					<div class="six columns">
+					<ul class="socialbuttons">
+						<li class="facebook"><a href="https://www.facebook.com/CarolinaParsonsOficial" target="_blank">Facebook</a></li>
+						<li class="twitter"><a href="https://twitter.com/caroparsons" target="_blank">twitter</a></li>
+						<li class="google"><a href="" target="_blank">googple plus</a></li>
+						<li class="instan"><a href="https://instagram.com/carolinaparsons/" target="_blank">googple plus</a></li>
+					</ul>
+				</div>
+
 				</div>
 			</div>
 		</div>

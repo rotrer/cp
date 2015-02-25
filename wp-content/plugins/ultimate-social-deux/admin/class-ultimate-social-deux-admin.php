@@ -42,8 +42,6 @@ class UltimateSocialDeuxAdmin {
 
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 
-		add_action( 'tf_admin_page_before', array( $this, 'header' ) );
-
 		add_action( 'tf_create_options', array( $this, 'options' ) );
 
 	}
@@ -67,6 +65,8 @@ class UltimateSocialDeuxAdmin {
         	delete_option('us_fan_count');
         	delete_option('us_license');
         	delete_option('us_advanced');
+
+        	add_action( 'tf_admin_page_before', array( $this, 'header' ) );
 	    }
 
 	}
@@ -74,6 +74,8 @@ class UltimateSocialDeuxAdmin {
 	public function options() {
 
 		$titan = TitanFramework::getInstance( 'ultimate-social-deux' );
+
+		require_once( plugin_dir_path( __FILE__ ) . 'includes/class-option-us-license.php' );
 
 		// Create an admin page with a menu
 		$panel = $titan->createAdminPanel( array(
@@ -1728,7 +1730,7 @@ class UltimateSocialDeuxAdmin {
 			$eddTab->createOption( array(
 				'id' => 'us_edd_top_exclude',
 				'name' => __( 'Exclude', 'ultimate-social-deux' ),
-				'desc' => __( 'Exclude Buttons on top of BuddyPress products with these IDs? Comma seperated:', 'ultimate-social-deux' ) . ' "42, 12, 4"',
+				'desc' => __( 'Exclude Buttons on top of Easy Digital Downloads products with these IDs? Comma seperated:', 'ultimate-social-deux' ) . ' "42, 12, 4"',
 				'type' => 'text',
 				'default' => UltimateSocialDeux::opt_old('us_edd_top_exclude', 'us_placement' ),
 			) );
@@ -1802,7 +1804,7 @@ class UltimateSocialDeuxAdmin {
 			$eddTab->createOption( array(
 				'id' => 'us_edd_bottom_exclude',
 				'name' => __( 'Exclude', 'ultimate-social-deux' ),
-				'desc' => __( 'Exclude Buttons on bottom of BuddyPress products with these IDs? Comma seperated:', 'ultimate-social-deux' ) . ' "42, 12, 4"',
+				'desc' => __( 'Exclude Buttons on bottom of Easy Digital Downloads products with these IDs? Comma seperated:', 'ultimate-social-deux' ) . ' "42, 12, 4"',
 				'type' => 'text',
 				'default' => UltimateSocialDeux::opt_old('us_edd_bottom_exclude', 'us_placement' ),
 			) );
@@ -1884,7 +1886,7 @@ class UltimateSocialDeuxAdmin {
 			$bbpressTab->createOption( array(
 				'id' => 'us_bbpress_before_topics_exclude',
 				'name' => __( 'Exclude', 'ultimate-social-deux' ),
-				'desc' => __( 'Exclude Buttons on top of BuddyPress products with these IDs? Comma seperated:', 'ultimate-social-deux' ) . ' "42, 12, 4"',
+				'desc' => __( 'Exclude Buttons on top of bbPress products with these IDs? Comma seperated:', 'ultimate-social-deux' ) . ' "42, 12, 4"',
 				'type' => 'text',
 			) );
 			$bbpressTab->createOption( array(
@@ -1954,7 +1956,7 @@ class UltimateSocialDeuxAdmin {
 			$bbpressTab->createOption( array(
 				'id' => 'us_bbpress_after_topics_exclude',
 				'name' => __( 'Exclude', 'ultimate-social-deux' ),
-				'desc' => __( 'Exclude Buttons on top of BuddyPress products with these IDs? Comma seperated:', 'ultimate-social-deux' ) . ' "42, 12, 4"',
+				'desc' => __( 'Exclude Buttons on top of bbPress products with these IDs? Comma seperated:', 'ultimate-social-deux' ) . ' "42, 12, 4"',
 				'type' => 'text',
 			) );
 			$bbpressTab->createOption( array(
@@ -2024,7 +2026,7 @@ class UltimateSocialDeuxAdmin {
 			$bbpressTab->createOption( array(
 				'id' => 'us_bbpress_before_replies_exclude',
 				'name' => __( 'Exclude', 'ultimate-social-deux' ),
-				'desc' => __( 'Exclude Buttons on top of BuddyPress products with these IDs? Comma seperated:', 'ultimate-social-deux' ) . ' "42, 12, 4"',
+				'desc' => __( 'Exclude Buttons on top of bbPress products with these IDs? Comma seperated:', 'ultimate-social-deux' ) . ' "42, 12, 4"',
 				'type' => 'text',
 			) );
 			$bbpressTab->createOption( array(
@@ -2094,7 +2096,7 @@ class UltimateSocialDeuxAdmin {
 			$bbpressTab->createOption( array(
 				'id' => 'us_bbpress_after_replies_exclude',
 				'name' => __( 'Exclude', 'ultimate-social-deux' ),
-				'desc' => __( 'Exclude Buttons on top of BuddyPress products with these IDs? Comma seperated:', 'ultimate-social-deux' ) . ' "42, 12, 4"',
+				'desc' => __( 'Exclude Buttons on top of bbPress products with these IDs? Comma seperated:', 'ultimate-social-deux' ) . ' "42, 12, 4"',
 				'type' => 'text',
 			) );
 			$bbpressTab->createOption( array(
@@ -2504,14 +2506,14 @@ class UltimateSocialDeuxAdmin {
 		) );
 		$panelFanCount->createOption( array(
 			'id' => 'us_linkedin_app',
-			'name' => __( 'LinkedIn', 'ultimate-social-deux' ). ' ' .__( 'App Secret', 'ultimate-social-deux' ),
+			'name' => __( 'LinkedIn', 'ultimate-social-deux' ). ' ' .__( 'API key', 'ultimate-social-deux' ),
 			'type' => 'text',
 			'desc' => __( 'Register your App at', 'ultimate-social-deux' ) . ' ' . 'https://www.linkedin.com/secure/developer',
 			'default' => UltimateSocialDeux::opt_old('us_linkedin_app', 'us_fan_count' ),
 		) );
 		$panelFanCount->createOption( array(
 			'id' => 'us_linkedin_api',
-			'name' => __( 'LinkedIn', 'ultimate-social-deux' ). ' ' .__( 'API key', 'ultimate-social-deux' ),
+			'name' => __( 'LinkedIn', 'ultimate-social-deux' ). ' ' .__( 'App Secret', 'ultimate-social-deux' ),
 			'type' => 'text',
 			'default' => UltimateSocialDeux::opt_old('us_linkedin_api', 'us_fan_count' ),
 

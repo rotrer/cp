@@ -27,7 +27,26 @@
 			?></title>
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="keywords" content="" >
+		<meta name="description" content="">
+		<!--FACEBOOK-->
+		<meta property="og:title" content="" >
+		<meta property="og:site_name" content="">
+		<meta property="og:url" content="" >
+		<meta property="og:description" content="" >
+		<meta property="og:image" content="" >
+		<meta property="og:type" content="website" >
+		<meta property="og:locale" content="" >
+		<!--TWITTER-->
+		<meta property="twitter:card" content="summary" >
+		<meta property="twitter:title" content="" >
+		<meta property="twitter:description" content="" >
+		<meta property="twitter:creator" content="@" >
+		<meta property="twitter:url" content="" >
+		<meta property="twitter:image" content="" >
+		<!--GOOGLE+-->
+		<link rel="author" href="">
 		<?php wp_head(); ?>
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 		<!-- Mobile Specific Metas -->
@@ -40,11 +59,13 @@
 
 		<!-- JS -->
 		<!--<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/libs/jquery-1.11.0.min.js"></script>-->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/libs/fancybox/jquery.fancybox.pack.js"></script>
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/sliderpro-min.js"></script>
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/responsive-nav.min.js"></script>
-
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social.js"></script>
+				<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social2.js"></script>
+								<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social3.js"></script>
 		<!-- Adaptative images -->
 		<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
 			<?php if ( is_home() ) { ?>

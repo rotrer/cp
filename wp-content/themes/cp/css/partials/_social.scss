@@ -1,0 +1,486 @@
+.us_sticky .us_wrapper {
+  background-color: #ffffff;
+}
+
+.us_floating .us_wrapper .us_button {
+  width: 45px;
+  -webkit-transition: width 1000ms ease-in-out, background-color 400ms ease-out;
+  -moz-transition: width 1000ms ease-in-out, background-color 400ms ease-out;
+  -o-transition: width 1000ms ease-in-out, background-color 400ms ease-out;
+  transition: width 1000ms ease-in-out, background-color 400ms ease-out;
+  &:hover {
+    width: 90px;
+    -webkit-transition: width 1000ms ease-in-out, background-color 400ms ease-out;
+    -moz-transition: width 1000ms ease-in-out, background-color 400ms ease-out;
+    -o-transition: width 1000ms ease-in-out, background-color 400ms ease-out;
+    transition: width 1000ms ease-in-out, background-color 400ms ease-out;
+  }
+}
+
+.us_fan_count_button {
+  -moz-border-radius-topleft: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+}
+
+.us_skin_default {
+  .us_button {
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+  }
+  div[class*='us_facebook'] {
+    background-color: #000000;
+  }
+}
+
+.us_skin_modern div[class*='us_facebook'], .us_skin_default div[class*='us_twitter'], .us_skin_modern div[class*='us_twitter'], .us_skin_default div[class*='us_google'], .us_skin_modern div[class*='us_google'], .us_skin_default div[class*='us_delicious'], .us_skin_modern div[class*='us_delicious'] {
+  background-color: #000000;
+}
+
+.us_skin_default div[class*='us_stumble'], .us_skin_modern div[class*='us_stumble'] {
+  background-color: #E94B24;
+}
+
+.us_skin_default div[class*='us_linkedin'], .us_skin_modern div[class*='us_linkedin'], .us_skin_default div[class*='us_pinterest'], .us_skin_modern div[class*='us_pinterest'], .us_skin_default div[class*='us_buffer'], .us_skin_modern div[class*='us_buffer'] {
+  background-color: #000000;
+}
+
+.us_skin_default div[class*='us_reddit'], .us_skin_modern div[class*='us_reddit'] {
+  background-color: #CEE3F8;
+}
+
+.us_skin_default div[class*='us_vkontakte'], .us_skin_modern div[class*='us_vkontakte'] {
+  background-color: #537599;
+}
+
+.us_skin_default .us_mail, .us_skin_modern .us_mail {
+  background-color: #666666;
+}
+
+.us_skin_default div[class*='us_love'], .us_skin_modern div[class*='us_love'] {
+  background-color: #FF0000;
+}
+
+.us_skin_default div[class*='us_pocket'], .us_skin_modern div[class*='us_pocket'] {
+  background-color: #ee4056;
+}
+
+.us_skin_default div[class*='us_tumblr'], .us_skin_modern div[class*='us_tumblr'] {
+  background-color: #529ecc;
+}
+
+.us_skin_default div[class*='us_print'], .us_skin_modern div[class*='us_print'] {
+  background-color: #60d0d4;
+}
+
+.us_skin_default div[class*='us_flipboard'], .us_skin_modern div[class*='us_flipboard'] {
+  background-color: #c10000;
+}
+
+.us_skin_default div[class*='us_comments'], .us_skin_modern div[class*='us_comments'] {
+  background-color: #b69823;
+}
+
+.us_skin_default div[class*='us_feedly'], .us_skin_modern div[class*='us_feedly'] {
+  background-color: #414141;
+}
+
+.us_skin_default div[class*='us_youtube'], .us_skin_modern div[class*='us_youtube'] {
+  background-color: #cc181e;
+}
+
+.us_skin_default div[class*='us_vimeo'], .us_skin_modern div[class*='us_vimeo'] {
+  background-color: #1bb6ec;
+}
+
+.us_skin_default div[class*='us_behance'], .us_skin_modern div[class*='us_behance'] {
+  background-color: #1769ff;
+}
+
+.us_skin_default div[class*='us_ok'], .us_skin_modern div[class*='us_ok'] {
+  background-color: #f2720c;
+}
+
+.us_skin_default div[class*='us_weibo'], .us_skin_modern div[class*='us_weibo'] {
+  background-color: #e64141;
+}
+
+.us_skin_default div[class*='us_managewp'], .us_skin_modern div[class*='us_managewp'] {
+  background-color: #098ae0;
+}
+
+.us_skin_default div[class*='us_xing'], .us_skin_modern div[class*='us_xing'] {
+  background-color: #026466;
+}
+
+.us_skin_default div[class*='us_whatsapp'], .us_skin_modern div[class*='us_whatsapp'] {
+  background-color: #34af23;
+}
+
+.us_skin_default div[class*='us_meneame'], .us_skin_modern div[class*='us_meneame'] {
+  background-color: #ff6400;
+}
+
+.us_skin_default div[class*='us_digg'], .us_skin_modern div[class*='us_digg'] {
+  background-color: #000000;
+}
+
+.us_skin_default div[class*='us_dribbble'], .us_skin_modern div[class*='us_dribbble'] {
+  background-color: #f72b7f;
+}
+
+.us_skin_default div[class*='us_envato'], .us_skin_modern div[class*='us_envato'] {
+  background-color: #82b540;
+}
+
+.us_skin_default div[class*='us_github'], .us_skin_modern div[class*='us_github'] {
+  background-color: #201e1f;
+}
+
+.us_skin_default div[class*='us_soundcloud'], .us_skin_modern div[class*='us_soundcloud'] {
+  background-color: #ff6f00;
+}
+
+.us_skin_default div[class*='us_instagram'], .us_skin_modern div[class*='us_instagram'] {
+  background-color: #48769c;
+}
+
+.us_skin_default div[class*='us_feedpress'], .us_skin_modern div[class*='us_feedpress'] {
+  background-color: #ffafaf;
+}
+
+.us_skin_default div[class*='us_mailchimp'], .us_skin_modern div[class*='us_mailchimp'] {
+  background-color: #6dc5dc;
+}
+
+.us_skin_default div[class*='us_flickr'], .us_skin_modern div[class*='us_flickr'] {
+  background-color: #0062dd;
+}
+
+.us_skin_default div[class*='us_members'], .us_skin_modern div[class*='us_members'] {
+  background-color: #0ab071;
+}
+
+.us_skin_default div[class*='us_more'], .us_skin_modern div[class*='us_more'] {
+  background-color: #53B27C;
+}
+
+.us_skin_default .us_posts_fan_count, .us_skin_modern .us_posts_fan_count {
+  background-color: #924e2a;
+}
+
+.us_skin_default .us_button:hover {
+  background-color: #000000;
+}
+
+.us_skin_modern {
+  .us_fan_count_button:hover, .us_button:hover, .us_fan_count_button:hover {
+    background-color: #000000;
+  }
+}
+
+.us_skin_simple div[class*='us_facebook'] a, .us_skin_minimal div[class*='us_facebook'] a, .us_skin_simple div[class*='us_twitter'] a, .us_skin_minimal div[class*='us_twitter'] a, .us_skin_simple div[class*='us_google'] a, .us_skin_minimal div[class*='us_google'] a, .us_skin_simple div[class*='us_delicious'] a, .us_skin_minimal div[class*='us_delicious'] a {
+  color: #000000;
+}
+
+.us_skin_simple div[class*='us_stumble'] a, .us_skin_minimal div[class*='us_stumble'] a {
+  color: #E94B24;
+}
+
+.us_skin_simple div[class*='us_linkedin'] a, .us_skin_minimal div[class*='us_linkedin'] a, .us_skin_simple div[class*='us_pinterest'] a, .us_skin_minimal div[class*='us_pinterest'] a, .us_skin_simple div[class*='us_buffer'] a, .us_skin_minimal div[class*='us_buffer'] a {
+  color: #000000;
+}
+
+.us_skin_simple div[class*='us_reddit'] a, .us_skin_minimal div[class*='us_reddit'] a {
+  color: #CEE3F8;
+}
+
+.us_skin_simple div[class*='us_vkontakte'] a, .us_skin_minimal div[class*='us_vkontakte'] a {
+  color: #537599;
+}
+
+.us_skin_simple .us_mail a, .us_skin_minimal .us_mail a {
+  color: #666666;
+}
+
+.us_skin_simple div[class*='us_love'] a, .us_skin_minimal div[class*='us_love'] a {
+  color: #FF0000;
+}
+
+.us_skin_simple div[class*='us_pocket'] a, .us_skin_minimal div[class*='us_pocket'] a {
+  color: #ee4056;
+}
+
+.us_skin_simple div[class*='us_tumblr'] a, .us_skin_minimal div[class*='us_tumblr'] a {
+  color: #529ecc;
+}
+
+.us_skin_simple div[class*='us_print'] a, .us_skin_minimal div[class*='us_print'] a {
+  color: #60d0d4;
+}
+
+.us_skin_simple div[class*='us_flipboard'] a, .us_skin_minimal div[class*='us_flipboard'] a {
+  color: #c10000;
+}
+
+.us_skin_simple div[class*='us_comments'] *, .us_skin_minimal div[class*='us_comments'] * {
+  color: #b69823;
+}
+
+.us_skin_simple div[class*='us_feedly'] a, .us_skin_minimal div[class*='us_feedly'] a {
+  color: #414141;
+}
+
+.us_skin_simple div[class*='us_youtube'] a, .us_skin_minimal div[class*='us_youtube'] a {
+  color: #cc181e;
+}
+
+.us_skin_simple div[class*='us_vimeo'] a, .us_skin_minimal div[class*='us_vimeo'] a {
+  color: #1bb6ec;
+}
+
+.us_skin_simple div[class*='us_behance'] a, .us_skin_minimal div[class*='us_behance'] a {
+  color: #1769ff;
+}
+
+.us_skin_simple div[class*='us_ok'] a, .us_skin_minimal div[class*='us_ok'] a {
+  color: #f2720c;
+}
+
+.us_skin_simple div[class*='us_weibo'] a, .us_skin_minimal div[class*='us_weibo'] a {
+  color: #e64141;
+}
+
+.us_skin_simple div[class*='us_managewp'] a, .us_skin_minimal div[class*='us_managewp'] a {
+  color: #098ae0;
+}
+
+.us_skin_simple div[class*='us_xing'] a, .us_skin_minimal div[class*='us_xing'] a {
+  color: #026466;
+}
+
+.us_skin_simple div[class*='us_whatsapp'] a, .us_skin_minimal div[class*='us_whatsapp'] a {
+  color: #34af23;
+}
+
+.us_skin_simple div[class*='us_meneame'] a, .us_skin_minimal div[class*='us_meneame'] a {
+  color: #ff6400;
+}
+
+.us_skin_simple div[class*='us_digg'] a, .us_skin_minimal div[class*='us_digg'] a {
+  color: #000000;
+}
+
+.us_skin_simple div[class*='us_dribbble'] a, .us_skin_minimal div[class*='us_dribbble'] a {
+  color: #f72b7f;
+}
+
+.us_skin_simple div[class*='us_envato'] a, .us_skin_minimal div[class*='us_envato'] a {
+  color: #82b540;
+}
+
+.us_skin_simple div[class*='us_github'] a, .us_skin_minimal div[class*='us_github'] a {
+  color: #201e1f;
+}
+
+.us_skin_simple div[class*='us_soundcloud'] a, .us_skin_minimal div[class*='us_soundcloud'] a {
+  color: #ff6f00;
+}
+
+.us_skin_simple div[class*='us_instagram'] a, .us_skin_minimal div[class*='us_instagram'] a {
+  color: #48769c;
+}
+
+.us_skin_simple div[class*='us_feedpress'], .us_skin_minimal div[class*='us_feedpress'] a {
+  color: #ffafaf;
+}
+
+.us_skin_simple div[class*='us_mailchimp'], .us_skin_minimal div[class*='us_mailchimp'] {
+  color: #6dc5dc;
+}
+
+.us_skin_simple div[class*='us_flickr'] a, .us_skin_minimal div[class*='us_flickr'] a {
+  color: #0062dd;
+}
+
+.us_skin_simple div[class*='us_members'], .us_skin_minimal div[class*='us_members'] {
+  color: #0ab071;
+}
+
+.us_skin_simple div[class*='us_more'] a, .us_skin_minimal div[class*='us_more'] a {
+  color: #53B27C;
+}
+
+.us_skin_simple .us_posts_fan_count, .us_skin_minimal .us_posts_fan_count {
+  color: #924e2a;
+}
+
+.us_skin_simple .us_button:hover a, .us_skin_minimal .us_button:hover a {
+  color: #000000;
+}
+
+.us_skin_round {
+  div {
+    &[class*='us_facebook'] {
+      .us_share, &.us_fan_count {
+        background-color: #000000;
+      }
+    }
+    &[class*='us_twitter'] {
+      .us_share, &.us_fan_count {
+        background-color: #000000;
+      }
+    }
+    &[class*='us_google'] {
+      .us_share, &.us_fan_count {
+        background-color: #000000;
+      }
+    }
+    &[class*='us_delicious'] {
+      .us_share, &.us_fan_count {
+        background-color: #000000;
+      }
+    }
+    &[class*='us_stumble'] .us_share {
+      background-color: #E94B24;
+    }
+    &[class*='us_linkedin'] {
+      .us_share, &.us_fan_count {
+        background-color: #000000;
+      }
+    }
+    &[class*='us_pinterest'] {
+      .us_share, &.us_fan_count {
+        background-color: #000000;
+      }
+    }
+    &[class*='us_buffer'] .us_share {
+      background-color: #000000;
+    }
+    &[class*='us_reddit'] .us_share {
+      background-color: #CEE3F8;
+    }
+    &[class*='us_vkontakte'] {
+      .us_share, &.us_fan_count {
+        background-color: #537599;
+      }
+    }
+  }
+  .us_mail .us_share {
+    background-color: #666666;
+  }
+  div {
+    &[class*='us_love'] {
+      .us_share, &.us_fan_count {
+        background-color: #FF0000;
+      }
+    }
+    &[class*='us_pocket'] .us_share {
+      background-color: #ee4056;
+    }
+    &[class*='us_tumblr'] .us_share {
+      background-color: #529ecc;
+    }
+    &[class*='us_print'] .us_share {
+      background-color: #60d0d4;
+    }
+    &[class*='us_flipboard'] .us_share {
+      background-color: #c10000;
+    }
+    &[class*='us_more'] .us_share {
+      background-color: #53B27C;
+    }
+    &[class*='us_comments'] {
+      .us_share, &.us_fan_count {
+        background-color: #b69823;
+      }
+    }
+    &[class*='us_feedly'] .us_share {
+      background-color: #414141;
+    }
+    &[class*='us_youtube'].us_fan_count {
+      background-color: #cc181e;
+    }
+    &[class*='us_vimeo'].us_fan_count {
+      background-color: #1bb6ec;
+    }
+    &[class*='us_behance'].us_fan_count {
+      background-color: #1769ff;
+    }
+    &[class*='us_ok'] .us_share {
+      background-color: #f2720c;
+    }
+    &[class*='us_weibo'] .us_share {
+      background-color: #e64141;
+    }
+    &[class*='us_managewp'] .us_share {
+      background-color: #098ae0;
+    }
+    &[class*='us_xing'] .us_share {
+      background-color: #026466;
+    }
+    &[class*='us_whatsapp'].us_fan_count {
+      background-color: #34af23;
+    }
+    &[class*='us_meneame'].us_fan_count {
+      background-color: #ff6400;
+    }
+    &[class*='us_digg'].us_fan_count {
+      background-color: #000000;
+    }
+    &[class*='us_dribbble'].us_fan_count {
+      background-color: #f72b7f;
+    }
+    &[class*='us_envato'].us_fan_count {
+      background-color: #82b540;
+    }
+    &[class*='us_github'].us_fan_count {
+      background-color: #201e1f;
+    }
+    &[class*='us_soundcloud'].us_fan_count {
+      background-color: #ff6f00;
+    }
+    &[class*='us_instagram'].us_fan_count {
+      background-color: #48769c;
+    }
+    &[class*='us_feedpress'].us_fan_count {
+      background-color: #ffafaf;
+    }
+    &[class*='us_mailchimp'].us_fan_count {
+      background-color: #6dc5dc;
+    }
+    &[class*='us_flickr'].us_fan_count {
+      background-color: #0062dd;
+    }
+    &[class*='us_members'].us_fan_count {
+      background-color: #0ab071;
+    }
+  }
+  .us_posts_fan_count.us_fan_count {
+    background-color: #924e2a;
+  }
+  .us_button {
+    &:hover .us_share, &.us_fan_count:hover {
+      background-color: #000000;
+    }
+  }
+}

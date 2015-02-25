@@ -53,7 +53,6 @@ require_once( TF_PATH . 'class-option-sortable.php' );
 require_once( TF_PATH . 'class-option-text.php' );
 require_once( TF_PATH . 'class-option-textarea.php' );
 require_once( TF_PATH . 'class-option-upload.php' );
-require_once( TF_PATH . 'class-option-us-license.php' );
 require_once( TF_PATH . 'class-theme-customizer-section.php' );
 require_once( TF_PATH . 'class-titan-css.php' );
 require_once( TF_PATH . 'class-titan-framework.php' );

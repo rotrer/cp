@@ -229,7 +229,7 @@
 			PopupCenter('http://service.weibo.com/share/share.php?url='+encodeURIComponent((opt.buttons.weibo.url !== '' ? opt.buttons.weibo.url : opt.url))+'&title='+encodeURIComponent(opt.text), 'weibo', us_script.weibo_width, us_script.weibo_height );
 		},
 		xing: function(opt){
-			PopupCenter('https://www.xing.com/social_plugins/share?h=1&url='+encodeURIComponent((opt.buttons.xing.url !== '' ? opt.buttons.xing.url : opt.url))+'&title='+encodeURIComponent(opt.text), 'xing', us_script.xing_width, us_script.xing_height );
+			PopupCenter('https://www.xing.com/social_plugins/share?h=1;url='+encodeURIComponent((opt.buttons.xing.url !== '' ? opt.buttons.xing.url : opt.url))+'&title='+encodeURIComponent(opt.text), 'xing', us_script.xing_width, us_script.xing_height );
 		},
 		managewp: function(opt){
 			PopupCenter('http://managewp.org/share/form?url='+encodeURIComponent((opt.buttons.managewp.url !== '' ? opt.buttons.managewp.url : opt.url))+'&title='+encodeURIComponent(opt.text), 'managewp', us_script.managewp_width, us_script.managewp_height );
@@ -444,7 +444,6 @@
 				managewp: {site: 'ManageWP', action: 'share'},
 				whatsapp: {site: 'WhatsApp', action: 'share'},
 				meneame: {site: 'Meneame', action: 'share'},
-				flipboard: {site: 'Flipboard', action: 'share'},
 				digg: {site: 'Digg', action: 'share'}
 			}
 	    	ga('send', 'social', tracking[site].site, tracking[site].action);

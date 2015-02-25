@@ -23,28 +23,17 @@
 					</div>
 				
 				<div class ="eleven columns u-pull-right readmore-social">
-
-
-						<?php echo do_shortcode('[ultimatesocial networks="total,facebook,twitter,google,mail"]'); ?>
-
-
-
-				<!-- Aca va el plugin social tiene un atado con el popup
-				
-
-					<span>Compartir:</span>
-
-					<ul class="socialbuttons">
-						<li class="facebook"><a href="">Facebook</a></li>
-						<li class="twitter"><a href="">twitter</a></li>
-						<li class="google"><a href="">googple plus</a></li>
-					</ul> -->
-					<!--
-					esto no lo utilizaremos
-					<span class="u-pull-right"><a href="<?php the_permalink(); ?>">Comentarios <?php echo get_comments_number() ?></a></span>-->
+					<span>Compartir:</span>	<?php echo do_shortcode('[ultimatesocial networks="facebook,twitter,google,mail"]'); ?>
 				</div>
 
 				</article>
+
+				
+
+
+<!-- ARREGLAR STYLOS -->
+				<div style="display:none;">
+
 				<div class ="eleven columns u-pull-right readmore-social">
 					<div class="pagination">
 					<?php
@@ -52,7 +41,7 @@
 						echo get_next_post_link('%link', 'Publicación Siguiente');
 					?>
 					</div>
-				</div>	
+				</div>
 
 				<div class="eleven columns u-pull-right comments">
 					
@@ -144,6 +133,8 @@
 					<?php endif; ?>
 
 			</div>
+		</div>
+
 		</div>
 		
 		<aside class="four  columns">
