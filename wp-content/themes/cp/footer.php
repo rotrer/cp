@@ -1,3 +1,16 @@
+		<!--  -->
+
+
+
+		<div class="container  ">
+			<div class="row">
+				<ul class="socialbuttons">
+					<li class="facebook" target="_blank"><a href="" >Facebook</a></li>
+					<li class="twitter"><a href="" target="_blank">twitter</a></li>
+					<li class="google"><a href="" target="_blank">googple plus</a></li>
+				</ul>
+			</div>
+		</div>
 		<!-- Footer -->
 		<div class="footer">
 			<div class="container  ">

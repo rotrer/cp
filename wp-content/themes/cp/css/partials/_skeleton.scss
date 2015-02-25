@@ -340,44 +340,15 @@ a {
 }
 
 .button, button, .reply a {
- background-color: transparent;
-    border: 1px solid $alink-color;
-    border-radius: 0;
-    box-sizing: border-box;
-    color: $alink-color;
-    cursor: pointer;
-    display: inline-block;
-    float: right;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    padding: 12px 15px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    white-space: nowrap;
-    width: auto;
 }
 
 #FSContact3 input {
   &[type="submit"], &[type="reset"], &[type="button"] {
- background-color: transparent;
-    border: 1px solid $alink-color;
-    border-radius: 0;
-    box-sizing: border-box;
-    color: $alink-color;
-    cursor: pointer;
-    display: inline-block;
-    float: right;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    padding: 12px 15px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    white-space: nowrap;
-    width: auto;
+    background-color:red;
+
+
+
+
 
   }
 }
@@ -536,22 +507,30 @@ label > .label-body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 ul {
-  list-style: circle inside;
+  font-size: 1.6em;
+  line-height: 200%;
+  list-style: circle disc;
+  padding-left: 30px;
 }
 
 ol {
+  font-size: 1.6em;
+  line-height: 200%;
   list-style: decimal inside;
-  padding-left: 0;
+  padding-left: 30px;
   margin-top: 0;
 }
 
 ul {
-  padding-left: 0;
-  margin-top: 0;
+
   ul, ol {
     margin: 1.5rem 0 1.5rem 3rem;
     font-size: 90%;
   }
+
+ a, p, div { 
+  font-size: 100%;}
+
 }
 
 ol {

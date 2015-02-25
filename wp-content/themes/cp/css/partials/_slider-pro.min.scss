@@ -8,8 +8,6 @@
 .slider-pro, .sp-slides-container {
   position: relative;
 }
-
-.slider-pro{ margin:40px auto;}
 .sp-mask {
   position: relative;
   overflow: hidden;
@@ -446,8 +444,8 @@ top: 22px;
   &:after, &:before {
     content: '';
     position: absolute;
-    width: 50%;
-    height: 50%;
+    width: 13%;
+    height: 100%;
     background-color: #FFF;
   }
 }
@@ -456,18 +454,18 @@ top: 22px;
   &:after {
     content: '';
     position: absolute;
-    width: 50%;
-    height: 50%;
+    width: 13%;
+    height: 100%;
     background-color: #FFF;
   }
   &:before {
     content: '';
     position: absolute;
-    width: 50%;
-    height: 50%;
+    width: 13%;
+    height: 100%;
     background-color: #FFF;
     left: 30%;
-    top: 0;
+    top: -15px;
     -webkit-transform: skew(145deg, 0deg);
     -ms-transform: skew(145deg, 0deg);
     transform: skew(145deg, 0deg);
@@ -484,7 +482,7 @@ top: 22px;
 .sp-next-arrow {
   &:before {
     right: 30%;
-    top: 0;
+    top: -15px;
     -webkit-transform: skew(35deg, 0deg);
     -ms-transform: skew(35deg, 0deg);
     transform: skew(35deg, 0deg);
@@ -601,52 +599,54 @@ top: 22px;
   &:after, &:before {
     content: '';
     position: absolute;
-    width: 50%;
-    height: 50%;
+    width:13%;
+    height: 100%;
     background-color: #FFF;
   }
 }
+
+
 
 .sp-previous-thumbnail-arrow {
   &:after {
     content: '';
     position: absolute;
-    width: 50%;
-    height: 50%;
+    width: 13%;
+    height: 100%;
     background-color: #FFF;
   }
   &:before {
     content: '';
     position: absolute;
-    width: 50%;
-    height: 50%;
+    width: 13%;
+    height: 100%;
     background-color: #FFF;
-    left: 30%;
-    top: 0;
-    -webkit-transform: skew(145deg, 0deg);
-    -ms-transform: skew(145deg, 0deg);
-    transform: skew(145deg, 0deg);
+    left: 170%;
+    top: -10px;
+    -webkit-transform: skew(137deg, 0deg);
+    -ms-transform: skew(137deg, 0deg);
+    transform: skew(137deg, 0deg);
   }
   &:after {
-    left: 30%;
-    top: 50%;
-    -webkit-transform: skew(-145deg, 0deg);
-    -ms-transform: skew(-145deg, 0deg);
-    transform: skew(-145deg, 0deg);
+    left: 170%;
+    top: 60%;
+    -webkit-transform: skew(-137deg, 0deg);
+    -ms-transform: skew(-137deg, 0deg);
+    transform: skew(-137deg, 0deg);
   }
 }
 
 .sp-next-thumbnail-arrow {
   &:before {
-    right: 30%;
-    top: 0;
+    right: 256%;
+    top: -10px;
     -webkit-transform: skew(35deg, 0deg);
     -ms-transform: skew(35deg, 0deg);
     transform: skew(35deg, 0deg);
   }
   &:after {
-    right: 30%;
-    top: 50%;
+    right: 250%;
+    top: 60%;
     -webkit-transform: skew(-35deg, 0deg);
     -ms-transform: skew(-35deg, 0deg);
     transform: skew(-35deg, 0deg);

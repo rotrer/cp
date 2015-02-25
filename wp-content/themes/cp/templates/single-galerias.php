@@ -23,11 +23,12 @@ get_header();
     $star_slide = 0;
     $count_photos = 0;
 ?>
-<div class="container section">
+<!--<div class="container section">
     <div class="row">
         <div class="twelve colummns">
-        	<!-- Primary Page Layout
+        	Primary Page Layout
             –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div id="full-container" class="slider-carusel">
             <div id="slider" class="slider-pro gallery">
         		<div class="sp-slides">
 
@@ -58,6 +59,7 @@ get_header();
                 </div>
                 
             </div>
+        </div>
             <div class ="eleven columns u-pull-right readmore-social">
                 <div class="pagination">
                 <?php
@@ -66,10 +68,10 @@ get_header();
                 ?>
                 </div>
             </div>
-
+<!--
         </div>
     </div>
-</div>
+</div> -->
     
     <!-- Content -->
     <div class="container section">
@@ -82,7 +84,7 @@ get_header();
 	<script type="text/javascript">
     $(document).ready(function($) {
         $('#slider').sliderPro({
-            width: 1100,
+            width: '100%',
             height:650,
             fade: true,
             arrows: true,
@@ -104,3 +106,10 @@ get_header();
 <?php
 
 get_footer();
+
+
+
+
+
+
+

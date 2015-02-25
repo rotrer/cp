@@ -24,47 +24,38 @@
 				
 				<div class ="eleven columns u-pull-right readmore-social">
 
+
+						<?php echo do_shortcode('[ultimatesocial networks="total,facebook,twitter,google,mail"]'); ?>
+
+
+
 				<!-- Aca va el plugin social tiene un atado con el popup
-				 -->
+				
 
-					<span>Compartir:</span> 
+					<span>Compartir:</span>
 
-					<ul class="socialshare">
+					<ul class="socialbuttons">
 						<li class="facebook"><a href="">Facebook</a></li>
 						<li class="twitter"><a href="">twitter</a></li>
 						<li class="google"><a href="">googple plus</a></li>
-					</ul>
+					</ul> -->
 					<!--
 					esto no lo utilizaremos
 					<span class="u-pull-right"><a href="<?php the_permalink(); ?>">Comentarios <?php echo get_comments_number() ?></a></span>-->
 				</div>
 
 				</article>
-				
-
-				<div class="comments">
-					<?php if ( get_comments() ) : ?>
-
-						
-
-
-						<ol class="comment-list">
-							<?php
-								wp_list_comments( array(
-									'style'       => 'ul',
-								), get_comments() );
-							?>
-						</ol><!-- .comment-list -->
-
-					<?php endif; // have_comments() ?>
-
+				<div class ="eleven columns u-pull-right readmore-social">
+					<div class="pagination">
 					<?php
-						// If comments are closed and there are comments, let's leave a little note, shall we?
-						if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+						echo get_previous_post_link('%link', 'Publicación Anterior');
+						echo get_next_post_link('%link', 'Publicación Siguiente');
 					?>
-						<p class="no-comments">Comentarios cerrados</p>
-					<?php endif; ?>
+					</div>
+				</div>	
 
+				<div class="eleven columns u-pull-right comments">
+					
 					<?php
 						$fields =  array(
 
@@ -113,14 +104,7 @@
 						comment_form($args);
 					?>
 				</div>
-				<div class ="eleven columns u-pull-right readmore-social">
-					<div class="pagination">
-					<?php
-						echo get_previous_post_link('%link', 'Anterior');
-						echo get_next_post_link('%link', 'Siguiente');
-					?>
-					</div>
-				</div>
+
 				<?php endwhile; ?>
 			<?php else : ?>
 
@@ -136,7 +120,30 @@
 				</article><!-- #post-0 -->
 
 			<?php endif; ?>
-			
+
+			<?php if ( get_comments() ) : ?>
+
+				<div class="eleven columns u-pull-right ">			
+
+
+					<ol class="comment-list">
+						<?php
+							wp_list_comments( array(
+							'style'       => 'ul',
+							), get_comments() );
+						?>
+					</ol><!-- .comment-list -->
+
+					<?php endif; // have_comments() ?>
+
+					<?php
+						// If comments are closed and there are comments, let's leave a little note, shall we?
+						if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+					?>
+						<p class="no-comments">Comentarios cerrados</p>
+					<?php endif; ?>
+
+			</div>
 		</div>
 		
 		<aside class="four  columns">
