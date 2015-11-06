@@ -52,20 +52,28 @@
 		<!-- Mobile Specific Metas -->
 		
 		<!-- CSS -->
-	 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style-min.css">
+	 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/bootstrap-3.3.6-dist/css/bootstrap.css">
+	 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css">
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/images/favicon.png" />
 
 		<!-- JS -->
-		<!--<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/libs/jquery-1.11.0.min.js"></script>-->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/bootstrap-3.3.6-dist/js/npm.js"></script>
+
+		<!--
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/libs/fancybox/jquery.fancybox.pack.js"></script>
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/sliderpro-min.js"></script>
-		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/responsive-nav.min.js"></script>
+-->
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social.js"></script>
-				<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social2.js"></script>
-								<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social3.js"></script>
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social2.js"></script>
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social3.js"></script>
+
+
+
 		<!-- Adaptative images -->
 		<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
 			<?php if ( is_home() ) { ?>
@@ -101,22 +109,33 @@
 	</head>
 
 	<body <?php body_class(); ?>>
+
 		<!-- header -->
-		<div class="deco">
-			<div class="container">
-				<header class="row">
-					<h1 class="logo">
-						<a href="<?php bloginfo( 'siteurl' ); ?>"><img src="<?php bloginfo( 'template_directory' ); ?>/images/carolina_parsons.png"></a>
-					</h1>
-					<nav class="nav-collapse">
-					   <?php
+
+			<header class="navbar-wrapper">
+		      <div class="container">
+		        <nav class="navbar navbar-inverse navbar-static-top">
+		          <div class="container">
+		            <div class="navbar-header">
+		              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		              </button>
+		              <a class="navbar-brand" href="<?php bloginfo( 'siteurl' ); ?>">
+		              	<h1>CAROLINA PARSONS</h1>
+		              </a>
+		            </div>
+		            <div id="navbar" class="navbar-collapse collapse">
+					<?php
 						$defaults = array(
 							'theme_location'  => 'header-menu',
 							'menu'            => '',
 							'container'       => '',
 							'container_class' => '',
 							'container_id'    => '',
-							'menu_class'      => 'menu',
+							'menu_class'      => 'nav navbar-nav',
 							'menu_id'         => '',
 							'echo'            => true,
 							'fallback_cb'     => 'wp_page_menu',
@@ -130,7 +149,10 @@
 						);
 						wp_nav_menu( $defaults );
 					?>
-				</nav>
-				</header>
-			</div>
-		</div> 
+		            </div>
+		          </div>
+		        </nav>
+		      </div>
+		    </header>
+		<!-- header -->
+

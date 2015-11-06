@@ -6,13 +6,13 @@
 
 <div class="container section">
 	<div class="row">
-		<div class="six columns">
+		<div class="col-md-6">
 			<h3>Contacto</h3>
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<?php the_content(); ?>
 			<?php endwhile; ?>
 		</div>
-		<div class="six columns contact-info">
+		<div class="col-md-6 contact-info">
 			<h3 class="psm">PARSONS FASHION MANAGEMENT</h3>
 			<p><span>Santiago de Chile </span>
 			<span>T: 562 – 29515214</span></p>

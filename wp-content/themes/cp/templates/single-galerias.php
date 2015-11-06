@@ -58,7 +58,7 @@ get_header();
                 
             </div>
         </div>
-            <div class ="eleven columns u-pull-right readmore-social">
+            <div class ="blog_content readmore-social">
                 <div class="pagination">
                 <?php
                     echo get_previous_post_link('%link', 'Anterior');

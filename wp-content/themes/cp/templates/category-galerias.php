@@ -2,6 +2,22 @@
 <!-- Content <div class="container section">
   <div class="row">
     <div class=" twelve column">-->
+    <section class="container">
+    <div class="row">
+      <div class="col-md-4 archive-cat">
+        <div class="archive-content ">
+          <div class="archive-img">
+            <img src="">
+          </div>
+        <div class="archive-text">
+          <h3>Cateroria</h3>
+        </div>
+         </div>  
+      </div>
+    </div>
+  </div>
+
+
 
     <div id="full-container" >
       <div  id="collage" class="flex-images">

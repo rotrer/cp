@@ -6525,7 +6525,7 @@ msgid "Three Columns"
 msgstr "Tres columnas"
 
 #: wp-admin/includes/theme.php:202
-msgid "Four Columns"
+msgid "col-md-12"
 msgstr "Cuatro columnas"
 
 #: wp-admin/includes/theme.php:203

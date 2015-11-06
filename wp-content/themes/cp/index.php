@@ -1,39 +1,42 @@
 <?php get_header(); ?>
-		<div id="slider" class="slider-pro">
-			<div class="sp-slides">
-				<?php if ( get_field('fotos_slider_home', 'options') ) foreach (get_field('fotos_slider_home', 'options') as $key => $item) { ?>
-				<div class="sp-slide">
-					<img src="<?php echo $item['foto_slider_h']; ?>">
-				</div>
-				<?php } ?>
-			</div>
-		</div>
 
+	<!-- Carousel
+	    ================================================== -->
+	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	      <div class="carousel-inner" role="listbox">
+	        <div class="item active">
+	          <img class="first-slide" src="http://cp.local.com/wp-content/themes/cp/images/bigimg2.jpg" alt="First slide">
+	        </div>
+	      </div>
+	    </div>
+	<!-- /.carousel -->
 		<!-- Content -->
 		<div class="container section">
 			<div class="row">
-				<div class="eight columns">
-					<h3>Reciente</h3>
+				<section class="post-list col-md-8">
 					<?php query_posts( array('category__in' => '2', 'post_status' => 'publish', 'posts_per_page' => 10, 'order' => 'DESC') ); ?>
 					<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+					<article class="post-content row">
+						<div class="col-md-12">
+							<div class="post-img">
+								 <a href="<?php the_permalink() ?>"><?php $image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
 
-					<article class="postlist">
-						<div class="four columns">
-							 <a href="<?php the_permalink() ?>"><?php $image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
-
-								<img src="<?php if ( has_post_thumbnail() ) echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="" >
-							 </a> 
+									<img src="<?php if ( has_post_thumbnail() ) echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="" >
+								 </a> 
+							</div>
 						</div>
-						<div class="eight columns">
+						<header class="post-entry">
 							<h2><a href="<?php the_permalink() ?>" ><?php the_title() ?></a> </h2>
+						</header>
+						<div class="col-md-12">
 							<?php the_excerpt() ?>
 						</div>
 					</article>
 					<?php endwhile; wp_reset_query(); ?>
-				</div>
-				<div class="four  columns">
+				</section>
+				<aside class="col-md-4">
 						<?php get_sidebar(); ?>
-				</div>
+				</aside>
 			</div>
 		</div>
 <?php get_footer(); ?>

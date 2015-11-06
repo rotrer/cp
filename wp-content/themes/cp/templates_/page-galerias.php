@@ -4,7 +4,23 @@
 <div class="container section">
   <div class="row">
     <div class=" twelve column">
+      <header>
       <h2><?php the_title(); ?></h2>
+      </header>
+
+      <div class="col-md-3 archives-cat">
+        <div class="archive ">
+          <div class="archive-img">
+          <img src="">
+          </div>
+        <div class="archive-text">
+        </div>
+         </div>  
+
+      </div>
+
+
+
       <div id="demo1" class="flex-images">
         <?php 
         $type = '';
