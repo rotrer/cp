@@ -49,9 +49,9 @@ function menus_register() {
 }
 add_action( 'init', 'menus_register' );
 
-function register_add_image_size_cp() {
-	add_image_size( 'galeria-normal-medium', 800);
-	add_image_size( 'galeria-small', 226);
-	add_image_size( 'galeria-large', 1500);
-}
-add_action( 'init', 'register_add_image_size_cp' );
+// function register_add_image_size_cp() {
+// 	add_image_size( 'galeria-normal-medium', 800);
+// 	add_image_size( 'galeria-small', 226);
+// 	add_image_size( 'galeria-large', 1500);
+// }
+// add_action( 'init', 'register_add_image_size_cp' );

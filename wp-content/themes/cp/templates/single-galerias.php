@@ -11,9 +11,7 @@ get_header();
 	foreach ($catgories as $key => $cat) {
 		if ( $cat->category_parent > 0 ) {
 			$filter_cat[] = $cat->term_id;
-		} elseif ( $cat->term_id == 17 ) {#excepcion para filtro de portadas
-            $filter_cat[] = $cat->term_id;
-        }
+		}
 	}
 
     #obtener post type del post
@@ -32,12 +30,12 @@ get_header();
             <div id="slider" class="slider-pro gallery">
         		<div class="sp-slides">
 
-        			<?php query_posts( array('post_type' => $post_type, 'category__in' => $filter_cat) ); ?>
+        			<?php query_posts( array('post_type' => 'archivos', 'category__in' => $filter_cat) ); ?>
         			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
         			<?php
         				$photo = get_field('foto_grande_galeria');
         				$thumb = get_field('foto_pequena_galeria');
-        				$thumbs[] = ( !empty( $thumb ) ) ? $thumb : $photo['sizes']['galeria-small'];
+        				$thumbs[] = ( !empty( $thumb ) ) ? $thumb : $photo['sizes']['thumbnail'];
 
                         #Indice foto
                         if ($post->ID === $post_id) {
@@ -46,7 +44,7 @@ get_header();
                         $count_photos++;
         			?>
                     <div class="sp-slide">
-                        <img class="sp-image" src="" data-src="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-small="<?php echo $photo['sizes']['galeria-small'] ?>" data-medium="<?php echo $photo['sizes']['galeria-normal-medium'] ?>" data-large="<?php echo $photo['sizes']['galeria-large'] ?>" data-retina="<?php echo $photo['sizes']['galeria-large'] ?>" />
+                        <img class="sp-image" src="" data-src="<?php echo $photo['sizes']['large'] ?>" data-small="<?php echo $photo['sizes']['thumbnail'] ?>" data-medium="<?php echo $photo['sizes']['medium'] ?>" data-large="<?php echo $photo['sizes']['large'] ?>" data-retina="<?php echo $photo['sizes']['large'] ?>" />
                     </div>
            			<?php $i++; endwhile; wp_reset_query(); ?>
 

@@ -7,7 +7,7 @@
       <div  id="collage" class="flex-images">
         <?php 
         $thisCat = get_category(get_query_var('cat'));
-        query_posts( array('cat' => $thisCat->term_id) ); 
+        query_posts( array('cat' => $thisCat->term_id, 'post_type' => 'archivos') ); 
         if ( have_posts() ) while ( have_posts() ) : the_post();
         ?>
         <?php $photo = get_field('foto_grande_galeria'); ?>
