@@ -9,32 +9,31 @@
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 				<article class="post-content">
+					<header class="post-title">
+						<h2><?php the_title(); ?> </h2>
+					</header>
 					<?php if ( has_post_thumbnail() ) { ?>
 					<div class="post-img">
 						
-							<?php $image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
-							<img src="<?php if ( has_post_thumbnail() ) echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="">
+						<?php $image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
+						<img src="<?php if ( has_post_thumbnail() ) echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="">
 						
 					</div>
 					<?php } ?>
-					<header class="post-title">
-						<h2><?php the_title(); ?> </h2>
-						
-						
-					</header>
+
 					<div class="post-entry">
 					<?php the_content(); ?>
 					</div>
-					
-				<div class ="blog_content readmore-social">
-					<span>Compartir:</span>	<?php echo do_shortcode('[ultimatesocial networks="facebook,twitter,google,mail"]'); ?>
-				</div>
+
+					<div class ="blog_content readmore-social">
+						<span>Compartir:</span>	<?php echo do_shortcode('[ultimatesocial networks="facebook,twitter,google,mail"]'); ?>
+					</div>
 
 				</article>
 
 				
 
-				<div style="display:none;">
+				<div>
 
 				<div class ="blog_content readmore-social">
 					<div class="pagination">
@@ -140,13 +139,7 @@
 		</div>
 		
 		<aside class="col-md-4">
-			<h3>Categorías</h3>
-			<?php $categories_blog = get_categories(array('parent' => 2, 'hide_empty' => 0)); ?>
-			<ul>
-				<?php if ( $categories_blog ) foreach ($categories_blog as $key => $cat) { ?>
-				<li><a href="<?php echo get_category_link( $cat->term_id ); ?>"><?php echo $cat->name ?></a></li>
-				<?php } ?>
-			</ul>
+			
 
 			<?php get_sidebar(); ?>
 		</aside>
