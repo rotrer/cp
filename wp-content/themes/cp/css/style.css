@@ -106,6 +106,7 @@ section.container header.title h2{ text-align:center; margin: 0 auto 40px; font-
 
 .section {}
 
+.post-content { margin: 50px 0 }
 .post-content .post-img {}
 
 .post-content img {
@@ -202,6 +203,8 @@ aside .sidebar-box {}
 
 footer {
     margin: 40px auto;
+    padding: 40px auto;
+    background-color: #f6f6f6;
 }
 
 
