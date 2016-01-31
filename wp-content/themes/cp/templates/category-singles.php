@@ -1,4 +1,3 @@
-
 <!-- Content <div class="container section">
   <div class="row">
     <div class=" twelve column">-->
@@ -10,28 +9,25 @@
       <h2>ARCHIVOS</h2>
       </header>
         <?php 
-        $categories = get_categories( array(
-            'orderby' => 'name',
-            'hide_empty' => 0,
-            'parent'  => 36
-        ) );
-        if ( $categories ) foreach ($categories as $key => $category) {
+        $thisCat = get_category(get_query_var('cat'));
+        query_posts( array('cat' => $thisCat->term_id, 'post_type' => 'archivos') ); 
+        if ( have_posts() ) while ( have_posts() ) : the_post();
         ?>
-        <?php $photo = get_field('imagen_cat', $category); ?>
+        <?php $photo = get_field('foto_grande_galeria'); ?>
 
 
 
         <div class="col-md-4 " data-w="<?php echo $photo['width'] ?>" data-h="<?php echo $photo['height'] ?>">
           <div class="archive-cat">
-          <a href="<?php echo get_category_link( $category->term_id ); ?>"><img  src="<?php echo $photo; ?>"> 
+          <a href="<?php the_permalink(); ?>"><img  src="<?php echo $photo['url'] ?>"> 
 
             <!-- descripcion imagen --> 
-           <div class="description"><h3><?php echo $category->name; ?></h3></div></a>
+           <div class="description"><h3>Descripcion</h3></div></a>
             </div>
         </div>
 
 
-        <?php } ?>
+        <?php endwhile; wp_reset_query(); ?>
 
 
    </div>
