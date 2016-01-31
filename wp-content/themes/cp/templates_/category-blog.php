@@ -2,28 +2,28 @@
 <div class="container section">
 
 	<div class="row">
-		<div class="eight columns">
+		<div class="col-md-8">
 			<?php if ( have_posts() ) : ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
-				<article class="postlist">
+				<article class="postlist row">
 					<?php if ( has_post_thumbnail() ) { ?>
-					<div class="twelve columns blog_img">
+					<div class="blog_img">
 						<a href="<?php the_permalink(); ?>">
 							<?php $image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
 							<img src="<?php if ( has_post_thumbnail() ) echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="">
 						</a> 
 					</div>
 					<?php } ?>
-					<div class="eleven columns u-pull-right ">
+					<div class="blog_content">
 						<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a> </h2>
 						
 						<?php the_excerpt(); ?>
 					</div>
 
 				</article>
-				<div class ="eleven columns u-pull-right readmore-social">
+				<div class ="blog_content readmore-social">
 					<span class="u-pull-right"><a href="<?php the_permalink(); ?>">Comentarios <?php comments_number( '0' ); ?></a></span><span class="u-pull-left "><a href="<?php the_permalink(); ?>">Continuar leyendo</a></span>
 				</div>
 				<?php endwhile; ?>
@@ -44,15 +44,7 @@
 			
 		</div>
 		
-		<aside class="four  columns">
-			<h3>Categorías</h3>
-			<?php $categories_blog = get_categories(array('parent' => 2, 'hide_empty' => 0)); ?>
-			<ul>
-				<?php if ( $categories_blog ) foreach ($categories_blog as $key => $cat) { ?>
-				<li><a href="<?php echo get_category_link( $cat->term_id ); ?>"><?php echo $cat->name ?></a></li>
-				<?php } ?>
-			</ul>
-
+		<aside class="col-md-4">
 			<?php get_sidebar(); ?>
 		</aside>
 	</div>

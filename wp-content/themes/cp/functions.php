@@ -55,3 +55,15 @@ add_action( 'init', 'menus_register' );
 // 	add_image_size( 'galeria-large', 1500);
 // }
 // add_action( 'init', 'register_add_image_size_cp' );
+
+
+//Evitar creación de copias de imágenes
+function ayudawp_quita_copias_imagenes( $sizes) {
+        unset( $sizes['thumbnail']);
+        unset( $sizes['medium']);
+        unset( $sizes['large']);
+        return $sizes;
+}
+add_filter('intermediate_image_sizes_advanced', 'ayudawp_quita_copias_imagenes');
+
+add_filter('jpeg_quality', function($arg){return 100;});

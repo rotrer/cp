@@ -1,40 +1,41 @@
 <!-- Content -->
 <div class="container section">
-
 	<div class="row">
-		<div class="eight columns">
+
+		<div class=" post-list col-md-8">
+
 			<?php if ( have_posts() ) : ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
-				<article class="postinterior">
+				<article class="post-content">
+					<header class="post-title">
+						<h2><?php the_title(); ?> </h2>
+					</header>
 					<?php if ( has_post_thumbnail() ) { ?>
-					<div class="twelve columns blog_img">
+					<div class="post-img">
 						
-							<?php $image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
-							<img src="<?php if ( has_post_thumbnail() ) echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="">
+						<?php $image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>
+						<img src="<?php if ( has_post_thumbnail() ) echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>" alt="">
 						
 					</div>
 					<?php } ?>
-					<div class="eleven columns u-pull-right ">
-						<h2><?php the_title(); ?> </h2>
-						
-						<?php the_content(); ?>
+
+					<div class="post-entry">
+					<?php the_content(); ?>
 					</div>
-				
-				<div class ="eleven columns u-pull-right readmore-social">
-					<span>Compartir:</span>	<?php echo do_shortcode('[ultimatesocial networks="facebook,twitter,google,mail"]'); ?>
-				</div>
+
+					<div class ="blog_content readmore-social">
+						<span>Compartir:</span>	<?php echo do_shortcode('[ultimatesocial networks="facebook,twitter,google,mail"]'); ?>
+					</div>
 
 				</article>
 
 				
 
+				<div>
 
-<!-- ARREGLAR STYLOS -->
-				<div style="display:none;">
-
-				<div class ="eleven columns u-pull-right readmore-social">
+				<div class ="blog_content readmore-social">
 					<div class="pagination">
 					<?php
 						echo get_previous_post_link('%link', 'Publicación Anterior');
@@ -43,7 +44,7 @@
 					</div>
 				</div>
 
-				<div class="eleven columns u-pull-right comments">
+				<div class="blog_contentcomments">
 					
 					<?php
 						$fields =  array(
@@ -98,11 +99,11 @@
 			<?php else : ?>
 
 				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
+					<header class="post-title">
+						<h1 ><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
 					</header><!-- .entry-header -->
 
-					<div class="entry-content">
+					<div class="post-entry">
 						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyeleven' ); ?></p>
 						<?php get_search_form(); ?>
 					</div><!-- .entry-content -->
@@ -112,7 +113,7 @@
 
 			<?php if ( get_comments() ) : ?>
 
-				<div class="eleven columns u-pull-right ">			
+				<div class="post-content">			
 
 
 					<ol class="comment-list">
@@ -137,14 +138,8 @@
 
 		</div>
 		
-		<aside class="four  columns">
-			<h3>Categorías</h3>
-			<?php $categories_blog = get_categories(array('parent' => 2, 'hide_empty' => 0)); ?>
-			<ul>
-				<?php if ( $categories_blog ) foreach ($categories_blog as $key => $cat) { ?>
-				<li><a href="<?php echo get_category_link( $cat->term_id ); ?>"><?php echo $cat->name ?></a></li>
-				<?php } ?>
-			</ul>
+		<aside class="col-md-4">
+			
 
 			<?php get_sidebar(); ?>
 		</aside>

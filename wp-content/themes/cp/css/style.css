@@ -1,0 +1,249 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100);
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url(../fonts/glyphicons-halflings-regular.eot);
+    src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'), url(../fonts/glyphicons-halflings-regular.woff) format('woff'), url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    line-height: 180%;
+    color: #575656;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 34px;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 20px
+}
+
+h4 {
+    font-size: 18px
+}
+
+h4 {}
+
+p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 24px;
+}
+
+.navbar-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+}
+
+.navbar-header {
+    display: initial;
+    float: initial;
+    text-align: center;
+}
+
+.navbar-inverse {
+    background-color: none;
+    margin-left;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-nav {
+    display: inline-block;
+    float: initial;
+    margin: 0 auto;
+    width: auto;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.navbar-brand {
+    float: initial;
+    margin: 0;
+    padding: 0
+}
+
+.navbar-brand h1 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 100;
+    margin: 35px 0 7px;
+}
+
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand {
+    margin: 0;
+}
+
+.carousel-inner .item {}
+
+.carousel-inner .item img {}
+
+section.container, div.container.section{ margin-top: 40px; }
+
+section.container header.title h2{ text-align:center; margin: 0 auto 40px; font-weight: 100;}
+
+
+
+
+.section {}
+
+.post-content .post-img {}
+
+.post-content img {
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #C4C4C4;
+}
+
+.post-content .post-title h2 {
+    margin-bottom: 34px;
+}
+
+.post-content .post-title h2 a {
+    color: #575656;
+    text-decoration: none;
+}
+
+.post-content .post-title h2 a:hover {
+    color: #414141;
+}
+
+.deco1 {
+    width: 70%;
+    margin: 0 auto;
+    border-top: 1px solid #ccc;
+    display: flex;
+}
+
+
+/* ASIDE */
+
+aside nav ul {
+    color: #414141;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0;
+    list-style: none;
+}
+
+aside nav ul li {
+    text-align: center;
+    margin: 8px auto;
+}
+
+aside nav ul li a {
+    color: #414141;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+aside .sidebar-box {
+    padding: 15px
+}
+
+aside .sidebar-box {}
+
+aside .sidebar-box h3 {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+aside .sidebar-box {}
+
+#instafeed {
+    text-align: center;
+}
+
+#instafeed a img {
+    padding: 0%;
+    width: 44%;
+    margin: 3%;
+    background-color: #f4f4f4;
+    border: 1px solid #c1c1c1;
+}
+
+
+/* Archivos */
+
+
+.archive-cat {
+    background-color: #fff;
+    border: 1px solid #c6c6c6;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.archive-cat a img {
+    width: 100%;
+}
+
+footer {
+    margin: 40px auto;
+}
+
+
+/* SOCIAl */
+
+ul.socialbuttons.social-footer {
+    float: right;
+}
+
+ul.socialbuttons {
+    margin: 0 auto;
+    padding: 0;
+    width: auto;
+    list-style: none;
+    width: 183px;
+}
+
+ul.socialbuttons li a {
+    float: left;
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+}
+
+ul.socialbuttons li a {
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    width: 51px;
+    height: 51px;
+    background: transparent url(../images/fb.gif) no-repeat 0 0;
+}
+
+ul.socialbuttons li.facebook a {
+    background-image: url(../images/fb.gif);
+}
+
+ul.socialbuttons li.twitter a {
+    background-image: url(../images/tw.gif);
+}
+
+ul.socialbuttons li.instant a {
+    background-image: url(../images/insta.gif);
+}
