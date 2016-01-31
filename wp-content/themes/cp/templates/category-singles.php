@@ -2,14 +2,13 @@
   <div class="row">
     <div class=" twelve column">-->
 
-
+    <?php $thisCat = get_category(get_query_var('cat')); ?>
     <section class="container">
     <div class="row">
       <header class="title">
       <h2>ARCHIVOS</h2>
       </header>
         <?php 
-        $thisCat = get_category(get_query_var('cat'));
         query_posts( array('cat' => $thisCat->term_id, 'post_type' => 'archivos') ); 
         if ( have_posts() ) while ( have_posts() ) : the_post();
         ?>

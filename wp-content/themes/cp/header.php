@@ -72,10 +72,6 @@
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social2.js"></script>
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social3.js"></script>
 
-
-
-		<!-- Adaptative images -->
-		<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
 			<?php if ( is_home() ) { ?>
 				<script type="text/javascript">
 					$(document).ready(function($) {
