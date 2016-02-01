@@ -1,0 +1,17 @@
+[0.0041] Info: WP_Query results written to log
+[0.0003] Registered sizes: ["thumbnail","medium","large","ept_thumbnail","ept_medium","ept_original","wp-image-form-field-preview","galeria-thumbx","full"]
+[0.0004] Meta indexed so far: 1 / 25
+[0.0015] Sample meta:
+{"width":1600,"height":1117,"file":"ent.jpg","sizes":{"ept_thumbnail":{"file":"ent-80x80.jpg","width":80,"height":80,"mime-type":"image\/jpeg"},"ept_medium":{"file":"ent-320x240.jpg","width":320,"height":240,"mime-type":"image\/jpeg"},"wp-image-form-field-preview":{"file":"ent-143x100.jpg","width":143,"height":100,"mime-type":"image\/jpeg"},"galeria-thumbx":{"file":"ent-450x314.jpg","width":450,"height":314,"mime-type":"image\/jpeg"}},"image_meta":{"aperture":0,"credit":"","camera":"","caption":"","created_timestamp":0,"copyright":"","focal_length":0,"iso":0,"shutter_speed":0,"title":"","orientation":0}}
+[0.3022] Meta indexed so far: 25 / 25
+[0.3730] Info: Valid and Invalid meta results written to log
+[0.0032] Info: Loaded attachments to memory [25.75 mb]
+[0.1338] Info: 248 Images found [26 mb]
+[0.1408] Info: 222 Invalid images found [26 mb]
+[0.1501] Info: Retrieved attachment images from DB [26 mb]
+[0.1637] Info: Backup meta results written to log [26 mb]
+[0.0023] Posts checked for used images 1/0
+[0.0056] Info: Invalid post image meta results written to log
+Warning: skipping script index because of too many image files
+[0.5250] Info: Invalid referenced image meta results written to log
+[0.5271] Info: Unreferenced image file results written to log

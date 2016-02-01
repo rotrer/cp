@@ -1,5 +1,12 @@
 <?php
 /*
+*  Mobile Detect
+*/
+require get_template_directory() . '/Mobile_Detect.php';
+$detect = new Mobile_Detect;
+$is_mobile = ($detect->isMobile()) ? true : false;
+
+/*
 *  Create an advanced sub page
 */
 
@@ -27,12 +34,10 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
-add_theme_support('post-thumbnails');
-
 // Add post formats
 // http://codex.wordpress.org/Post_Formats
 // add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));
-add_theme_support('post-formats');
+// add_theme_support('post-formats');
 
 /** 
  *
@@ -51,19 +56,10 @@ add_action( 'init', 'menus_register' );
 
 function register_add_image_size_cp() {
 	add_image_size( 'galeria-thumbx', 450);
-	// add_image_size( 'galeria-small', 226);
-	// add_image_size( 'galeria-large', 1500);
 }
+// add_theme_support( 'post-thumbnails' ); 
+
 add_action( 'init', 'register_add_image_size_cp' );
 
-
-//Evitar creación de copias de imágenes
-function ayudawp_quita_copias_imagenes( $sizes) {
-        unset( $sizes['thumbnail']);
-        unset( $sizes['medium']);
-        unset( $sizes['large']);
-        return $sizes;
-}
-add_filter('intermediate_image_sizes_advanced', 'ayudawp_quita_copias_imagenes');
 
 add_filter('jpeg_quality', function($arg){return 100;});

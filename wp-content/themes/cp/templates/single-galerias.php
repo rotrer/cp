@@ -4,28 +4,11 @@
  *
  */
 get_header();
-    #Categorias asociadas al post
-	$catgories = get_the_category();
-	#filtro categorias
-    $filter_cat = array();
-	foreach ($catgories as $key => $cat) {
-		if ( $cat->category_parent > 0 ) {
-			$filter_cat[] = $cat->term_id;
-		}
-	}
-
-    #obtener post type del post
-    $post_type = get_post_type( $post->ID );
-    #Current post id
-    $post_id = $post->ID;
-    $star_slide = 0;
-    $count_photos = 0;
 ?>
-<!--<div class="container section">
-    <div class="row">
-        <div class="twelve colummns">
-        	Primary Page Layout
-            –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!--
+Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
      <div class="container section">
         <div class="row">
             <div class="col-md-12">
@@ -33,30 +16,25 @@ get_header();
                 <div id="full-container" class="slider-carusel">
                     <div id="slider" class="slider-pro gallery">
                 		<div class="sp-slides">
-
-                			<?php query_posts( array('post_type' => 'archivos', 'category__in' => $filter_cat) ); ?>
-                			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
                 			<?php
-                				$photo = get_field('foto_grande_galeria');
-                				$thumb = get_field('foto_pequena_galeria');
-                				$thumbs[] = ( !empty( $thumb ) ) ? $thumb : $photo['sizes']['thumbnail'];
-
-                                #Indice foto
-                                if ($post->ID === $post_id) {
-                                    $star_slide = $count_photos;
-                                }
-                                $count_photos++;
+                				$gallery = get_field('galeria_all');
                 			?>
+                            <?php if($gallery) foreach ($gallery as $key => $photo) { ?>
                             <div class="sp-slide">
-                                <img class="sp-image" src="" data-src="<?php echo $photo['sizes']['large'] ?>" data-small="<?php echo $photo['sizes']['thumbnail'] ?>" data-medium="<?php echo $photo['sizes']['medium'] ?>" data-large="<?php echo $photo['sizes']['large'] ?>" data-retina="<?php echo $photo['sizes']['large'] ?>" />
+                                <img class="sp-image" src="" 
+                                    data-src="<?php echo $photo["url"]; ?>" 
+                                    data-small="<?php echo $photo['sizes']["galeria-thumbx"]; ?>" 
+                                    data-medium="<?php echo $photo['sizes']['medium']; ?>" 
+                                    data-large="<?php echo $photo["url"]; ?>" 
+                                    data-retina="<?php echo $photo["url"]; ?>" />
                             </div>
-                   			<?php $i++; endwhile; wp_reset_query(); ?>
+                   			<?php } ?>
 
                    		</div>
 
                         <div class="sp-thumbnails">
-                        <?php if( $thumbs ) foreach ($thumbs as $key => $thumb) { ?>
-                            <img class="sp-thumbnail" src="<?php echo $thumb ?>"/>
+                        <?php if($gallery) foreach ($gallery as $key => $photo) { ?>
+                            <img class="sp-thumbnail" src="<?php echo $photo["sizes"]["thumbnail"] ?>"/>
                         <?php } ?>
                         </div>
                         
@@ -65,6 +43,7 @@ get_header();
             </div>
         </div>
     </div>
+<?php endwhile; ?>
     <div class ="blog_content readmore-social">
         <div class="pagination">
         <?php
@@ -73,10 +52,6 @@ get_header();
         ?>
         </div>
     </div>
-<!--
-        </div>
-    </div>
-</div> -->
     
     <!-- Content -->
     <div class="container section">
@@ -103,7 +78,7 @@ get_header();
             autoplay: false,
             //autoHeight:true,
             imageScaleMode:'contain',
-            startSlide: <?php echo $star_slide; ?>,
+            startSlide: 0,
             //centerImage:false,
         });
     });
