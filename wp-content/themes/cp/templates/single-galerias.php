@@ -12,7 +12,19 @@ Primary Page Layout
      <div class="container section">
         <div class="row">
             <div class="col-md-12">
-
+                <?php
+                    $category_name = '';
+                    $categories = get_the_category();
+                    if ($categories) foreach ($categories as $key => $category) {
+                        if ($category->parent != 0) {
+                            $category_name = $category->name;
+                        }
+                    }
+                ?>
+                <h1>
+                    <small>Archivos - <?php echo $category_name; ?></small><br>
+                    <?php the_title(); ?>
+                </h1>
                 <div id="full-container" class="slider-carusel">
                     <div id="slider" class="slider-pro gallery">
                 		<div class="sp-slides">
@@ -54,13 +66,13 @@ Primary Page Layout
     </div>
     
     <!-- Content -->
-    <div class="container section">
+    <!-- <div class="container section">
         <div class="row">
             <div class=" twelve column">
                 <h3>Comentarios</h3>
             </div>
         </div>
-    </div>
+    </div> -->
 	<script type="text/javascript">
     $(document).ready(function($) {
         $('#slider').sliderPro({
