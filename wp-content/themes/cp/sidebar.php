@@ -2,11 +2,10 @@
 			<div class="col-md-12 sidebar-box">
 
 			<div class="img-perfil">
-				<img src="" />
-			</div>as
+				<img src="<?php the_field('foto_perfil', 'option'); ?>" />
+			</div>
 			<div class="perfildescription">
-
-			<p>sadasdasdasdasdasdasdaadasd</p>
+				<?php the_field('texto_perfil', 'option'); ?>
 			</div>
 
 			</div>
