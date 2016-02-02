@@ -270,6 +270,9 @@ ul.socialbuttons li.instant a {
     background-image: url(../images/insta.gif);
 }
 
+
+ul.socialbuttons .share li a  { background: transparent url(../images/fb.gif) no-repeat 5px 5px;}
+
 .comment-form {}
 
 .comment-form  p{ width: 48%; float: left; }
