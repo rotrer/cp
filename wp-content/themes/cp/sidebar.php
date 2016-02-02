@@ -2,7 +2,7 @@
 			<div class="col-md-12 sidebar-box">
 
 			<div class="img-perfil">
-				<img src="<?php the_field('foto_perfil', 'option'); ?>" />
+				<img src="<?php the_field('foto_perfil', 'option'); ?>" alt="" style="width: 200px;"><br>
 			</div>
 			<div class="perfildescription">
 				<?php the_field('texto_perfil', 'option'); ?>
