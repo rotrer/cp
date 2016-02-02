@@ -134,6 +134,7 @@ section.container header.title h3{ font-size:26px; text-align:center; margin: 0 
 .post-content .post-title h2 a {
     color: #575656;
     text-decoration: none;
+    border:none;
 }
 
 .post-content .post-title h2 a:hover {
