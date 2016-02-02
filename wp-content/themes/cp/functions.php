@@ -57,7 +57,7 @@ add_action( 'init', 'menus_register' );
 function register_add_image_size_cp() {
 	add_image_size( 'galeria-thumbx', 450);
 }
-// add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'post-thumbnails' ); 
 
 add_action( 'init', 'register_add_image_size_cp' );
 
