@@ -1,7 +1,12 @@
 			<!-- Sidebar-->
-
+			
 			<div class="col-md-12 sidebar-box">
-				<h3>Categorías</h3>
+				<h3>Perfil</h3>
+				<img src="<?php the_field('foto_perfil', 'option'); ?>" alt="" style="width: 200px;"><br>
+				<?php the_field('texto_perfil', 'option'); ?>
+			</div>
+			<div class="deco1"></div>
+			<h3>Categorías</h3>
 			<div class="deco1"></div>
 				<?php $categories_blog = get_categories(array('parent' => 2, 'hide_empty' => 0)); ?>
 				

@@ -5,7 +5,7 @@
 	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
 	      <div class="carousel-inner" role="listbox">
 	        <div class="item active">
-	          <img class="first-slide" src="http://cp.local.com/wp-content/themes/cp/images/bigimg2.jpg" alt="First slide">
+	          <img class="first-slide" src="<?php bloginfo( 'template_directory' ); ?>/images/bigimg2.jpg" alt="First slide">
 	        </div>
 	      </div>
 	    </div>
