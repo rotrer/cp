@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -25,28 +24,7 @@
 				echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
 
 			?></title>
-		<meta name="description" content="">
-		<meta name="author" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<meta name="keywords" content="" >
-		<meta name="description" content="">
-		<!--FACEBOOK-->
-		<meta property="og:title" content="" >
-		<meta property="og:site_name" content="">
-		<meta property="og:url" content="" >
-		<meta property="og:description" content="" >
-		<meta property="og:image" content="" >
-		<meta property="og:type" content="website" >
-		<meta property="og:locale" content="" >
-		<!--TWITTER-->
-		<meta property="twitter:card" content="summary" >
-		<meta property="twitter:title" content="" >
-		<meta property="twitter:description" content="" >
-		<meta property="twitter:creator" content="@" >
-		<meta property="twitter:url" content="" >
-		<meta property="twitter:image" content="" >
-		<!--GOOGLE+-->
-		<link rel="author" href="">
 		<?php wp_head(); ?>
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 		<!-- Mobile Specific Metas -->
@@ -69,6 +47,7 @@
 
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social2.js"></script>
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social3.js"></script>
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/scripts.js"></script>
 
 			<?php if ( is_home() ) { ?>
 				<script type="text/javascript">
@@ -103,6 +82,14 @@
 	</head>
 
 	<body <?php body_class(); ?>>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=735516033250253";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 
 		<!-- header -->
 
