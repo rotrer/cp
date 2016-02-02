@@ -5,8 +5,8 @@ $(document).ready(function(){
     FB.ui({
       method: 'feed',
       link: data.link,
-      name: 'Carolina Parsonas',
-      caption: data.title,
+      name: data.title,
+      caption: 'Carolina Parsonas',
       description: data.excerpt,
       picture: data.picture
     }, function(response){});
