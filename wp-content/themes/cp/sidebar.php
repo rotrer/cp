@@ -14,7 +14,7 @@
 				</nav>
 			</div>
 			
-			<div class="deco1 row"></div>
+			<div class="deco2 row"></div>
 
 
 			<div class="col-md-12 sidebar-box">
@@ -25,7 +25,7 @@
 					</ul>
 			</div>
 
-			<div class="deco1"></div>
+			<div class="deco2"></div>
 
 			<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.jstwitter.js"></script>
 			<script type="text/javascript">
@@ -47,7 +47,7 @@
 			</div>
 
 
-			<div class="deco1"></div>
+			<div class="deco2"></div>
 
 			<script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
 
