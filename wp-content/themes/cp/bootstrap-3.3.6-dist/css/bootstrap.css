@@ -7003,7 +7003,7 @@ button.close {
   background-color: #000; }
 
 .sp-full-screen-button {
-  bottom: 17px;
+
   cursor: pointer;
   font-size: 30px;
   line-height: 1;
@@ -7014,7 +7014,7 @@ button.close {
   transform: rotate(45deg); }
   .sp-full-screen-button:before {
     content: '\2195';
-    color: #222; }
+    color: #fff; }
 
 .sp-fade-full-screen {
   opacity: 0;

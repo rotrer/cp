@@ -242,6 +242,35 @@ footer {
 footer p { margin: 12px 0; }
 
 
+.sp-slides-container, .slider-pro{ background-color: #000;  padding: 30px 0; } 
+.sp-full-screen-button {  }
+
+
+.sp-full-screen-button {
+
+    cursor: pointer;
+    font-size: 48px;
+    line-height: 1;
+    position: absolute;
+    right: 22px;
+    top: 15px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.sp-full-screen-button:before {
+    content: '\2195';
+    color: #fff;
+}
+
+.sp-fade-full-screen {
+    opacity: 1;
+    color: #fff;
+    /* -webkit-transition: opacity .5s; */
+    /* transition: opacity 0.5s; */
+}
+
 
 /* SOCIAl */
 
@@ -327,3 +356,5 @@ ul.socialbuttons li.instant a {
 .wpcf7-form textarea { width: 100%; }
 .wpcf7-form  .wpcf7-submit{padding: 8px 20px; margin: 10px 0;  background-color: #fff; border:1px solid  #ccc; width: auto; float: right;}
 .wpcf7-form  .wpcf7-submit:hover, .comment-form  p.form-submit  input:hover { background-color: #000;  color: #fff;  border-color:#000  }
+
+#myCarousel { display: none; }
