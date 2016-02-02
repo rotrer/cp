@@ -2,6 +2,7 @@
 /*
 *  Mobile Detect
 */
+
 require get_template_directory() . '/Mobile_Detect.php';
 $detect = new Mobile_Detect;
 $is_mobile = ($detect->isMobile()) ? true : false;
