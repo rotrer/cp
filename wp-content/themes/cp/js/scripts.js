@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $("#fb_share").click(function(e){
+  $("#share_fb").click(function(e){
     e.preventDefault();
     var data = $(this).data();
     FB.ui({
@@ -11,13 +11,14 @@ $(document).ready(function(){
       picture: data.picture
     }, function(response){});
   });
-  $("#tw_share").click(function(e){
+  $("#share_tw").click(function(e){
     e.preventDefault();
+    var data = $(this).data();
     var base = 'https://twitter.com/intent/tweet';
-    var text = encodeURIComponent( TW_TXT_SHARE );
+    var text = encodeURIComponent( data.title );
     var hashtags = '';
     var via = '';
-    var url = encodeURIComponent( APP_BASE );
+    var url = encodeURIComponent( data.link );
     var width  = 575,
         height = 400,
         urlTwit    = base + '?text=' + text + '&url=' + url + '&hashtags=' + hashtags ,

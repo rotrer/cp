@@ -6,6 +6,15 @@ require get_template_directory() . '/Mobile_Detect.php';
 $detect = new Mobile_Detect;
 $is_mobile = ($detect->isMobile()) ? true : false;
 
+//Set Client ID FB
+if (strstr($_SERVER['HTTP_HOST'], '.app') || strstr($_SERVER['HTTP_HOST'], 'localhost:8888')) {
+  define(CLIENT_ID, "1494358724206970");
+} elseif (strstr($_SERVER['HTTP_HOST'], 'dev.lcasesoria.cl')) {
+  define(CLIENT_ID, "735516033250253");
+} else {
+  define(CLIENT_ID, "436088603255049");
+}
+
 /*
 *  Create an advanced sub page
 */

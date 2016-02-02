@@ -29,8 +29,22 @@
 						<span>Compartir:</span>	
 
 						<ul class="socialbuttons share">
-							<li class="facebook"><a href="https://www.facebook.com/CarolinaParsonsOficial" target="_blank">Facebook</a></li>
-							<li class="twitter"><a href="https://twitter.com/caroparsons" target="_blank">twitter</a></li>
+							<li class="facebook">
+								<a 	href=""
+										id="share_fb" 
+										data-link="<?php the_permalink(); ?>" 
+										data-title="<?php the_title(); ?>" 
+										data-excerpt="<?php echo strip_tags(get_the_excerpt()); ?>" 
+										data-picture="<?php echo $image; ?>" 
+										target="_blank">Facebook</a>
+							</li>
+							<li class="twitter">
+								<a 	href=""
+										id="share_tw" 
+										data-link="<?php the_permalink(); ?>" 
+										data-title="<?php the_title(); ?>" 
+										target="_blank">twitter</a>
+							</li>
 						</ul>
 
 					</div>

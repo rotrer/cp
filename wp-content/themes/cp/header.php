@@ -87,7 +87,7 @@
 		  var js, fjs = d.getElementsByTagName(s)[0];
 		  if (d.getElementById(id)) return;
 		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=735516033250253";
+		  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=<?php echo CLIENT_ID; ?>";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 
