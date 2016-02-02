@@ -4,6 +4,7 @@
  *
  */
 get_header();
+$count_photos = 0;
 ?>
 <!--
 Primary Page Layout
@@ -40,15 +41,17 @@ Primary Page Layout
                                     data-large="<?php echo $photo["url"]; ?>" 
                                     data-retina="<?php echo $photo["url"]; ?>" />
                             </div>
-                   			<?php } ?>
+                   			<?php $count_photos++; } ?>
 
                    		</div>
 
+                        <?php if( $count_photos > 0 ) { ?>
                         <div class="sp-thumbnails">
                         <?php if($gallery) foreach ($gallery as $key => $photo) { ?>
                             <img class="sp-thumbnail" src="<?php echo $photo["sizes"]["thumbnail"] ?>"/>
                         <?php } ?>
                         </div>
+                        <?php } ?>
                         
                     </div>
                 </div>
