@@ -10,9 +10,10 @@ $count_photos = 0;
 Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-     <div class="container section">
+     <section class="container section">
         <div class="row">
             <div class="col-md-12">
+            <header class="title">
                 <?php
                     $category_name = '';
                     $categories = get_the_category();
@@ -23,9 +24,12 @@ Primary Page Layout
                     }
                 ?>
                 <h1>
-                    <small>Archivos - <?php echo $category_name; ?></small><br>
-                    <?php the_title(); ?>
+                   Archivos
+                   
                 </h1>
+                <h3><?php echo $category_name; ?> <?php the_title(); ?> </h3>
+                </header>
+
                 <div id="full-container" class="slider-carusel">
                     <div id="slider" class="slider-pro gallery">
                 		<div class="sp-slides">
@@ -57,7 +61,7 @@ Primary Page Layout
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 <?php endwhile; ?>
     <div class ="blog_content readmore-social">
         <div class="pagination">

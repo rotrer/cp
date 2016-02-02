@@ -35,6 +35,7 @@
 					</footer>
 				</article>
 
+
 				<?php endwhile; ?>
 			<?php else : ?>
 
