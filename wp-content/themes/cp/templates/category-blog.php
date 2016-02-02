@@ -33,6 +33,8 @@
 							<a href="<?php the_permalink(); ?>">Continuar leyendo</a>
 						</div>
 					</footer>
+
+					<div class="deco1"></div>
 				</article>
 
 

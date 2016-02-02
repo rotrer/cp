@@ -1,12 +1,22 @@
 			<!-- Sidebar-->
-			
 			<div class="col-md-12 sidebar-box">
-				<h3>Perfil</h3>
-				<img src="<?php the_field('foto_perfil', 'option'); ?>" alt="" style="width: 200px;"><br>
-				<?php the_field('texto_perfil', 'option'); ?>
+
+			<div class="img-perfil">
+				<img src="" />
+			</div>as
+			<div class="perfildescription">
+
+			<p>sadasdasdasdasdasdasdaadasd</p>
 			</div>
-			<div class="deco1"></div>
-			<h3>Categorías</h3>
+
+			</div>
+
+			
+	<div class="deco2 row"></div>
+
+			<div class="col-md-12 sidebar-box">
+
+				<h3>Categorías</h3>
 			<div class="deco1"></div>
 				<?php $categories_blog = get_categories(array('parent' => 2, 'hide_empty' => 0)); ?>
 				
@@ -23,6 +33,9 @@
 
 
 			<div class="col-md-12 sidebar-box">
+			<h3>REDES</h3>
+
+
 				<ul class="socialbuttons">
 						<li class="facebook"><a href="https://www.facebook.com/CarolinaParsonsOficial" target="_blank">Facebook</a></li>
 						<li class="twitter"><a href="https://twitter.com/caroparsons" target="_blank">twitter</a></li>
@@ -39,7 +52,7 @@
 					JQTWEET.loadTweets();
 			});
 			</script>
-			<!-- Twitter-->
+			<!-- Twitter
 			<div class="col-md-12 mclean-left sidebar-box">
 				<h3 class="socialtitle">Twitter</h3>
 				<div class="followbutton">
@@ -50,7 +63,7 @@
 
 				<div id="jstwitter sidebar-box "></div>
 			</div>
-
+-->
 
 			<div class="deco2"></div>
 
