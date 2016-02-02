@@ -28,17 +28,16 @@
 					<div class ="blog_content readmore-social">
 						<span>Compartir:</span>	
 
-						<ul class="socialbuttons social-footer">
-					<li class="facebook"><a href="https://www.facebook.com/CarolinaParsonsOficial" target="_blank">Facebook</a></li>
-					<li class="twitter"><a href="https://twitter.com/caroparsons" target="_blank">twitter</a></li>
-					<li class="instant"><a href="https://instagram.com/carolinaparsons/" target="_blank">Instagram</a></li>
-				</ul>
-				
+						<ul class="socialbuttons share">
+							<li class="facebook"><a href="https://www.facebook.com/CarolinaParsonsOficial" target="_blank">Facebook</a></li>
+							<li class="twitter"><a href="https://twitter.com/caroparsons" target="_blank">twitter</a></li>
+						</ul>
+
 					</div>
 
 				</article>
 
-				
+				<div class="deco1"></div>
 
 				<div>
 

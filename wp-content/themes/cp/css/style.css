@@ -106,7 +106,11 @@ p {
 
 section.container, div.container.section{ margin-top: 40px; }
 
-section.container header.title h2{ text-align:center; margin: 0 auto 40px; font-weight: 100;}
+section.container header.title { text-align:center; margin: 0 auto 40px;}
+section.container header.title h2{ text-align:center; margin: 0 auto; font-weight: 100;}
+section.container header.title h3{ font-size:26px; text-align:center; margin: 0 auto; font-weight: 100;}
+
+
 
 
 
@@ -207,9 +211,21 @@ aside .sidebar-box {}
     border: 1px solid #c6c6c6;
     margin-bottom: 20px;
     padding: 15px;
+    height: 261px;
+}
+.archive-cat a {
+    border: 1px solid #c6c6c6;
+    height: 229px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    width: 261px; position: relative;
 }
 
 .archive-cat a img {
+    position: absolute;
+    top: -12px;
+    /* left: -10px; */
     width: 100%;
 }
 
@@ -229,6 +245,11 @@ footer p { margin: 12px 0; }
 
 /* SOCIAl */
 
+
+.readmore-social{ padding-bottom: 40px;   float: left;
+    width: 100%;}
+
+
 ul.socialbuttons.social-footer {
     float: right;
 }
@@ -241,6 +262,7 @@ ul.socialbuttons {
     width: 183px;
 }
 
+ul.socialbuttons.share{ width: auto; }
 ul.socialbuttons li a {
     float: left;
     display: inline-block;
@@ -258,6 +280,19 @@ ul.socialbuttons li a {
     background: transparent url(../images/fb.gif) no-repeat 0 0;
 }
 
+ul.socialbuttons.share li a {
+    background: transparent url(../images/fb.gif) no-repeat 0px 0px;
+    background-size: contain;
+    font: inherit;
+    width: 117px;
+    height: 33px;
+    border: 2px solid #575656;
+    color: #575656;
+    color: #414141;
+    padding-left: 40px;
+    padding-right: 0px;
+}
+
 ul.socialbuttons li.facebook a {
     background-image: url(../images/fb.gif);
 }
@@ -270,8 +305,8 @@ ul.socialbuttons li.instant a {
     background-image: url(../images/insta.gif);
 }
 
+.pagination { display: none }
 
-ul.socialbuttons .share li a  { background: transparent url(../images/fb.gif) no-repeat 5px 5px;}
 
 .comment-form {}
 

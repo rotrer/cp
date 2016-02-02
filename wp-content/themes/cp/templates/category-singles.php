@@ -6,7 +6,8 @@
     <section class="container">
     <div class="row">
       <header class="title">
-      <h2>ARCHIVOS - <strong><?php echo $thisCat->name; ?></strong></h2>
+      <h2>ARCHIVOS</h2>
+      <h3><?php echo $thisCat->name; ?></h3>
       </header>
         <?php 
         query_posts( array('cat' => $thisCat->term_id, 'post_type' => 'archivos') ); 
