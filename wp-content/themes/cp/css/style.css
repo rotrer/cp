@@ -1,4 +1,6 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100);
+﻿@import url(https://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
+
+/*@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100); */
 @font-face {
     font-family: 'Glyphicons Halflings';
     src: url(../fonts/glyphicons-halflings-regular.eot);
@@ -6,7 +8,7 @@
 }
 
 body {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Cardo', serif;
     line-height: 180%;
     color: #575656;
 }
@@ -43,7 +45,7 @@ h4 {
 h4 {}
 
 p {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 300;
     margin-bottom: 24px;
 }
@@ -358,4 +360,11 @@ ul.socialbuttons li.instant a {
 .wpcf7-form  .wpcf7-submit{padding: 8px 20px; margin: 10px 0;  background-color: #fff; border:1px solid  #ccc; width: auto; float: right;}
 .wpcf7-form  .wpcf7-submit:hover, .comment-form  p.form-submit  input:hover { background-color: #000;  color: #fff;  border-color:#000  }
 
-#myCarousel { display: none; }
+#myCarousel {  }
+
+
+
+.post-content{ text-align: center; } 
+.post-entry,  .post-title  { padding:  0 10%; }
+
+.post-img { width: 60%;  margin: 0 auto}
