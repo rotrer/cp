@@ -61,3 +61,13 @@ add_action( 'init', 'register_add_image_size_cp' );
 
 
 add_filter('jpeg_quality', function($arg){return 100;});
+
+function my_custom_featured_image_column_image( $image ) {
+    if ( !has_post_thumbnail() )
+    {
+      $imagen_destacada = get_field('imagen_destacada');
+      $photo_featured = $imagen_destacada["url"];
+      return $photo_featured;
+    }
+}
+add_filter( 'featured_image_column_default_image', 'my_custom_featured_image_column_image' );
