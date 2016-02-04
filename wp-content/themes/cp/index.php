@@ -19,7 +19,7 @@
 					<article class="post-content">
 
 							<header class="post-title">
-								<h4>01 Febrero 2016</h4>
+								<h4><?php echo get_the_date(); ?></h4>
 								<h2><a href="<?php the_permalink() ?>" ><?php the_title() ?></a> </h2>
 							</header>
 						
