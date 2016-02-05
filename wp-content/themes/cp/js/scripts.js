@@ -28,8 +28,4 @@ $(document).ready(function(){
 
       window.open(urlTwit, 'twitter', opts);
   });
-
-  if ($("#flex")) {
-    $('#flex').flexImages();
-  };
 });

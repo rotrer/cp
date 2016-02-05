@@ -31,6 +31,7 @@
 		<!-- CSS -->
 	 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/bootstrap-3.3.6-dist/css/bootstrap.css">
 	 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css">
+	 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/jquery.flex-images.css">
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/images/favicon.png" />

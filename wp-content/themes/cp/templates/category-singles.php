@@ -35,3 +35,10 @@
       </div>
     </div>
 </section>
+<?php if ($thisCat->term_id == 47) { ?>
+<script>
+  $(document).ready(function(){
+    $('#flex').flexImages();
+  });
+</script>
+<?php } ?>
