@@ -220,7 +220,7 @@ aside .sidebar-box {}
 
 
 .archive-cat {
-    background-color: #111111;
+    background-color: #fff;
     border: 1px solid #c6c6c6;
     margin-bottom: 20px;
     padding: 15px;
@@ -242,6 +242,27 @@ aside .sidebar-box {}
     width: 100%;
 }
 
+
+#portadas .archive-cat a {
+    border: 1px solid #c6c6c6;
+    height: 305px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    width: 261px;
+    position: relative;
+}
+
+#portadas  .archive-cat {
+    background-color: #fff;
+    border: 1px solid #c6c6c6;
+    margin-bottom: 20px;
+    padding: 15px;
+    height: 338px;
+}
+
+#portadas .archive-cat a img {
+    position: absolute; top: 0;}
 
 .deco3 {    border-top: 1px solid#111111;     background-color: #f5f5f5; margin-top: 100px;}
 
