@@ -4,10 +4,15 @@
 <?php get_header(); ?>
 
 
-<div class="container section">
-	<div class="row">
+<section class="container section">
+            <header class="title">
+               <h3>¡Hola!</h3>
+                <h1>
+                 Contacto
+                </h1>
+          
+                </header>
 		<div class="col-md-7">
-			<h3>Contacto</h3>
 			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<?php the_content(); ?>
 			<?php endwhile; ?>
@@ -30,5 +35,5 @@
 			</p>
 		</div>
 	</div>
-</div>
+</section>
 <?php get_footer(); ?>

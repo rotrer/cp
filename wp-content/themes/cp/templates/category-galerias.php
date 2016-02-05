@@ -1,7 +1,7 @@
 <section class="container">
     <div class="row">
         <header class="title">
-            <h2>ARCHIVOS</h2>
+            <h3>Archivos</h3>
         </header>
         <?php 
         $categories = get_categories( array(
@@ -17,7 +17,7 @@
                     <a href="<?php echo get_category_link( $category->term_id ); ?>"><img  src="<?php echo $photo['url']; ?>"> 
                         <!-- descripcion imagen --> 
                         <div class="description">
-                            <h3><?php echo $category->name; ?></h3>
+                            <h2><?php echo $category->name; ?></h2>
                         </div>
                     </a>
                 </div>

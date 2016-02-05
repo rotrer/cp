@@ -23,7 +23,7 @@
 					<a href="<?php the_permalink(); ?>">
 						<img  src="<?php echo $photo['url'] ?>"> 
 						<!-- descripcion imagen --> 
-						 <div class="description"><h3>Descripcion</h3></div>
+						 <div class="description"><h2>Descripcion</h2></div>
 					 </a>
 				</div>
 

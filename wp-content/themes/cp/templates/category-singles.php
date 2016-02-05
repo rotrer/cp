@@ -13,8 +13,9 @@
 <section class="container">
     <div class="row">
       <header class="title">
-        <h2>ARCHIVOS</h2>
-        <h3><?php echo $thisCat->name; ?></h3>
+         <h3> Archivos</h3>
+        <h1><?php echo $thisCat->name; ?></h1>
+   
       </header>
       <div id="<?php echo $id_singles; ?>">
         <?php 
@@ -30,7 +31,7 @@
             <a href="<?php the_permalink(); ?>"><img  src="<?php echo $photo_featured; ?>"> 
               <!-- descripcion imagen -->
               <div class="description">
-                <h3><?php the_title(); ?></h3>
+                <h2><?php the_title(); ?></h2>
               </div>
             </a>
           </div>

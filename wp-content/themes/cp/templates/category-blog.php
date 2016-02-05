@@ -1,5 +1,5 @@
 <!-- Content -->
-<div class="container section">
+<div class="container section blog-interior">
 
 	<div class="row">
 		<section class="col-md-8 post-list">
