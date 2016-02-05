@@ -2,12 +2,31 @@
 
 	<!-- Carousel
 	    ================================================== -->
-	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-	      <div class="carousel-inner" role="listbox">
-	        <div class="item active">
-	          <img class="first-slide" src="<?php bloginfo( 'template_directory' ); ?>/images/bigimg2.jpg" alt="First slide">
-	        </div>
+	    <div class="container">
+	    <div class="row">
+		    <div id="myCarousel" class="carousel slide " data-ride="carousel">
+		     <ol class="carousel-indicators">
+	             <li class="active" data-slide-to="0" data-target="#slider-home"></li>
+	             <li class="" data-slide-to="1" data-target="#slider-home"></li>
+			</ol>
+		      <div class="carousel-inner" role="listbox">
+		        <div class="item active">
+		          <img class="first-slide" src="<?php bloginfo( 'template_directory' ); ?>/images/bigimg2.jpg" alt="First slide">
+		        </div>
+      	        <div class="item ">
+		          <img class="first-slide" src="<?php bloginfo( 'template_directory' ); ?>/images/bigimg2.jpg" alt="First slide">
+		        </div>
+		      </div>
+		      <a data-slide="prev" role="button" href="#myCarousel" class="left carousel-control">
+		          <span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>
+		          <span class="sr-only">Previous</span>
+	    	  </a>
+		      <a data-slide="next" role="button" href="#myCarousel" class="right carousel-control">
+		          <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
+		          <span class="sr-only">Next</span>
+		      </a>
 	      </div>
+      	</div>
 	    </div>
 	<!-- /.carousel -->
 		<!-- Content -->
