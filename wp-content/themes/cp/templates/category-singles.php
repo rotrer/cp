@@ -1,11 +1,22 @@
-<?php $thisCat = get_category(get_query_var('cat')); ?>
+<?php 
+  $thisCat = get_category(get_query_var('cat')); 
+  $id_singles = '';
+?>
+<?php if ($thisCat->term_id == 47) { $id_singles = 'flex'; ?>
+<script>
+  $(document).ready(function(){
+    $('#flex').flexImages();
+  });
+</script>
+<?php }elseif ($thisCat->term_id == 39) { $id_singles = 'portadas'; ?>
+<?php } ?>
 <section class="container">
     <div class="row">
       <header class="title">
         <h2>ARCHIVOS</h2>
         <h3><?php echo $thisCat->name; ?></h3>
       </header>
-      <div id="flex">
+      <div id="<?php echo $id_singles; ?>">
         <?php 
         query_posts( array('cat' => $thisCat->term_id, 'post_type' => 'archivos') ); 
         if ( have_posts() ) while ( have_posts() ) : the_post();
@@ -35,10 +46,3 @@
       </div>
     </div>
 </section>
-<?php if ($thisCat->term_id == 47) { ?>
-<script>
-  $(document).ready(function(){
-    $('#flex').flexImages();
-  });
-</script>
-<?php } ?>
