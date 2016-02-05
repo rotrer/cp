@@ -81,6 +81,10 @@
 			<?php } ?>
 		<?php wp_head(); ?>
 
+			<script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.flex-images.min.js"></script>
+			<script>
+				$('#flex').flexImages({ rowHeight: 320, maxRows: 8, truncate: true });
+		    </script>
 	</head>
 
 	<body <?php body_class(); ?>>

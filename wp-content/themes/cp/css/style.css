@@ -275,7 +275,21 @@ aside .sidebar-box {}
 }
 
 
+/* RECORTES */
+/* RECORTES */
+#flex .archive-cat a { height: 100%;  width: 100%; border:0  none;}
+#flex .archive-cat {
+    background-color: #000;
+    padding: 0;
+    border: none 0;
+    height: 100%;
+    margin-bottom: 0;}
+#flex .item.col-md-4 { margin:0;  padding: 0}
+#flex .archive-cat a img { top: 0; }
+
+
 /* Archivos */
+
 
 .archive-cat {
     background-color: #fff;
