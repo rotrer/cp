@@ -1,4 +1,8 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
+﻿@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+
+
 
 /*@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100); */
 @font-face {
@@ -8,15 +12,15 @@
 }
 
 body {
-    font-family: 'Cardo', serif;
+    font-family: 'Baskerville', 'Libre Baskerville', serif;
     line-height: 180%;
-    color: #575656;
+    color: #111111;
 }
 
 a { color:#999; text-decoration: none; } 
-a:hover { color:#575656;   text-decoration: none; }
+a:hover { color:#111111;   text-decoration: none; }
 .col-md-8 a  { color:#999;  border-bottom: 1px dotted #999 ; text-decoration: none; } 
-.col-md-8 a:hover { color:#575656;  border-color:#575656; text-decoration: none; }
+.col-md-8 a:hover, .col-md-8 a:active, .col-md-8 a:focus , .col-md-12 a:focus { color:#111111;  border-color:#111111; text-decoration: none;  outline: 0 none; border:none; }
 
 
 
@@ -45,7 +49,7 @@ h4 {
 h4 {}
 
 p {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     margin-bottom: 24px;
 }
@@ -53,7 +57,6 @@ p {
 .navbar-wrapper {
     position: relative;
     width: 100%;
-    background-color: #000;
 }
 
 .navbar-header {
@@ -75,6 +78,8 @@ p {
     margin-bottom: 0;
 }
 
+
+
 .navbar-nav {
     display: inline-block;
     float: initial;
@@ -83,6 +88,10 @@ p {
     font-weight: 300;
     text-transform: uppercase;
 }
+.navbar-inverse .navbar-nav > li { font-size : 18px; font-family: 'Oswald', sans-serif;}
+.navbar-inverse .navbar-nav > li > a{ color:#111;}
+.navbar-inverse .navbar-nav > li > a:hover{ color:#414141}
+
 
 .navbar-brand {
     float: initial;
@@ -91,12 +100,11 @@ p {
 }
 
 .navbar-brand h1 {
-    color: #fff;
-    font-size: 36px;
+    color: #111111;
+    font-size: 53px;
     font-weight: 100;
     margin: 35px 0 7px;
 }
-
 .navbar > .container .navbar-brand,
 .navbar > .container-fluid .navbar-brand {
     margin: 0;
@@ -111,10 +119,6 @@ section.container, div.container.section{ margin-top: 40px; }
 section.container header.title { text-align:center; margin: 0 auto 40px;}
 section.container header.title h2{ text-align:center; margin: 0 auto; font-weight: 100;}
 section.container header.title h3{ font-size:26px; text-align:center; margin: 0 auto; font-weight: 100;}
-
-
-
-
 
 
 .section {}
@@ -134,7 +138,7 @@ section.container header.title h3{ font-size:26px; text-align:center; margin: 0 
 }
 
 .post-content .post-title h2 a {
-    color: #575656;
+    color: #111111;
     text-decoration: none;
     border:none;
 }
@@ -143,6 +147,12 @@ section.container header.title h3{ font-size:26px; text-align:center; margin: 0 
     color: #414141;
 }
 
+.post-title h4 {
+    color: #999;
+    font-family: oswald;
+    font-size: 14px;
+    font-weight: 100;
+}
 .deco1 {
     width: 70%;
     margin: 0 auto;
@@ -210,7 +220,7 @@ aside .sidebar-box {}
 
 
 .archive-cat {
-    background-color: #fff;
+    background-color: #111111;
     border: 1px solid #c6c6c6;
     margin-bottom: 20px;
     padding: 15px;
@@ -233,7 +243,7 @@ aside .sidebar-box {}
 }
 
 
-.deco3 {    border-top: 1px solid#575656;     background-color: #f5f5f5; margin-top: 100px;}
+.deco3 {    border-top: 1px solid#111111;     background-color: #f5f5f5; margin-top: 100px;}
 
 footer {
     margin: 40px auto;
@@ -264,12 +274,12 @@ footer p { margin: 12px 0; }
 
 .sp-full-screen-button:before {
     content: '\2195';
-    color: #fff;
+    color: #111111;
 }
 
 .sp-fade-full-screen {
     opacity: 1;
-    color: #fff;
+    color: #111111;
     /* -webkit-transition: opacity .5s; */
     /* transition: opacity 0.5s; */
 }
@@ -318,8 +328,8 @@ ul.socialbuttons.share li a {
     font: inherit;
     width: 117px;
     height: 33px;
-    border: 2px solid #575656;
-    color: #575656;
+    border: 2px solid #111111;
+    color: #111111;
     color: #414141;
     padding-left: 40px;
     padding-right: 0px;
@@ -349,7 +359,7 @@ ul.socialbuttons li.instant a {
 
 .comment-form input, textarea{ width: 100%;  float: right; border:1px solid  #ccc; }
 .comment-form  p.form-submit { float: right; }
-.comment-form  p.form-submit  input{ padding: 8px 10px;  background-color: #fff; }
+.comment-form  p.form-submit  input{ padding: 8px 10px;  background-color: #111111; }
 
 .comment-form  .comment-form-comment { width: 100%; }
 .comment-form  .comment-form-comment  textarea{ width: 100%; }
@@ -357,8 +367,8 @@ ul.socialbuttons li.instant a {
 
 .wpcf7-form input, 
 .wpcf7-form textarea { width: 100%; }
-.wpcf7-form  .wpcf7-submit{padding: 8px 20px; margin: 10px 0;  background-color: #fff; border:1px solid  #ccc; width: auto; float: right;}
-.wpcf7-form  .wpcf7-submit:hover, .comment-form  p.form-submit  input:hover { background-color: #000;  color: #fff;  border-color:#000  }
+.wpcf7-form  .wpcf7-submit{padding: 8px 20px; margin: 10px 0;  background-color: #111111; border:1px solid  #ccc; width: auto; float: right;}
+.wpcf7-form  .wpcf7-submit:hover, .comment-form  p.form-submit  input:hover { background-color: #000;  color: #111111;  border-color:#000  }
 
 #myCarousel {  }
 
