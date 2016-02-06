@@ -2,6 +2,12 @@
 <div class="container section blog-interior">
 
 	<div class="row">
+	<div class="col-md-12">
+		
+		<div class="deco2"></div>
+	</div>
+
+
 		<section class="col-md-8 post-list">
 			<?php $post_counter = 0; ?>
 			<?php if ( have_posts() ) : ?>

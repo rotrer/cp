@@ -219,9 +219,8 @@ section.container header.title h3 {
 .deco2 {
     width: 100%;
     margin: 0 auto;
-    border-top: 1px solid #ccc;
-    display: flex;
-}
+    border-top: 1px solid #111;
+    display: flex;}
 
 .contact-info h3 {
     font-weight: 700
@@ -231,8 +230,13 @@ section.container header.title h3 {
 /* Blog interiior*/
 
 .col-md-8.post-list .post-title,
-.col-md-8.post-list .post-entry {
+.col-md-8.post-list .post-entry, .col-md-8.post-list .post-img{
+    text-align: left;
     padding: 0;
+}
+.col-md-8.post-list .post-img{
+    padding: 0;
+    width: 80%;
 }
 
 
@@ -398,7 +402,7 @@ a .description {
 }
 
 a .description:hover {
-    opacity: 0.2;
+    opacity: 0;
     line-height: 400%;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -413,7 +417,6 @@ a .description:hover {
     font-family: 'Oswald', sans-serif;
     vertical-align: middle;
     text-transform: uppercase;
-    opacity: 1;
     font-size: 22px;
 }
 

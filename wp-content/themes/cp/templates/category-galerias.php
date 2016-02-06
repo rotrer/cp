@@ -1,7 +1,7 @@
 <section class="container">
     <div class="row">
         <header class="title">
-            <h3>Archivos</h3>
+            <h1>Archivos</h1>
         </header>
         <?php 
         $categories = get_categories( array(
