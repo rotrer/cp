@@ -3,7 +3,7 @@
 	<!-- Carousel
 	    ================================================== -->
 	    <div class="container">
-	    <div class="row">
+	 
 		    <div id="myCarousel" class="carousel slide " data-ride="carousel">
 		     <ol class="carousel-indicators">
 	             <li class="active" data-slide-to="0" data-target="#slider-home"></li>
@@ -11,7 +11,7 @@
 			</ol>
 		      <div class="carousel-inner" role="listbox">
 		        <div class="item active">
-		          <img class="first-slide" src="<?php bloginfo( 'template_directory' ); ?>/images/bigimg2.jpg" alt="First slide">
+		          <img class="first-slide" src="<?php bloginfo( 'template_directory' ); ?>/images/bigimg1.jpg" alt="First slide">
 		        </div>
       	        <div class="item ">
 		          <img class="first-slide" src="<?php bloginfo( 'template_directory' ); ?>/images/bigimg2.jpg" alt="First slide">
@@ -26,7 +26,7 @@
 		          <span class="sr-only">Next</span>
 		      </a>
 	      </div>
-      	</div>
+      
 	    </div>
 	<!-- /.carousel -->
 		<!-- Content -->
@@ -61,7 +61,7 @@
 					<?php } ?>
 					<?php endwhile; wp_reset_query(); ?>
 				</section>
-				
+
 				<aside class="col-md-4" style="display: none">
 						<?php get_sidebar(); ?>
 				</aside>

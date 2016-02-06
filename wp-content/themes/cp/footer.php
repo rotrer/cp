@@ -17,5 +17,14 @@
 	</footer>
 </div>		
 		<?php wp_footer(); ?>
+		<script type="text/javascript">
+			$(function() {
+			     $("img.lazy").lazyload({
+			         effect : "fadeIn"
+			     });
+
+			  });
+		</script>
+
 	</body>
 </html>

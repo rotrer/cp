@@ -38,7 +38,7 @@ Primary Page Layout
                 			?>
                             <?php if($gallery) foreach ($gallery as $key => $photo) { ?>
                             <div class="sp-slide">
-                                <img class="sp-image" src="" 
+                                <img class="lazy sp-image" src="" 
                                     data-src="<?php echo $photo["url"]; ?>" 
                                     data-small="<?php echo $photo['sizes']["galeria-thumbx"]; ?>" 
                                     data-medium="<?php echo $photo['sizes']['medium']; ?>" 
@@ -87,7 +87,7 @@ Primary Page Layout
             height:650,
             fade: true,
             arrows: <?php echo ($count_photos > 1) ? 'true' : 'false'; ?>,
-            buttons: false,
+            buttons: true,
             fullScreen: true,
             shuffle: false,
             smallSize: 226,
