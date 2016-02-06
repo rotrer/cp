@@ -658,6 +658,17 @@ footer p {
 }
 
 
+.img-perfil { border-bottom: 1px solid #1111;  border-radius: 200px; overflow: hidden;  }
+
+.img-perfil  img{
+ width: 100%;  
+}
+
+.perfildescription { text-align: center; margin-top: 30px; }
+aside .sidebar-box .perfildescription h3{ margin-bottom: 0;  top: 0; font-size: 18px;}
+
+aside .sidebar-box .perfildescription p { font-size: 16px;  text-align: center; line-height: 140%;  font-style: italic;}
+
 /* SOCIAl */
 
 .readmore-social {

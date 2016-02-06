@@ -1,4 +1,25 @@
 			<!-- Sidebar-->
+
+			<div class="col-md-12 sidebar-box">
+
+			<div class="img-perfil">
+
+		 				<img class="first-slide" src="http://dev.lcasesoria.cl/carolina-parsons/wp-content/uploads/2016/02/editorial.jpg" >
+			</div>
+			<div class="perfildescription">
+				<h3>@Carolinaparsons</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						<a href="">Contactar</a> 
+
+					</p>
+			</div>
+
+			</div>
+
+
+
+<!--
 			<div class="col-md-12 sidebar-box">
 
 			<div class="img-perfil">
@@ -9,7 +30,7 @@
 			</div>
 
 			</div>
-
+-->
 			
 	<div class="deco2 row"></div>
 
