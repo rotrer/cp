@@ -3,10 +3,12 @@
 
 	<div class="row">
 		<section class="col-md-8 post-list">
+			<?php $post_counter = 0; ?>
 			<?php if ( have_posts() ) : ?>
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
+				<?php $post_counter++; ?>
 				<article class="post-content">
 					<header class="post-title">
 						<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a> </h2>
@@ -33,8 +35,9 @@
 							<a href="<?php the_permalink(); ?>">Continuar leyendo</a>
 						</div>
 					</footer>
-
+					<?php if ($post_counter < count( $posts )) { ?>
 					<div class="deco1"></div>
+					<?php } ?>
 				</article>
 
 
