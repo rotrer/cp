@@ -3,12 +3,20 @@
 
 	<div class="row">
 	<div class="col-md-12">
-		
 		<div class="deco2"></div>
-	</div>
+		<!--<?php $categories_blog = get_categories(array('parent' => 2, 'hide_empty' => 0)); ?>
+			<nav>
+				 <ul class="menu-blog">
+					<?php if ( $categories_blog ) foreach ($categories_blog as $key => $cat) { ?>
+					<li><a href="<?php echo get_category_link( $cat->term_id ); ?>"><?php echo $cat->name ?></a></li>
+					<?php } ?>
+				</ul>
+			</nav>
+			<div class="deco2"></div>-->
+		</div>
 
 
-		<section class="col-md-8 post-list">
+		<section class="col-md-9 post-list">
 			<?php $post_counter = 0; ?>
 			<?php if ( have_posts() ) : ?>
 
@@ -17,7 +25,9 @@
 				<?php $post_counter++; ?>
 				<article class="post-content">
 					<header class="post-title">
+
 						<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a> </h2>
+						<h4><?php echo get_the_date(); ?></h4>
 					</header>
 					<?php if ( has_post_thumbnail() ) { ?>
 					<div class="post-img">
@@ -41,11 +51,11 @@
 							<a href="<?php the_permalink(); ?>">Continuar leyendo</a>
 						</div>
 					</footer>
-					<?php if ($post_counter < count( $posts )) { ?>
-					<div class="deco1"></div>
-					<?php } ?>
+					
 				</article>
-
+					<?php if ($post_counter < count( $posts )) { ?>
+						<div class="deco1"></div>
+					<?php } ?>
 
 				<?php endwhile; ?>
 			<?php else : ?>
@@ -65,7 +75,7 @@
 			
 		</section>
 		
-		<aside class="col-md-4">
+		<aside class="col-md-3">
 			<?php get_sidebar(); ?>
 		</aside>
 	</div>

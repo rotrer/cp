@@ -4,7 +4,7 @@
 	<footer class="container  ">
 		<div class="row">
 			<div class="col-md-6">
-				<p>Carolina Parsons© Todos los derechos reservados 2016 </p>
+				<h1>CAROLINA PARSONS©</h1> <p>Todos los derechos reservados 2016 </p>
 			</div>	
 			<div class="col-md-6">
 				<ul class="socialbuttons social-footer">

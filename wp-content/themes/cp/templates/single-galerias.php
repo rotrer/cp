@@ -23,11 +23,11 @@ Primary Page Layout
                         }
                     }
                 ?>
-                <h3> Archivos</h3>
+                
                 <h1>
                    <?php echo $category_name; ?> <?php the_title(); ?>
                 </h1>
-          
+                 <h3> Archivos</h3>
                 </header>
 
                 <div id="full-container" class="slider-carusel">

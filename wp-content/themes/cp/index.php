@@ -40,8 +40,9 @@
 					<article class="post-content">
 
 							<header class="post-title">
-								<h4><?php echo get_the_date(); ?></h4>
+								
 								<h2><a href="<?php the_permalink() ?>" ><?php the_title() ?></a> </h2>
+								<h4><?php echo get_the_date(); ?></h4>
 							</header>
 						
 							<div class="post-img">
@@ -60,6 +61,7 @@
 					<?php } ?>
 					<?php endwhile; wp_reset_query(); ?>
 				</section>
+				
 				<aside class="col-md-4" style="display: none">
 						<?php get_sidebar(); ?>
 				</aside>

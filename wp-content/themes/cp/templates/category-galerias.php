@@ -1,6 +1,6 @@
 <section class="container">
     <div class="row">
-        <header class="title">
+        <header class="title category">
             <h1>Archivos</h1>
         </header>
         <?php 

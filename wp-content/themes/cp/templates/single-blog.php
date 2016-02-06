@@ -1,8 +1,20 @@
 <!-- Content -->
 <div class="container section">
 	<div class="row">
+	<div class="col-md-12">
+		<div class="deco2"></div>
+		<!--<?php $categories_blog = get_categories(array('parent' => 2, 'hide_empty' => 0)); ?>
+			<nav>
+				 <ul class="menu-blog">
+					<?php if ( $categories_blog ) foreach ($categories_blog as $key => $cat) { ?>
+					<li><a href="<?php echo get_category_link( $cat->term_id ); ?>"><?php echo $cat->name ?></a></li>
+					<?php } ?>
+				</ul>
+			</nav>
+			<div class="deco2"></div>-->
+		</div>
 
-		<div class=" post-list col-md-8">
+		<div class=" post-list col-md-9">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -11,6 +23,7 @@
 				<article class="post-content">
 					<header class="post-title">
 						<h2><?php the_title(); ?> </h2>
+						<h4><?php echo get_the_date(); ?></h4>
 					</header>
 					<?php if ( has_post_thumbnail() ) { ?>
 					<div class="post-img">
@@ -26,7 +39,6 @@
 					</div>
 
 					<div class ="blog_content readmore-social">
-						<span>Compartir:</span>	
 
 						<ul class="socialbuttons share">
 							<li class="facebook">
@@ -156,7 +168,7 @@
 			</div>
 		</div>
 		
-		<aside class="col-md-4">
+		<aside class="col-md-3">
 			
 			<?php get_sidebar(); ?>
 		</aside>

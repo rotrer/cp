@@ -16,12 +16,12 @@ body {
 }
 
 a {
-    color: #999;
+    color: #111;
     text-decoration: none;
 }
 
 a:hover {
-    color: #111111;
+    color: #999;
     text-decoration: none;
 }
 
@@ -52,8 +52,10 @@ h6 {
 }
 
 h2 {
-    font-size: 34px;
+    font-size: 42px;
     margin-top: 0;
+    font-weight: 400;
+    letter-spacing: -1px;
 }
 
 h3 {
@@ -67,8 +69,9 @@ h4 {
 h4 {}
 
 p {
-    font-size: 18px;
+    font-size: 21px;
     font-weight: 300;
+    line-height: 30px;
     margin-bottom: 24px;
 }
 
@@ -115,7 +118,7 @@ p {
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-    color: #414141
+    color: #999;
 }
 
 .navbar-brand {
@@ -147,7 +150,11 @@ div.container.section {
 
 section.container header.title {
     text-align: center;
-    margin: 0 auto 35px;
+    margin: 0 auto 13px;
+}
+
+section.container header.title.category {
+    margin-bottom: 38px;
 }
 
 section.container header.title h1 {
@@ -165,7 +172,8 @@ section.container header.title h1 {
 
 section.container header.title h3 {
     position: relative;
-    top: 20px;
+    top: -13px;
+    margin-bottom: 0;
     background-color: #fff;
     display: inline-block;
     color: #111;
@@ -175,8 +183,24 @@ section.container header.title h3 {
 
 .section {}
 
+.post-entry,
+.post-title {
+    padding: 0 10%;
+}
+
+.post-img {
+    width: 60%;
+    margin: 0 auto
+}
+
+.post-list {
+    margin-top: 28px;
+}
+
 .post-content {
-    margin: 50px 0
+    margin: 28px 0;
+    padding-bottom: 28px;
+    text-align: center;
 }
 
 .post-content .post-img {}
@@ -189,28 +213,65 @@ section.container header.title h3 {
 }
 
 .post-content .post-title h2 {
-    margin-bottom: 34px;
+    border-bottom: 1px solid #111;
+    margin-bottom: 10px;
+    padding-bottom: 20px
 }
 
 .post-content .post-title h2 a {
     color: #111111;
     text-decoration: none;
+    font-family: oswald;
+    letter-spacing: 1px;
+    font-weight: 400;
     border: none;
 }
 
 .post-content .post-title h2 a:hover {
-    color: #414141;
+    color: #999;
 }
 
-.post-title h4 {
-    color: #999;
-    font-family: oswald;
+.post-content header h4 {
+    background-color: #fff;
+    display: inline-block;
     font-size: 14px;
-    font-weight: 100;
+    margin: 0;
+    padding: 0 15px;
+    position: relative;
+    color: #111;
+    top: -23px;
+    font-weight: 600;
+}
+
+.blog_contentcomments {
+    padding: 0 10%;
+}
+
+.post-option {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    font-family: 'oswald', sans-serif
+}
+
+.post-option div {
+    display: inline-block;
+}
+
+.post-option div a {
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 19px;
+    color: #999;
+    border-bottom: 1px dotted #999;
+}
+
+.post-option .post-social {
+    display: none;
 }
 
 .deco1 {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     border-top: 1px solid #111;
     display: flex;
@@ -220,27 +281,75 @@ section.container header.title h3 {
     width: 100%;
     margin: 0 auto;
     border-top: 1px solid #111;
-    display: flex;}
+    display: flex;
+}
 
 .contact-info h3 {
     font-weight: 700
 }
 
+.contact-info p {
+    font-size: 16px;
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
 
-/* Blog interiior*/
+.contact-info p span {
+    width: 100%;
+    float: left;
+    line-height: 132%;
+}
 
-.col-md-8.post-list .post-title,
-.col-md-8.post-list .post-entry, .col-md-8.post-list .post-img{
+.wpcf7-form small {
+    font-size: 12px;
+}
+
+
+/* Blog interiior
+
+.col-md-9.post-list .post-title,
+.col-md-9.post-list .post-entry,
+.col-md-9.post-list .post-img {
     text-align: left;
     padding: 0;
 }
-.col-md-8.post-list .post-img{
+*/
+
+.col-md-9.post-list .post-img {
     padding: 0;
     width: 80%;
 }
 
+ul.menu-blog {
+    font-size: 18px;
+    float: left;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+ul.menu-blog li {
+    float: left;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+ul.menu-blog li a {
+    float: left;
+    list-style: none;
+}
+
 
 /* ASIDE */
+
+aside {
+    margin-top: 45px;
+}
+
+aside .sidebar-box {
+    border-left: 1px solid #111;
+}
 
 aside nav ul {
     color: #414141;
@@ -248,17 +357,25 @@ aside nav ul {
     text-decoration: none;
     padding: 0;
     list-style: none;
+    margin-bottom: 0
 }
 
 aside nav ul li {
-    text-align: center;
+    text-align: left;
     margin: 8px auto;
+}
+
+aside nav ul li:before {
+    content: '-';
 }
 
 aside nav ul li a {
     color: #414141;
+    font-family: oswald;
+    padding-left: 10px;
     text-transform: uppercase;
     text-decoration: none;
+    letter-spacing: 3px;
 }
 
 aside .sidebar-box {
@@ -271,14 +388,37 @@ aside .sidebar-box h3 {
     margin: 0;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 100;
-    margin-bottom: 20px;
+    top: -28px;
+    /* margin-bottom: 20px; */
+    position: relative;
+    background-color: #fff;
+    font-size: 12px;
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+aside .content {
+    position: relative;
+    top: -24px;
+    padding: 20px 0 0 0px;
+    text-align: center;
 }
 
 aside .sidebar-box {}
 
-#instafeed {
+aside h2 {
+    font-size: 22px;
     text-align: center;
+}
+
+aside h2 a {
+    border-bottom: 1px dotted;
+    margin: 0;
+}
+
+#instafeed {
+    text-align: left;
 }
 
 #instafeed a img {
@@ -289,48 +429,6 @@ aside .sidebar-box {}
     border: 1px solid #c1c1c1;
 }
 
-
-/* RECORTES */
-
-
-/* RECORTES */
-
-#flex .archive-cat a {
-    height: 100%;
-    width: 100%;
-    border: 0 none;
-}
-
-#flex .archive-cat {
-    background-color: #000;
-    padding: 0;
-    border: none 0;
-    height: 100%;
-    margin-bottom: 0;
-}
-
-#flex .item.col-md-4 {
-    margin: 0;
-    padding: 0
-}
-
-#flex .archive-cat a img {
-    top: 0;
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1);
-}
-
-#flex .archive-cat a img:hover {
-    -webkit-filter: none (0);
-    filter: none (0)
-}
-
-#flex .archive-cat a .description h2 {
-    padding: 5px;
-    background-color: #000;
-}
-
-#flex .archive-cat a .description {}
 
 /* Archivos */
 
@@ -391,9 +489,8 @@ a .description {
     font-weight: 300;
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.3);
     color: #fff;
-    opacity: 0.5;
     display: table;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -402,8 +499,7 @@ a .description {
 }
 
 a .description:hover {
-    opacity: 0;
-    line-height: 400%;
+    background-color: rgba(0, 0, 0, 0.1);
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -418,14 +514,56 @@ a .description:hover {
     vertical-align: middle;
     text-transform: uppercase;
     font-size: 22px;
+    font-weight: 100;
 }
 
-#portadas div {
-    -webkit-transition: all 10s ease-in;
-    -moz-transition: all 0.10s ease-in;
-    -o-transition: all 0.10s ease-in;
-    transition: all 0.10s ease-in;
+.description h2:hover {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
+
+
+/* RECORTES */
+
+#flex .archive-cat a {
+    height: 100%;
+    width: 100%;
+    border: 0 none;
+}
+
+#flex .archive-cat {
+    padding: 0;
+    border: none 0;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+#flex .item.col-md-4 {
+    margin: 0;
+    padding: 0
+}
+
+#flex .archive-cat a img {
+    top: 0;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+#flex .archive-cat a img:hover {
+    -webkit-filter: none (0);
+    filter: none (0)
+}
+
+#flex .archive-cat a .description h2 {
+    padding: 5px;
+}
+
+#flex .archive-cat a .description {}
+
+#portadas div {}
 
 .deco3 {
     border-top: 1px solid#111111;
@@ -438,8 +576,20 @@ footer {
     padding: 40px auto;
 }
 
+footer h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
 footer p {
-    margin: 12px 0;
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 100%;
+    margin-top: 0;
+}
+
+.slider-carusel {
+    margin: 0 15px;
 }
 
 .sp-slides-container,
@@ -489,56 +639,85 @@ ul.socialbuttons.social-footer {
 
 ul.socialbuttons {
     margin: 0 auto;
+    margin-top: 4px;
     padding: 0;
     width: auto;
     list-style: none;
-    width: 183px;
+    display: inline-block;
 }
 
 ul.socialbuttons.share {
     width: auto;
 }
 
-ul.socialbuttons li a {
-    float: left;
+ul.socialbuttons li {
     display: inline-block;
-    margin: 0 5px;
+    float: left;
     padding: 0;
 }
 
 ul.socialbuttons li a {
-    border: 0;
-    font: 0/0 a;
-    text-shadow: none;
-    color: transparent;
-    width: 51px;
-    height: 51px;
-    background: transparent url(../images/fb.gif) no-repeat 0 0;
+    display: inline-block;
+    float: left;
+    margin: 0 10px;
+    padding: 0;
 }
 
-ul.socialbuttons.share li a {
-    background: transparent url(../images/fb.gif) no-repeat 0px 0px;
-    background-size: contain;
-    font: inherit;
-    width: 117px;
-    height: 33px;
-    border: 2px solid #111111;
-    color: #111111;
-    color: #414141;
-    padding-left: 40px;
-    padding-right: 0px;
+ul.socialbuttons li a {
+    background: transparent url("../images/fb.png") no-repeat scroll 0 0;
+    border: 0 none;
+    color: transparent;
+    font: 0px/0 a;
+    height: 26px;
+    text-shadow: none;
+    width: 26px;
 }
 
 ul.socialbuttons li.facebook a {
-    background-image: url(../images/fb.gif);
+    background-image: url(../images/fb.png);
 }
 
 ul.socialbuttons li.twitter a {
-    background-image: url(../images/tw.gif);
+    background-image: url(../images/tw.png);
 }
 
 ul.socialbuttons li.instant a {
-    background-image: url(../images/insta.gif);
+    background-image: url(../images/inst.png);
+}
+
+ul.socialbuttons.share {
+    display: inline-block;
+    margin: 0 auto;
+    width: auto;
+}
+
+ul.socialbuttons.share li {
+    display: inline-block;
+    margin: 0 auto;
+    width: auto;
+    float: left;
+}
+
+ul.socialbuttons.share li a {
+    background: transparent url(../images/sfb.png) no-repeat scroll 0 0;
+    border: 0 none;
+    color: transparent;
+    font: 0px/0 a;
+    height: 22px;
+    text-shadow: none;
+    width: 22px;
+}
+
+ul.socialbuttons.share li.facebook a {
+    background-image: url(../images/sfb.png);
+}
+
+ul.socialbuttons.share li.twitter a {
+    background-image: url(../images/stw.png);
+}
+
+ul.socialbuttons.share li.instant a {
+    background-image: url(../images/sinst.png);
 }
 
 .pagination {
@@ -550,6 +729,21 @@ ul.socialbuttons li.instant a {
 .comment-form p {
     width: 48%;
     float: left;
+}
+
+.comment-form p label,
+.wpcf7-form label {
+    background-color: #fff;
+    font-family: "oswald", sans-serif;
+    z-index: 100;
+    font-size: 13px;
+    font-weight: normal;
+    left: 5px;
+    padding: 0 5px;
+    position: relative;
+    text-transform: uppercase;
+    top: 18px;
+    width: auto;
 }
 
 .comment-form p.comment-notes {
@@ -566,10 +760,21 @@ ul.socialbuttons li.instant a {
 }
 
 .comment-form input,
+.comment-form input,
 textarea {
-    width: 100%;
-    float: right;
     border: 1px solid #ccc;
+    color: #666;
+    float: right;
+    font-family: caption;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 12px;
+    width: 100%;
+}
+
+.comment-form input:hover,
+textarea:hover {
+    background-color: #f1f1f1
 }
 
 .comment-form p.form-submit {
@@ -578,7 +783,7 @@ textarea {
 
 .comment-form p.form-submit input {
     padding: 8px 10px;
-    background-color: #111111;
+    background-color: #fff;
 }
 
 .comment-form .comment-form-comment {
@@ -597,7 +802,7 @@ textarea {
 .wpcf7-form .wpcf7-submit {
     padding: 8px 20px;
     margin: 10px 0;
-    background-color: #111111;
+    background-color: #fff;
     border: 1px solid #ccc;
     width: auto;
     float: right;
@@ -605,23 +810,18 @@ textarea {
 
 .wpcf7-form .wpcf7-submit:hover,
 .comment-form p.form-submit input:hover {
-    background-color: #000;
+    background-color: #fff;
     color: #111111;
     border-color: #000
 }
 
-#myCarousel {}
+form p {}
 
-.post-content {
+span.wpcf7-not-valid-tip {
+    background-color: #000;
+    color: #ccc;
+    display: block;
+    font-size: 13px;
+    padding: 6px;
     text-align: center;
-}
-
-.post-entry,
-.post-title {
-    padding: 0 10%;
-}
-
-.post-img {
-    width: 60%;
-    margin: 0 auto
 }

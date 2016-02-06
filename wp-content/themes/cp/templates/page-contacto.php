@@ -5,8 +5,7 @@
 
 
 <section class="container section">
-            <header class="title">
-               <h3>¡Hola!</h3>
+            <header class="title category">
                 <h1>
                  Contacto
                 </h1>

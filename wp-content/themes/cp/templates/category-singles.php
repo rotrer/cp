@@ -13,8 +13,9 @@
 <section class="container">
     <div class="row">
       <header class="title">
-         <h3> Archivos</h3>
+         
         <h1><?php echo $thisCat->name; ?></h1>
+        <h3> Archivos</h3>
    
       </header>
       <div id="<?php echo $id_singles; ?>">
