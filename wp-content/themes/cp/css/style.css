@@ -177,6 +177,7 @@ section.container header.title {
 section.container header.title.category {
     margin-bottom: 38px;
 }
+
 section.container header.title h1 {
     font-style: italic;
     font-size: 38px;
@@ -238,16 +239,12 @@ section.container header.title h3 {
 .post-content .post-title h2 {
     border-bottom: 1px solid #111;
     margin-bottom: 10px;
-    padding-bottom: 20px
-}
-
-.post-content .post-title h2 a {
+    padding-bottom: 20px;
     color: #111111;
     text-decoration: none;
     font-family: oswald;
     letter-spacing: 1px;
     font-weight: 400;
-    border: none;
 }
 
 .post-content .post-title h2 a:hover {
@@ -270,7 +267,8 @@ section.container header.title h3 {
     padding: 0 10%;
 }
 
-.post-option {
+.post-option,
+.pagination a {
     display: inline-block;
     width: 100%;
     margin: 0;
@@ -281,10 +279,11 @@ section.container header.title h3 {
     display: inline-block;
 }
 
-.post-option a {
+.post-option a,
+.pagination a {
     text-transform: uppercase;
     display: inline-block;
-    font-size: 19px;
+    font-size: 17px;
     color: #c2c2c2;
     border-bottom: 1px dotted #ccc;
 }
@@ -295,6 +294,16 @@ section.container header.title h3 {
 
 .post-option .post-social {
     display: none;
+}
+
+.pagination { width: 100%; 
+    text-align: right;
+
+}
+
+.pagination a {
+    width: auto;
+    margin-left: 20px;
 }
 
 .deco1 {
@@ -615,9 +624,6 @@ footer p {
     margin-top: 0;
 }
 
-.slider-carusel {
-    margin: 0 15px;
-}
 
 .img-perfil {
     border-bottom: 1px solid #1111;
@@ -756,10 +762,6 @@ ul.socialbuttons.share li.instant a {
     background-image: url(../images/sinst.png);
 }
 
-.pagination {
-    display: none
-}
-
 .comment-form {}
 
 .comment-form p {
@@ -862,35 +864,39 @@ span.wpcf7-not-valid-tip {
     text-align: center;
 }
 
-.slider-pro{ padding: 30px; }
-
-.sp-image-container  {
-    padding: 0 30px;}
+.slider-carusel {
+    margin: 0 15px;
 }
-.sp-image-container  img{ opacity: 1;
-        -webkit-transition: all 1s ease-in-out;
+
+
+.slider-pro {
+    padding: 30px;
+    margin: 20px auto 0
+}
+
+.sp-image-container {
+    padding: 0 30px;
+}
+
+}
+.sp-image-container img {
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
-
- }
-
- .sp-buttons { display: none; }
-
-.sp-bottom-thumbnails {
-     margin-top: 30px;
-
 }
-
-
-
+.sp-buttons {
+    display: none;
+}
+.sp-bottom-thumbnails {
+    margin-top: 30px;
+}
 .sp-slides-container,
 .slider-pro {
     background-color: #000;
 }
-
 .sp-full-screen-button {}
-
 .sp-full-screen-button {
     cursor: pointer;
     font-size: 48px;
@@ -899,7 +905,6 @@ span.wpcf7-not-valid-tip {
     right: 17px;
     top: 3px;
 }
-
 .sp-full-screen-button:before {
     content: '\e096';
     color: #fff;
@@ -915,7 +920,6 @@ span.wpcf7-not-valid-tip {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
 }
-
 .sp-fade-full-screen {
     opacity: 1;
     color: #111111;

@@ -59,18 +59,28 @@ Primary Page Layout
                         
                     </div>
                 </div>
+                <div>
+                    <div class=" col-md-6">
+                    </div>
+                    <div class=" col-md-6">
+                        <div class="pagination">
+                        <?php
+                            echo get_previous_post_link('%link', 'Anterior');
+                            echo get_next_post_link('%link', 'Siguiente');
+                        ?>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
         </div>
     </section>
 <?php endwhile; ?>
-    <div class ="blog_content readmore-social">
-        <div class="pagination">
-        <?php
-            echo get_previous_post_link('%link', 'Anterior');
-            echo get_next_post_link('%link', 'Siguiente');
-        ?>
-        </div>
-    </div>
+    
+
     
     <!-- Content -->
     <!-- <div class="container section">
