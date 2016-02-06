@@ -26,5 +26,59 @@
 			  });
 		</script>
 
+
+	<!-- JS -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+
+		
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/libs/fancybox/jquery.fancybox.pack.js"></script>
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/sliderpro-min.js"></script>
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.flex-images.min.js"></script>
+
+				<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.lazyload.js"></script>
+<!-- LOAD DE IMAGENES 
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social2.js"></script>
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social3.js"></script>
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/scripts.js"></script>
+-->
+		
+			<?php if ( is_home() ) { ?>
+				<script type="text/javascript">
+					$(document).ready(function($) {
+						$('#slider').sliderPro({
+							width: '500px',
+							height: '500px',
+							aspectRatio: 1,
+							visibleSize: '100%',
+							//forceSize: 'fullWidth'
+							slideDistance :0,   
+						});
+
+						// instantiate fancybox when a link is clicked
+						$('#slider .sp-image').parent('a').on('click', function(event) {
+							event.preventDefault();
+
+							// check if the clicked link is also used in swiping the slider
+							// by checking if the link has the 'sp-swiping' class attached.
+							// if the slider is not being swiped, open the lightbox programmatically,
+							// at the correct index
+							if ($('#slider').hasClass('sp-swiping') === false) {
+								$.fancybox.open($('#slider .sp-image').parent('a'), {
+									index: $(this).parents('.sp-slide').index()
+								});
+							}
+						});
+					});	
+				</script>
+			<?php } ?>
+		<?php wp_head(); ?>
+
+			<script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.flex-images.min.js"></script>
+			<script>
+				$('#flex').flexImages({ rowHeight: 320, maxRows: 8, truncate: true });
+		    </script>
+		    
 	</body>
 </html>

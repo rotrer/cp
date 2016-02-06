@@ -62,9 +62,7 @@
 					<?php endwhile; wp_reset_query(); ?>
 				</section>
 
-				<aside class="col-md-4" style="display: none">
-						<?php get_sidebar(); ?>
-				</aside>
+				
 			</div>
 		</div>
 <?php get_footer(); ?>
