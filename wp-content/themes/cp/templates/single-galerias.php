@@ -49,7 +49,7 @@ Primary Page Layout
 
                    		</div>
 
-                        <?php if( $count_photos > 0 ) { ?>
+                        <?php if( $count_photos > 1 ) { ?>
                         <div class="sp-thumbnails">
                         <?php if($gallery) foreach ($gallery as $key => $photo) { ?>
                             <img class="sp-thumbnail" src="<?php echo $photo["sizes"]["thumbnail"] ?>"/>
@@ -86,7 +86,7 @@ Primary Page Layout
             width: '100%',
             height:650,
             fade: true,
-            arrows: true,
+            arrows: <?php echo ($count_photos > 1) ? 'true' : 'false'; ?>,
             buttons: false,
             fullScreen: true,
             shuffle: false,
