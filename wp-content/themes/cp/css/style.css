@@ -285,8 +285,16 @@ aside .sidebar-box {}
     height: 100%;
     margin-bottom: 0;}
 #flex .item.col-md-4 { margin:0;  padding: 0}
-#flex .archive-cat a img { top: 0; }
+#flex .archive-cat a img { top: 0;   -webkit-filter: grayscale(1);
+  filter: grayscale(1);}
 
+  #flex .archive-cat a img:hover { -webkit-filter:  none (0);
+  filter: none (0)}
+
+  #flex .archive-cat a .description  h2{ padding: 5px ;  background-color: #000;   }
+
+  #flex .archive-cat  a .description  {}
+¡
 
 /* Archivos */
 
@@ -342,6 +350,7 @@ aside .sidebar-box {}
 
 a .description {
     z-index: 500;
+        text-align: center;
     position: absolute;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
@@ -349,18 +358,23 @@ a .description {
     height: 100%;
     background-color: #000;
     color: #fff;
-    opacity: 0;
+    opacity: 0.5;
     display:table;
+        -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 a .description:hover {
-    opacity: 0.7;
-    text-align: center;
+    opacity: 0.2;
     line-height: 400%;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    color: #fff;
+
 
 
 }
@@ -372,7 +386,17 @@ a .description:hover {
      text-transform: uppercase;
      opacity: 1;
      font-size: 22px;
+
 }
+
+
+#portadas div{  
+   -webkit-transition: all 10s ease-in;
+    -moz-transition: all 0.10s ease-in;
+    -o-transition: all 0.10s ease-in;
+    transition: all 0.10s ease-in;}
+
+
 
 .deco3 {
     border-top: 1px solid#111111;

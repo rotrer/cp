@@ -85,6 +85,8 @@
 			<script>
 				$('#flex').flexImages({ rowHeight: 320, maxRows: 8, truncate: true });
 		    </script>
+
+
 	</head>
 
 	<body <?php body_class(); ?>>
