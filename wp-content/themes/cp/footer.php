@@ -16,18 +16,6 @@
 		</div>
 	</footer>
 </div>		
-
-
-		<!-- End Document
-		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<!-- Flexsslider
-			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<?php if ( is_page( array('Campañas', 'Editorial', 'Portadas') ) ) { ?>
-			<script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.flex-images.min.js"></script>
-			<script>
-				$('.flex-images').flexImages({ rowHeight: 320, maxRows: 8, truncate: true });
-		    </script>
-		<?php } ?>
 		<?php wp_footer(); ?>
 	</body>
 </html>
