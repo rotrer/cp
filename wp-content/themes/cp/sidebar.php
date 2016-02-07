@@ -1,6 +1,6 @@
 			<!-- Sidebar-->
 
-			<div class="col-md-12 sidebar-box">
+			<div class="col-md-12 sidebar-box perfil-blog">
 
 			<div class="img-perfil">
 
@@ -34,7 +34,7 @@
 			
 	<div class="deco2 row"></div>
 
-			<div class="col-md-12 sidebar-box">
+			<div class="col-md-12 sidebar-box categorias-blog">
 
 				<h3>Categorías</h3>
 
@@ -49,10 +49,10 @@
 			</nav>
 			</div>
 		</div>		
-			<div class="deco2 row"></div>
+			<div class="deco2 row hidden-sm "></div>
 
 
-			<div class="col-md-12 sidebar-box">
+			<div class="col-md-12 sidebar-box redes-blog">
 			<h3>Redes</h3>
 
 			<div class="content">
@@ -64,7 +64,7 @@
 					</div>
 			</div>
 
-			<div class="deco2"></div>
+			<div class="deco2 hidden-sm"></div>
 
 			<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.jstwitter.js"></script>
 			<script type="text/javascript">
@@ -90,7 +90,7 @@
 
 
 			<!-- instanfeed-->
-			<div class="col-md-12 mclean-left sidebar-box">
+			<div class="col-md-12 mclean-left sidebar-box instan-blog">
 				<h3 class="socialtitle">Instagram</h3>
 				<div class="content">
 				<h2><a href="https://www.instagram.com/carolinaparsons/"><span></span>@Carolinaparsons</a></h2>

@@ -12,7 +12,7 @@
         if ( $categories ) foreach ($categories as $key => $category) {
         ?>
             <?php $photo = get_field('imagen_cat2', $category); ?>
-            <div class="col-sm-6 col-md-4 " data-w="<?php echo $photo['width'] ?>" data-h="<?php echo $photo['height'] ?>">
+            <div class=" col-xs-12 col-sm-6 col-md-4 " data-w="<?php echo $photo['width'] ?>" data-h="<?php echo $photo['height'] ?>">
                 <div class="archive-cat">
                     <a href="<?php echo get_category_link( $category->term_id ); ?>"><img  src="<?php echo $photo['url']; ?>"> 
                         <!-- descripcion imagen --> 

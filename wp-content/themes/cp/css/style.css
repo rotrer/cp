@@ -1,4 +1,4 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
 
 /*@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100); */
@@ -147,6 +147,96 @@ p {
 
 .carousel-inner .item img {}
 
+@media ( max-width: 768px) {
+    .container.slider-home {
+        margin: 0;
+        padding: 0
+    }
+    .navbar-brand h1 {
+        font-size: 35px;
+        margin: 11px 0 0 0;
+        float: left;
+    }
+}
+
+@media ( max-width: 375px) {
+    .container.slider-home {
+        margin: 0;
+        padding: 0
+    }
+
+.navbar-header {
+    padding: 15px 15px 0 15px;
+    margin: 0;
+    display: block;
+}
+    .navbar-brand {
+        float: left;
+    }
+    .navbar-brand h1 {
+        font-size: 24px;
+        margin: 4px 0 0 0;
+        float: left;
+    }
+    section.container header.title h1 {
+        font-size: 24px;
+    }
+    .navbar .container {
+        padding: 0;
+        margin: 0;
+    }
+    .navbar-toggle {
+        margin: 0;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+
+.navbar-toggle {
+    margin-bottom: 0;
+    border: none;
+    background: transparent !important;
+}
+
+.navbar-toggle:hover {
+    background: transparent !important;
+}
+
+.navbar-toggle .icon-bar {
+    width: 22px;
+    transition: all 0.2s;
+}
+
+.navbar-toggle .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggle .middle-bar {
+    opacity: 0;
+}
+
+.navbar-toggle .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+
+.navbar-toggle.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggle.collapsed .middle-bar {
+    opacity: 1;
+}
+
+.navbar-toggle.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
 .glyphicon-chevron-left:before {
     content: "\e257";
 }
@@ -207,14 +297,26 @@ section.container header.title h3 {
 
 .section {}
 
-.post-entry,
-.post-title {
+.post-content {
     padding: 0 10%;
 }
 
 .post-img {
     width: 60%;
     margin: 0 auto
+}
+
+@media ( max-width: 375px) {
+    .glyphicon-chevron-left:before,
+    .glyphicon-chevron-right:before {
+        font-size: 25px;
+    }
+    .post-content {
+        padding: 0 5%;
+    }
+    .post-img {
+        width: 90%;
+    }
 }
 
 .post-list {
@@ -296,9 +398,9 @@ section.container header.title h3 {
     display: none;
 }
 
-.pagination { width: 100%; 
+.pagination {
+    width: 100%;
     text-align: right;
-
 }
 
 .pagination a {
@@ -453,18 +555,6 @@ aside h2 a {
     margin: 0;
 }
 
-#instafeed {
-    text-align: left;
-}
-
-#instafeed a img {
-    padding: 0%;
-    width: 44%;
-    margin: 3%;
-    background-color: #f4f4f4;
-    border: 1px solid #c1c1c1;
-}
-
 
 /* Archivos */
 
@@ -473,7 +563,7 @@ aside h2 a {
     border: 1px solid #c6c6c6;
     margin-bottom: 20px;
     padding: 15px;
-    height: 261px;
+    height: 260px;
 }
 
 .archive-cat a {
@@ -482,7 +572,7 @@ aside h2 a {
     overflow: hidden;
     display: block;
     float: left;
-    width: 261px;
+    width: 100%;
     position: relative;
 }
 
@@ -516,6 +606,42 @@ aside h2 a {
     top: 0;
     z-index: 1;
 }
+
+@media ( max-width: 991px) {
+    #portadas .archive-cat {
+        height: 265px;
+        position: relative;
+    }
+    #portadas .archive-cat a {
+        width: 100%;
+        height: 232px;
+    }
+}
+
+@media ( max-width: 510px) {
+    .deco1 {
+        width: 90%
+    }
+    .archive-cat a {
+        height: 201px;
+    }
+    .archive-cat {
+        margin-bottom: 10px;
+        padding: 8px;
+        height: 220px;
+    }
+    #portadas .archive-cat {
+        height: 225px;
+        position: relative;
+        padding: 8px;
+    }
+    #portadas .archive-cat a {
+        width: 100%;
+        height: 207px;
+    }
+}
+
+@media ( max-width: 768px) {}
 
 a .description {
     z-index: 500;
@@ -607,6 +733,47 @@ a .description:hover {
     margin-top: 40px;
 }
 
+@media ( max-width: 375px) {
+    section.container header.title h1 {
+        font-size: 22px;
+        line-height: 160%;
+    }
+}
+
+@media ( max-width: 375px) {
+    .archive-cat,
+    .post-content img,
+    #portadas .archive-cat {
+        padding: 8px;
+    }
+    #portadas .archive-cat a {
+        width: 100%
+    }
+    aside .sidebar-box {
+        border-left: 0 none
+    }
+    .instan-blog,
+    .redes-blog,
+    .hidden-sm {
+        display: none
+    }
+    .categorias-blog {
+        text-align: center;
+    }
+}
+
+#instafeed {
+    text-align: left;
+}
+
+#instafeed a img {
+    padding: 0%;
+    width: 44%;
+    margin: 3%;
+    background-color: #f4f4f4;
+    border: 1px solid #c1c1c1;
+}
+
 footer {
     margin: 40px auto;
     padding: 40px auto;
@@ -624,6 +791,15 @@ footer p {
     margin-top: 0;
 }
 
+@media ( max-width: 325px) {
+    footer p {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .navbar-brand h1 {
+        font-size: 21px;
+    }
+}
 
 .img-perfil {
     border-bottom: 1px solid #1111;
@@ -868,7 +1044,6 @@ span.wpcf7-not-valid-tip {
     margin: 0 15px;
 }
 
-
 .slider-pro {
     padding: 30px;
     margin: 20px auto 0
@@ -877,6 +1052,7 @@ span.wpcf7-not-valid-tip {
 .sp-image-container {
     padding: 0 30px;
 }
+
 
 }
 .sp-image-container img {
@@ -925,4 +1101,10 @@ span.wpcf7-not-valid-tip {
     color: #111111;
     -webkit-transition: opacity .5s;
     transition: opacity 0.5s;
+}
+@media (max-width:450px;
+) {
+    .slider-pro {
+        padding:
+    }
 }

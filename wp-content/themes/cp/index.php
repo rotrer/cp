@@ -2,7 +2,7 @@
 
 	<!-- Carousel
 	    ================================================== -->
-	    <div class="container">
+	    <div class="container slider-home">
 	 
 		    <div id="myCarousel" class="carousel slide " data-ride="carousel">
 		     <ol class="carousel-indicators">
@@ -55,7 +55,20 @@
 						<div class="post-entry">
 							<?php the_excerpt() ?>
 						</div>
+
+					<footer class ="post-option">
+						<div class="post-social">
+							<a href="<?php the_permalink(); ?>">Comentarios <?php comments_number( '0' ); ?></a>
+						</div>
+						<div class="post-readmore">
+							<a href="<?php the_permalink(); ?>">Continuar leyendo</a>
+						</div>
+					</footer>
+					
+
 					</article>
+
+
 					<?php if ($post_counter < count( $posts )) { ?>
 					<div class="deco1"></div>
 					<?php } ?>

@@ -27,7 +27,7 @@
           $photo_width = $imagen_destacada["sizes"]["galeria-thumbx-width"];
           $photo_height = $imagen_destacada["sizes"]["galeria-thumbx-height"];
         ?>
-        <div class="item col-md-4" data-w="<?php echo $photo_width; ?>" data-h="<?php echo $photo_height; ?>">
+        <div class="item col-xs-6 col-sm-4 col-md-4 " data-w="<?php echo $photo_width; ?>" data-h="<?php echo $photo_height; ?>">
           <div class="archive-cat">
             <a href="<?php the_permalink(); ?>"><img  src="<?php echo $photo_featured; ?>"> 
               <!-- descripcion imagen -->
