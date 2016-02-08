@@ -38,8 +38,8 @@ Primary Page Layout
                 			?>
                             <?php if($gallery) foreach ($gallery as $key => $photo) { ?>
                             <div class="sp-slide">
-                                <img class="lazy sp-image" src="<?php bloginfo( 'template_directory' ); ?>/images/blank.gif" 
-                                    data-src="<?php echo $photo["url"]; ?>" 
+                                <img class="lazy sp-image" src="<?php bloginfo( 'template_directory' ); ?>/css/images/blank.gif" 
+                                     data-src="<?php echo $photo["url"]; ?>" 
                                     data-small="<?php echo $photo['sizes']["galeria-thumbx"]; ?>" 
                                     data-medium="<?php echo $photo['sizes']['medium']; ?>" 
                                     data-large="<?php echo $photo["url"]; ?>" 
