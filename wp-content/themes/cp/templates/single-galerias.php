@@ -38,7 +38,7 @@ Primary Page Layout
                 			?>
                             <?php if($gallery) foreach ($gallery as $key => $photo) { ?>
                             <div class="sp-slide">
-                                <img class="lazy sp-image" src="" 
+                                <img class="lazy sp-image" src="<?php bloginfo( 'template_directory' ); ?>/images/blank.gif" 
                                     data-src="<?php echo $photo["url"]; ?>" 
                                     data-small="<?php echo $photo['sizes']["galeria-thumbx"]; ?>" 
                                     data-medium="<?php echo $photo['sizes']['medium']; ?>" 
@@ -90,28 +90,47 @@ Primary Page Layout
             </div>
         </div>
     </div> -->
-	<script type="text/javascript">
-    $(document).ready(function($) {
-        $('#slider').sliderPro({
-            width: '100%',
-            height:650,
-            fade: true,
-            arrows: <?php echo ($count_photos > 1) ? 'true' : 'false'; ?>,
-            buttons: true,
-            fullScreen: true,
-            shuffle: false,
-            smallSize: 226,
-            mediumSize: 800,
-            largeSize: 1600,
-            thumbnailArrows: true,
-            autoplay: false,
-            //autoHeight:true,
-            imageScaleMode:'contain',
-            startSlide: 0,
-            //centerImage:false,
-        });
-    });
-    </script>
+                <script type="text/javascript">
+                    $(document).ready(function($) {
+                        $('#slider').sliderPro({
+                            width: '100%',
+                            height:'400',
+                            fade: true,
+                            arrows: <?php echo ($count_photos > 1) ? 'true' : 'false'; ?>,
+                            buttons: true,
+                            fullScreen: true,
+                            shuffle: false,
+                            smallSize: 200,
+                            mediumSize: 800,
+                            largeSize: 1200,
+                            thumbnailArrows: true,
+                            autoplay: false,
+                            //autoHeight:true,
+                            imageScaleMode:'contain',
+                            startSlide: 0,       
+                            thumbnailWidth: 80,
+                            thumbnailHeight: 100
+
+                            //centerImage:false,
+                        });
+
+                        // instantiate fancybox when a link is clicked
+                        $('#slider .sp-image').parent('a').on('click', function(event) {
+                            event.preventDefault();
+
+                            // check if the clicked link is also used in swiping the slider
+                            // by checking if the link has the 'sp-swiping' class attached.
+                            // if the slider is not being swiped, open the lightbox programmatically,
+                            // at the correct index
+                            if ($('#slider').hasClass('sp-swiping') === false) {
+                                $.fancybox.open($('#slider .sp-image').parent('a'), {
+                                    index: $(this).parents('.sp-slide').index()
+                                });
+                            }
+                        });
+                    }); 
+                </script>
+
 <?php
 
 get_footer();

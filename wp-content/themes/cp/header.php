@@ -54,33 +54,13 @@
 -->
 		
 			<?php if ( is_home() ) { ?>
-				<script type="text/javascript">
-					$(document).ready(function($) {
-						$('#slider').sliderPro({
-							width: '500px',
-							height: '500px',
-							aspectRatio: 1,
-							visibleSize: '100%',
-							//forceSize: 'fullWidth'
-							slideDistance :0,   
-						});
 
-						// instantiate fancybox when a link is clicked
-						$('#slider .sp-image').parent('a').on('click', function(event) {
-							event.preventDefault();
 
-							// check if the clicked link is also used in swiping the slider
-							// by checking if the link has the 'sp-swiping' class attached.
-							// if the slider is not being swiped, open the lightbox programmatically,
-							// at the correct index
-							if ($('#slider').hasClass('sp-swiping') === false) {
-								$.fancybox.open($('#slider .sp-image').parent('a'), {
-									index: $(this).parents('.sp-slide').index()
-								});
-							}
-						});
-					});	
-				</script>
+
+
+
+
+
 			<?php } ?>
 		<?php wp_head(); ?>
 
