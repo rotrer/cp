@@ -660,6 +660,7 @@ a .description {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     color: #fff;
+    padding-bottom:10px ;
     display: table;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -678,9 +679,8 @@ a .description:hover {
 
 .description h2 {
     display: table-cell;
-    vertical-align: middle;
     font-family: 'Oswald', sans-serif;
-    vertical-align: middle;
+    vertical-align:bottom;
     text-transform: uppercase;
     font-size: 22px;
     font-weight: 100;
