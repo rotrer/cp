@@ -1,7 +1,7 @@
 <section class="container">
     <div class="row">
         <header class="title category">
-            <h1>Archivos</h1>
+            <h1><a href="<?php echo get_category_link(36); ?>">Archivos</a></h1>
         </header>
         <?php 
         $categories = get_categories( array(

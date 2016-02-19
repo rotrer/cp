@@ -14,8 +14,8 @@
     <div class="row">
       <header class="title">
          
-        <h1><?php echo $thisCat->name; ?></h1>
-        <h3> Archivos</h3>
+        <h1><a href="<?php echo get_category_link($thisCat); ?>"><?php echo $thisCat->name; ?></a></h1>
+        <h3><a href="<?php echo get_category_link(36); ?>">Archivos</a></h3>
    
       </header>
       <div id="<?php echo $id_singles; ?>">
