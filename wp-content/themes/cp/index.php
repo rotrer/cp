@@ -4,7 +4,7 @@
 	    ================================================== -->
 	    <div class="container slider-home">
 	 
-		    <div id="myCarousel" class="carousel slide " data-ride="carousel">
+		    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 		     <ol class="carousel-indicators">
 	             <li class="active" data-slide-to="0" data-target="#slider-home"></li>
 	             <li class="" data-slide-to="1" data-target="#slider-home"></li>
