@@ -20,16 +20,15 @@ Primary Page Layout
                     if ($categories) foreach ($categories as $key => $category) {
                         if ($category->parent != 0) {
                             $category_name = $category->name;
+                            $category_id = $category->term_id;
                         }
                     }
                 ?>
                 
-                <h1>
-                   <?php echo $category_name; ?> <?php the_title(); ?>
-                </h1>
+                <h1><?php the_title(); ?></h1>
                 <nav class="breadcrum">
                   <a href="<?php echo get_category_link(36); ?>">Archivos</a>
-                  <a href="<?php echo get_category_link(36); ?>">Subcatergoria</a>
+                  <a href="<?php echo get_category_link($category_id); ?>"><?php echo $category_name; ?></a>
                 </nav>
                 </header>
 
