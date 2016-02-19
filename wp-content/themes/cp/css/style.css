@@ -784,7 +784,7 @@ a .description:hover {
 
 .description-video {
     background-color: #000;
-    bottom: 13px;
+    bottom: 14px;
     color: #fff;
     left: 15px;
     padding: 5px 10px;
@@ -793,16 +793,12 @@ a .description:hover {
 }
 
 .description-video h2 {
+
     font-family: 'Oswald', sans-serif;
     vertical-align: bottom;
     text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 100;
-    font-family: 'Oswald', sans-serif;
-    vertical-align: bottom;
-    text-transform: uppercase;
-    font-size: 18px;
-    letter-spacing: 2px;
+    font-size: 15px;
+    letter-spacing: 1px;
     font-weight: 100;
     margin: 0;
 }
