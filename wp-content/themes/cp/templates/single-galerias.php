@@ -61,9 +61,32 @@ Primary Page Layout
                 </div>
                 <div>
                     <div class=" col-md-6">
+
+                    <div class ="blog_content ">
+
+                        <ul class="socialbuttons share">
+                            <li class="facebook">
+                                <a  href=""
+                                        id="share_fb" 
+                                        data-link="<?php the_permalink(); ?>" 
+                                        data-title="<?php the_title(); ?>" 
+                                        data-excerpt="<?php echo strip_tags(get_the_excerpt()); ?>" 
+                                        data-picture="<?php echo $image; ?>" 
+                                        target="_blank">Facebook</a>
+                            </li>
+                            <li class="twitter">
+                                <a  href=""
+                                        id="share_tw" 
+                                        data-link="<?php the_permalink(); ?>" 
+                                        data-title="<?php the_title(); ?>" 
+                                        target="_blank">twitter</a>
+                            </li>
+                        </ul>
+
+                    </div>
                     </div>
                     <div class=" col-md-6">
-                        <div class="pagination">
+                        <div class="pagination2">
                         <?php
                             echo get_previous_post_link('%link', 'Anterior');
                             echo get_next_post_link('%link', 'Siguiente');

@@ -75,7 +75,8 @@
 					?>
 					</div>
 				</div>
-
+				
+				<div class="deco1"></div>
 				<div class="blog_contentcomments">
 					
 					<?php

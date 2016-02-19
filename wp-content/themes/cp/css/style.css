@@ -397,6 +397,14 @@ section.container header.title h3 {
     color: #c2c2c2;
     border-bottom: 1px dotted #ccc;
 }
+.pagination2 { text-align: right;}
+.pagination2 a {      
+     font-family: 'oswald', sans-serif; text-transform: uppercase;
+    display: inline-block;
+    font-size: 17px;
+    color: #c2c2c2;
+    text-align: right; margin-left: 10px;
+    border-bottom: 1px dotted #ccc;}
 
 .post-option a:hover {
     color: #000
@@ -874,7 +882,7 @@ aside .sidebar-box .perfildescription p {
 /* SOCIAl */
 
 .readmore-social {
-    padding-bottom: 40px;
+    padding: 15px;
     float: left;
     width: 100%;
 }
@@ -1080,7 +1088,7 @@ span.wpcf7-not-valid-tip {
     padding: 6px;
     text-align: center;
 }
-
+#slider { margin-bottom:25px;}
 .slider-carusel {
     margin: 0 15px;
 }

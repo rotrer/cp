@@ -18,8 +18,10 @@
 		        </div>
 		      </div>
 		      <a data-slide="prev" role="button" href="#myCarousel" class="left carousel-control">
-		          <span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>
+		          <span aria-hidden="true" class="sp-arrow sp-previous-arrow"></span>
 		          <span class="sr-only">Previous</span>
+		        
+
 	    	  </a>
 		      <a data-slide="next" role="button" href="#myCarousel" class="right carousel-control">
 		          <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
