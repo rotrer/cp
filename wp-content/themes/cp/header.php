@@ -101,6 +101,7 @@
 							'menu_id'         => '',
 							'echo'            => true,
 							'fallback_cb'     => 'wp_page_menu',
+							'imageScaleMode'  => 'contain',	
 							'before'          => '',
 							'after'           => '',
 							'link_before'     => '',
