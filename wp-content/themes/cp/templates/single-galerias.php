@@ -27,7 +27,7 @@ Primary Page Layout
                 <h1>
                    <?php echo $category_name; ?> <?php the_title(); ?>
                 </h1>
-                 <h3> Archivos</h3>
+                 <h3><a href="<?php echo get_category_link(36); ?>">Archivos</a></h3>
                 </header>
 
                 <div id="full-container" class="slider-carusel">
