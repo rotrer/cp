@@ -18,8 +18,8 @@
         ?>
         <div class="item col-xs-6 col-sm-6 col-md-6 " data-w="<?php echo $photo_width; ?>" data-h="<?php echo $photo_height; ?>">
           <div class="archive-cat">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/<?php echo $id_video_youtube; ?>?rel=0" frameborder="0" allowfullscreen></iframe>
-            <div class="description">
+            <iframe width="100%" height="229" src="https://www.youtube.com/embed/<?php echo $id_video_youtube; ?>?rel=0" frameborder="0" allowfullscreen></iframe>
+            <div class="description" style="display: none">
               <h2><?php the_title(); ?></h2>
             </div>
           </div>
