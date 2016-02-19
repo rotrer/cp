@@ -13,7 +13,7 @@ if (strstr($_SERVER['HTTP_HOST'], '.app') || strstr($_SERVER['HTTP_HOST'], 'loca
 } elseif (strstr($_SERVER['HTTP_HOST'], 'dev.lcasesoria.cl')) {
   define(CLIENT_ID, "735516033250253");
 } else {
-  define(CLIENT_ID, "436088603255049");
+  define(CLIENT_ID, "1067212079997859");
 }
 
 /*
