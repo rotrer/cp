@@ -11,10 +11,10 @@
 			</ol>
 		      <div class="carousel-inner" role="listbox">
 		        <div class="item active">
-		          <img class="first-slide" src="<?php bloginfo( 'template_directory' ); ?>/images/bigimg1.jpg" alt="First slide">
+		          <img class="first-slide" src="<?php bloginfo( 'template_directory' ); ?>/images/img1.jpg" alt="First slide">
 		        </div>
       	        <div class="item ">
-		          <img class="first-slide" src="<?php bloginfo( 'template_directory' ); ?>/images/bigimg2.jpg" alt="First slide">
+		          <img class="first-slide" src="<?php bloginfo( 'template_directory' ); ?>/images/img2.jpg" alt="First slide">
 		        </div>
 		      </div>
 		      <a data-slide="prev" role="button" href="#myCarousel" class="left carousel-control">
