@@ -9,6 +9,8 @@ get_header();
 		include TEMPLATEPATH . '/templates/category-blog.php';
 	} elseif ( $thisCat->term_id == 36 ) {
     include TEMPLATEPATH . '/templates/category-galerias.php';
+  } elseif ( $thisCat->term_id == 51 ) {
+  	include TEMPLATEPATH . '/templates/category-videos.php';
   } elseif ( $thisCat->parent == 36 ) {
   	include TEMPLATEPATH . '/templates/category-singles.php';
   }

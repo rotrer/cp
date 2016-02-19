@@ -2,14 +2,6 @@
   $thisCat = get_category(get_query_var('cat')); 
   $id_singles = '';
 ?>
-<?php if ($thisCat->term_id == 47) { $id_singles = 'flex'; ?>
-<script>
-  $(document).ready(function(){
-    $('#flex').flexImages();
-  });
-</script>
-<?php }elseif ($thisCat->term_id == 39) { $id_singles = 'portadas'; ?>
-<?php } ?>
 <section class="container">
     <div class="row">
       <header class="title">
@@ -22,19 +14,14 @@
         <?php 
         query_posts( array('cat' => $thisCat->term_id, 'post_type' => 'archivos') ); 
         if ( have_posts() ) while ( have_posts() ) : the_post();
-          $imagen_destacada = get_field('imagen_destacada');
-          $photo_featured = $imagen_destacada["sizes"]["galeria-thumbx"];
-          $photo_width = $imagen_destacada["sizes"]["galeria-thumbx-width"];
-          $photo_height = $imagen_destacada["sizes"]["galeria-thumbx-height"];
+          $id_video_youtube = get_field('id_video_youtube');
         ?>
         <div class="item col-xs-6 col-sm-6 col-md-6 " data-w="<?php echo $photo_width; ?>" data-h="<?php echo $photo_height; ?>">
           <div class="archive-cat">
-            <a href="<?php the_permalink(); ?>"><img  src="<?php echo $photo_featured; ?>"> 
-              <!-- descripcion imagen -->
-              <div class="description">
-                <h2><?php the_title(); ?></h2>
-              </div>
-            </a>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/<?php echo $id_video_youtube; ?>?rel=0" frameborder="0" allowfullscreen></iframe>
+            <div class="description">
+              <h2><?php the_title(); ?></h2>
+            </div>
           </div>
         </div>
         <?php endwhile; wp_reset_query(); ?>
