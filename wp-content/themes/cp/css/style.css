@@ -297,19 +297,25 @@ section.container header.title h1 {
     letter-spacing: 0px;
 }
 
-section.container header.title h3 {
+section.container header.title nav {
     position: relative;
     top: -11px;
     margin-bottom: 0;
-    background-color: #fff;
+
     display: inline-block;
     color: #111;
     margin-top: 0;
-    height: 5px;
-    padding: 0 15px;
     line-height: 5px;
 }
 
+
+section.container header.title nav a {
+    background: #fff none repeat scroll 0 0;
+    font-size: 16px;
+    margin: 2px;
+    padding: 5px 6px;
+    text-transform: uppercase;
+}
 .section {}
 
 .post-content {

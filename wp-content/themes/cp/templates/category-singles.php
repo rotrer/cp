@@ -15,7 +15,9 @@
       <header class="title">
          
         <h1><?php echo $thisCat->name; ?></h1>
-        <h3><a href="<?php echo get_category_link(36); ?>">Archivos</a></h3>
+        <nav class="breadcrum">
+          <a href="<?php echo get_category_link(36); ?>">Archivos</a>
+        </nav>
    
       </header>
       <div id="<?php echo $id_singles; ?>">
