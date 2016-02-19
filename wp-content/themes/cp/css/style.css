@@ -142,7 +142,7 @@ p {
 .carousel-indicators { display: none }
 .carousel-control {
     opacity: .3;
-    width: 4%;
+    width: 3%;
 }
 
 .carousel-control:hover{ opacity: .7;     -webkit-transition: all 0.2s ease-in-out;
@@ -153,6 +153,14 @@ p {
 .carousel-inner .item {}
 
 .carousel-inner .item img {}
+
+#myCarousel .sp-arrow  { top: 45% ; margin: 0 2%;}  
+
+.carousel-control.left,
+.carousel-control.right  {background-image: none;} 
+
+.carousel-control.left  span{ right: 0; }
+.carousel-control.right span{ left: 0;  }
 
 @media ( max-width: 768px) {
     .container.slider-home {
@@ -1299,4 +1307,3 @@ span.wpcf7-not-valid-tip {
 }
  
 .gallery .gallery-item dt { width: 100%;} 
-

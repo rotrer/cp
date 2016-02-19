@@ -24,7 +24,7 @@
 
 	    	  </a>
 		      <a data-slide="next" role="button" href="#myCarousel" class="right carousel-control">
-		          <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
+		          <span aria-hidden="true" class="sp-arrow sp-next-arrow"></span>
 		          <span class="sr-only">Next</span>
 		      </a>
 	      </div>
