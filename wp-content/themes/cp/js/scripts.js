@@ -28,4 +28,10 @@ $(document).ready(function(){
 
       window.open(urlTwit, 'twitter', opts);
   });
+  $(".gallery-icon a").click(function(e){
+    e.preventDefault();
+    var photo = $(this).attr("href");
+    $("#photo_blog").attr("src", photo).show();
+    $("#myModal").modal('show')
+  });
 });

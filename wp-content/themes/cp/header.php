@@ -50,18 +50,8 @@
 <!-- LOAD DE IMAGENES 
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social2.js"></script>
 		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social3.js"></script>
-		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/scripts.js"></script>
 -->
-		
-			<?php if ( is_home() ) { ?>
-
-
-
-
-
-
-
-			<?php } ?>
+		<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/scripts.js"></script>
 		<?php wp_head(); ?>
 
 			<script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.flex-images.min.js"></script>
