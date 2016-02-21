@@ -407,7 +407,7 @@ section.container header.title nav a {
 }
 
 .post-content .post-title h2 {
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
     padding-bottom: 20px;
     color: #111111;
@@ -428,7 +428,7 @@ section.container header.title nav a {
     margin: 0;
     padding: 0 15px;
     position: relative;
-    color: #111;
+    color: #ccc;
     top: -23px;
     font-weight: 600;
 }
@@ -574,7 +574,7 @@ aside {
 }
 
 aside .sidebar-box {
-    border-left: 1px solid #111;
+
 }
 
 aside nav ul {
