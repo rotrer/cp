@@ -371,6 +371,8 @@ section.container header.title nav a {
     margin: 0 auto
 }
 
+.post-entry img { width: auto;}
+
 @media ( max-width: 375px) {
     .glyphicon-chevron-left:before,
     .glyphicon-chevron-right:before {
@@ -398,8 +400,6 @@ section.container header.title nav a {
 
 .post-content img {
     margin-bottom: 30px;
-    width: 96%;
-
     padding: 15px;
     border: 1px solid #C4C4C4;
 }
