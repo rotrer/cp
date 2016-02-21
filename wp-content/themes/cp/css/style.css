@@ -398,8 +398,8 @@ section.container header.title nav a {
 
 .post-content img {
     margin-bottom: 30px;
-    width: 100%;
-    padding: 20px;
+
+    padding: 15px;
     border: 1px solid #C4C4C4;
 }
 
@@ -826,8 +826,7 @@ a .description:hover {
 
 #flex .archive-cat a img {
     top: 0;
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1);
+
 }
 
 #flex .archive-cat a img:hover {
