@@ -363,11 +363,11 @@ section.container header.title nav a {
 .section {}
 
 .post-content {
-    padding: 0 10%;
+    padding: 0 2%;
 }
 
 .post-img {
-    width: 60%;
+    width: 86%;
     margin: 0 auto
 }
 
@@ -398,6 +398,7 @@ section.container header.title nav a {
 
 .post-content img {
     margin-bottom: 30px;
+    width: 96%;
 
     padding: 15px;
     border: 1px solid #C4C4C4;
