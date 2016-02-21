@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:700italic);
+
 
 /*@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100); */
 
@@ -331,11 +333,11 @@ section.container header.title.category {
 section.container header.title h1 {
     font-style: italic;
     font-size: 38px;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Playfair Display', serif;
     margin: 0;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #ccc;
     line-height: 130%;
-    border-top: 1px solid #000;
+    border-top: 1px solid #ccc;
     font-weight: 100;
     padding: 20px 0;
     margin: 0 15px;
@@ -371,7 +373,11 @@ section.container header.title nav a {
     margin: 0 auto
 }
 
+
+
 .post-entry img { width: auto;}
+
+.post-entry p img { margin-bottom:0 ;}
 
 @media ( max-width: 375px) {
     .glyphicon-chevron-left:before,
@@ -402,8 +408,18 @@ section.container header.title nav a {
 
 .post-content img {
     margin-bottom: 30px;
-    padding: 15px;
+    padding: 8px;
     border: 1px solid #C4C4C4;
+}
+.post-content img:before{ content: '';
+    border: 1px solid #ccc;
+
+}
+.post-content img {
+    margin-bottom: 30px;
+    padding: 8px;
+    background-color: #f1f1f1;
+    border: 1px solid #e2e2e2;
 }
 
 .post-content .post-title h2 {
@@ -455,7 +471,7 @@ section.container header.title nav a {
     display: inline-block;
     font-size: 17px;
     color: #c2c2c2;
-    border-bottom: 1px dotted #ccc;
+
 }
 
 .pagination2 {
@@ -494,14 +510,14 @@ section.container header.title nav a {
 .deco1 {
     width: 80%;
     margin: 0 auto;
-    border-top: 1px solid #111;
+    border-top: 1px solid #ccc;
     display: flex;
 }
 
 .deco2 {
     width: 100%;
     margin: 0 auto;
-    border-top: 1px solid #111;
+    border-top: 1px solid #ccc;
     display: flex;
 }
 
@@ -647,16 +663,17 @@ aside h2 a {
 /* Archivos */
 
 .archive-cat {
-    background-color: #fff;
-    border: 1px solid #c6c6c6;
-    margin-bottom: 20px;
-    padding: 15px;
+
+    margin-bottom: 30px;
+    padding: 8px;
     height: 260px;
+        background-color: #f1f1f1;
+    border: 1px solid #e2e2e2;
 }
 
 .archive-cat a {
     border: 1px solid #c6c6c6;
-    height: 229px;
+    height: 242px;
     overflow: hidden;
     display: block;
     float: left;
@@ -673,19 +690,18 @@ aside h2 a {
 
 #portadas .archive-cat a {
     border: 1px solid #c6c6c6;
-    height: 305px;
+    height: 100%;
     overflow: hidden;
     display: block;
     float: left;
-    width: 261px;
     position: relative;
 }
 
 #portadas .archive-cat {
-    background-color: #fff;
-    border: 1px solid #c6c6c6;
-    margin-bottom: 20px;
-    padding: 15px;
+    background-color: #f1f1f1;
+    border: 1px solid #e2e2e2;
+    margin-bottom: 30px;
+    padding: 8px;
     height: 338px;
 }
 
@@ -946,7 +962,7 @@ footer p {
 }
 
 .img-perfil {
-    border-bottom: 1px solid #1111;
+    border-bottom: 1px solid #ccc1;
     border-radius: 200px;
     overflow: hidden;
 }
