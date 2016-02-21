@@ -397,7 +397,7 @@ section.container header.title nav a {
 }
 
 .post-content .post-img {}
-
+.post-img img { width: 80%}
 .post-content img {
     margin-bottom: 30px;
     padding: 15px;
