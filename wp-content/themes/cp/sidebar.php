@@ -66,13 +66,7 @@
 
 			<div class="deco2 hidden-sm"></div>
 
-			<script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.jstwitter.js"></script>
-			<script type="text/javascript">
-			$(document).ready(function(){
-					// start jqtweet!
-					JQTWEET.loadTweets();
-			});
-			</script>
+		
 			<!-- Twitter
 			<div class="col-md-12 mclean-left sidebar-box">
 				<h3 class="socialtitle">Twitter</h3>

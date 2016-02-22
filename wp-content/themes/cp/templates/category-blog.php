@@ -1,9 +1,13 @@
 <!-- Content -->
-<div class="container section blog-interior">
+<section class="container section blog-interior">
 
 	<div class="row">
 	<div class="col-md-12">
-		<div class="deco2"></div>
+
+
+		<header class="title category">
+            <h1>Blog</h1>
+        </header>
 		<!--<?php $categories_blog = get_categories(array('parent' => 2, 'hide_empty' => 0)); ?>
 			<nav>
 				 <ul class="menu-blog">
@@ -14,7 +18,6 @@
 			</nav>
 			<div class="deco2"></div>-->
 		</div>
-
 
 		<section class="col-md-9 post-list">
 			<?php $post_counter = 0; ?>
@@ -79,4 +82,4 @@
 			<?php get_sidebar(); ?>
 		</aside>
 	</div>
-</div>
+</section>

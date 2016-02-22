@@ -34,7 +34,7 @@
 		<!-- Content -->
 		<div class="container section">
 			<div class="row">
-				<section class="post-list col-md-12">
+				<section class="post-list home col-md-12">
 					<?php $post_counter = 0; ?>
 					<?php query_posts( array('category__in' => '2', 'post_status' => 'publish', 'posts_per_page' => 10, 'order' => 'DESC') ); ?>
 					<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>

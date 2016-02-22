@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display:700italic);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700italic,400italic);
 
 
 /*@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100); */
@@ -330,7 +330,7 @@ section.container header.title.category {
     margin-bottom: 38px;
 }
 
-section.container header.title h1 {
+section.container header.title h1 { 
     font-style: italic;
     font-size: 38px;
     font-family: 'Playfair Display', serif;
@@ -339,9 +339,10 @@ section.container header.title h1 {
     line-height: 130%;
     border-top: 1px solid #ccc;
     font-weight: 100;
-    padding: 20px 0;
+    padding: 10px 0;
     margin: 0 15px;
-    letter-spacing: 0px;
+    font-weight: 700;text-align: center;
+        letter-spacing: 0px;
 }
 
 section.container header.title nav {
@@ -396,6 +397,7 @@ section.container header.title nav a {
     margin-top: 28px;
 }
 
+.post-list.home {    padding: 0 80px;}
 .post-list .post-content {
     margin: 28px 0;
     padding-bottom: 28px;
@@ -430,7 +432,8 @@ section.container header.title nav a {
     text-decoration: none;
     font-family: oswald;
     letter-spacing: 1px;
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 38px; 
 }
 
 .post-content .post-title h2 a:hover {
@@ -440,6 +443,8 @@ section.container header.title nav a {
 .post-content header h4 {
     background-color: #fff;
     display: inline-block;
+    font-family: 'Playfair Display', serif;
+     text-transform: none;
     font-size: 14px;
     margin: 0;
     padding: 0 15px;
@@ -486,7 +491,7 @@ section.container header.title nav a {
     color: #c2c2c2;
     text-align: right;
     margin-left: 10px;
-    border-bottom: 1px dotted #ccc;
+
 }
 
 .post-option a:hover {
@@ -508,7 +513,7 @@ section.container header.title nav a {
 }
 
 .deco1 {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     border-top: 1px solid #ccc;
     display: flex;
