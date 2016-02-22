@@ -20,7 +20,7 @@
         ?>
         <div class="item col-xs-6 col-sm-6 col-md-6 " data-w="<?php echo $photo_width; ?>" data-h="<?php echo $photo_height; ?>">
           <div class="archive-cat">
-            <iframe width="100%" height="229" src="https://www.youtube.com/embed/<?php echo $id_video_youtube; ?>?showinfo=0&iv_load_policy=3&nologo=1"  showinfo="0" frameborder="0" color="#414141" allowfullscreen ></iframe>
+            <iframe width="100%" height="236" src="https://www.youtube.com/embed/<?php echo $id_video_youtube; ?>?showinfo=0&iv_load_policy=3&nologo=1&rel=0" frameborder="0" color="#414141" allowfullscreen ></iframe>
             <div class="description-video">
               <h2><?php the_title(); ?></h2>
             </div>

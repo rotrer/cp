@@ -70,8 +70,8 @@
 				<div class ="blog_content readmore-social">
 					<div class="pagination">
 					<?php
-						echo get_previous_post_link('%link', 'Publicación Anterior');
-						echo get_next_post_link('%link', 'Publicación Siguiente');
+						echo get_previous_post_link('%link', 'Anterior');
+						echo get_next_post_link('%link', 'Siguiente');
 					?>
 					</div>
 				</div>

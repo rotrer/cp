@@ -1067,6 +1067,9 @@ ul.socialbuttons li.twitter a {
 ul.socialbuttons li.instant a {
     background-image: url(../images/inst.png);
 }
+ul.socialbuttons li.yout a {
+    background-image: url(../images/yout.png);
+}
 
 ul.socialbuttons.share {
     display: inline-block;
