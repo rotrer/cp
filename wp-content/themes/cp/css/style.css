@@ -2,7 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700italic,400italic);
 
-
 /*@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100); */
 
 @font-face {
@@ -240,9 +239,6 @@ p {
         margin: 4px 0 0 0;
         float: left;
     }
-    section.container header.title h1 {
-        font-size: 24px;
-    }
     .navbar .container {
         padding: 0;
         margin: 0;
@@ -254,7 +250,7 @@ p {
         font-size: 24px;
     }
     p {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -330,7 +326,7 @@ section.container header.title.category {
     margin-bottom: 38px;
 }
 
-section.container header.title h1 { 
+section.container header.title h1 {
     font-style: italic;
     font-size: 38px;
     font-family: 'Playfair Display', serif;
@@ -341,8 +337,9 @@ section.container header.title h1 {
     font-weight: 100;
     padding: 10px 0;
     margin: 0 15px;
-    font-weight: 700;text-align: center;
-        letter-spacing: 0px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0px;
 }
 
 section.container header.title nav {
@@ -374,30 +371,22 @@ section.container header.title nav a {
     margin: 0 auto
 }
 
+.post-entry img {
+    width: auto;
+}
 
-
-.post-entry img { width: auto;}
-
-.post-entry p img { margin-bottom:0 ;}
-
-@media ( max-width: 375px) {
-    .glyphicon-chevron-left:before,
-    .glyphicon-chevron-right:before {
-        font-size: 25px;
-    }
-    .post-content {
-        padding: 0 5%;
-    }
-    .post-img {
-        width: 90%;
-    }
+.post-entry p img {
+    margin-bottom: 0;
 }
 
 .post-list {
     margin-top: 28px;
 }
 
-.post-list.home {    padding: 0 80px;}
+.post-list.home {
+    padding: 0 80px;
+}
+
 .post-list .post-content {
     margin: 28px 0;
     padding-bottom: 28px;
@@ -406,17 +395,21 @@ section.container header.title nav a {
 
 .post-content .post-img {}
 
-.post-img img { width: 100%}
+.post-img img {
+    width: 100%
+}
 
 .post-content img {
     margin-bottom: 30px;
     padding: 8px;
     border: 1px solid #C4C4C4;
 }
-.post-content img:before{ content: '';
-    border: 1px solid #ccc;
 
+.post-content img:before {
+    content: '';
+    border: 1px solid #ccc;
 }
+
 .post-content img {
     margin-bottom: 30px;
     padding: 8px;
@@ -433,7 +426,7 @@ section.container header.title nav a {
     font-family: oswald;
     letter-spacing: 1px;
     font-weight: 300;
-    font-size: 38px; 
+    font-size: 38px;
 }
 
 .post-content .post-title h2 a:hover {
@@ -444,7 +437,7 @@ section.container header.title nav a {
     background-color: #fff;
     display: inline-block;
     font-family: 'Playfair Display', serif;
-     text-transform: none;
+    text-transform: none;
     font-size: 14px;
     margin: 0;
     padding: 0 15px;
@@ -452,6 +445,25 @@ section.container header.title nav a {
     color: #ccc;
     top: -23px;
     font-weight: 600;
+}
+
+@media ( max-width: 375px) {
+    .glyphicon-chevron-left:before,
+    .glyphicon-chevron-right:before {
+        font-size: 25px;
+    }
+    .post-content .post-title h2 {
+        font-size: 26px;
+    }
+    .post-content {
+        padding: 0 5%;
+    }
+    .post-img {
+        width: 90%;
+    }
+    .post-list.home {
+        padding: 0
+    }
 }
 
 .blog_contentcomments {
@@ -476,7 +488,6 @@ section.container header.title nav a {
     display: inline-block;
     font-size: 17px;
     color: #c2c2c2;
-
 }
 
 .pagination2 {
@@ -491,7 +502,6 @@ section.container header.title nav a {
     color: #c2c2c2;
     text-align: right;
     margin-left: 10px;
-
 }
 
 .post-option a:hover {
@@ -594,9 +604,7 @@ aside {
     margin-top: 45px;
 }
 
-aside .sidebar-box {
-
-}
+aside .sidebar-box {}
 
 aside nav ul {
     color: #414141;
@@ -668,11 +676,10 @@ aside h2 a {
 /* Archivos */
 
 .archive-cat {
-
     margin-bottom: 30px;
     padding: 8px;
     height: 260px;
-        background-color: #f1f1f1;
+    background-color: #f1f1f1;
     border: 1px solid #e2e2e2;
 }
 
@@ -727,31 +734,6 @@ aside h2 a {
     }
 }
 
-@media ( max-width: 510px) {
-    .deco1 {
-        width: 90%
-    }
-    .archive-cat a {
-        height: 201px;
-    }
-    .archive-cat {
-        margin-bottom: 10px;
-        padding: 8px;
-        height: 220px;
-    }
-    #portadas .archive-cat {
-        height: 225px;
-        position: relative;
-        padding: 8px;
-    }
-    #portadas .archive-cat a {
-        width: 100%;
-        height: 207px;
-    }
-}
-
-@media ( max-width: 768px) {}
-
 a .description {
     z-index: 500;
     text-align: center;
@@ -796,6 +778,8 @@ a .description:hover {
     transition: all 0.2s ease-in-out;
 }
 
+@media ( max-width: 768px) {}
+
 .archive-cat {
     position: relative;
 }
@@ -817,7 +801,6 @@ a .description:hover {
 }
 
 .description-video h2 {
-
     font-family: 'Oswald', sans-serif;
     vertical-align: bottom;
     text-transform: uppercase;
@@ -850,7 +833,6 @@ a .description:hover {
 
 #flex .archive-cat a img {
     top: 0;
-
 }
 
 #flex .archive-cat a img:hover {
@@ -874,9 +856,25 @@ a .description:hover {
     width: 100%;
 }
 
+@media ( max-width: 325px) {
+    .archive-cat,
+    .post-content img,
+    #portadas .archive-cat {
+        padding: 8px;
+        height: 168px;
+    }
+    #portadas .archive-cat a {
+        width: 100%;
+        height: 117px;
+    }
+    .description h2 {
+        font-size: 12px
+    }
+}
+
 @media ( max-width: 375px) {
     section.container header.title h1 {
-        font-size: 22px;
+        font-size: 30px;
         line-height: 160%;
     }
 }
@@ -901,30 +899,51 @@ a .description:hover {
     }
     #portadas .archive-cat a {
         width: 100%;
-        height: 177px;
+        height: 100%;
     }
     .categorias-blog {
         text-align: center;
     }
     .archive-cat,
-    .post-content img,
     #portadas .archive-cat {
         padding: 8px;
-        height: 196px;
+        height: 190px;
     }
+    .post-content img {}
 }
 
-@media ( max-width: 325px) {
-    .archive-cat,
-    .post-content img,
-    #portadas .archive-cat {
+@media ( max-width: 510px) {
+    .deco1 {
+        width: 90%
+    }
+    .category-archivos .archive-cat {
+        margin-bottom: 10px;
         padding: 8px;
-        height: 168px;
+        height: 264px;
+    }
+    .archive-cat a {
+        height: 100%;
+    }
+    #portadas .archive-cat {
+        height: 190px;
+        position: relative;
+        padding: 8px;
     }
     #portadas .archive-cat a {
         width: 100%;
-        height: 148px;
+        height: 100%;
     }
+    .archive-cat a img {
+        top: 0;
+    }
+    .description h2 {
+        font-size: 15px;
+    }
+    .category-editorial .archive-cat {
+        height: 168px;
+    }
+    .category-publicidad .archive-cat {        height: 150px;}
+    .category-videos .archive-cat {height: 255px;}
 }
 
 #instafeed {
@@ -1067,6 +1086,7 @@ ul.socialbuttons li.twitter a {
 ul.socialbuttons li.instant a {
     background-image: url(../images/inst.png);
 }
+
 ul.socialbuttons li.yout a {
     background-image: url(../images/yout.png);
 }
