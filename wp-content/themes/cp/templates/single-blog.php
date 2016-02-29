@@ -65,7 +65,7 @@
 
 				<div class="deco1"></div>
 
-				<div>
+				<div class="row">
 
 				<div class ="blog_content readmore-social">
 					<div class="pagination">

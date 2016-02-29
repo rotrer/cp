@@ -217,11 +217,14 @@ p {
     .navbar-brand h1 {
         font-size: 35px;
         margin: 11px 0 0 0;
-        float: left;
+        float: initial;
     }
 }
 
 @media ( max-width: 375px) {
+    .carousel-control {
+        width: 10%;
+    }
     .container.slider-home {
         margin: 0;
         padding: 0
@@ -362,10 +365,6 @@ section.container header.title nav a {
 
 .section {}
 
-.post-content {
-    padding: 0 2%;
-}
-
 .post-img {
     width: 86%;
     margin: 0 auto
@@ -388,8 +387,7 @@ section.container header.title nav a {
 }
 
 .post-list .post-content {
-    margin: 28px 0;
-    padding-bottom: 28px;
+    margin: 0;
     text-align: center;
 }
 
@@ -400,7 +398,7 @@ section.container header.title nav a {
 }
 
 .post-content img {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     padding: 8px;
     border: 1px solid #C4C4C4;
 }
@@ -417,8 +415,12 @@ section.container header.title nav a {
     border: 1px solid #e2e2e2;
 }
 
+.post-title {
+    margin-bottom: -23px;
+}
+
 .post-content .post-title h2 {
-    border-bottom: 1px solid #ccc;
+    // border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
     padding-bottom: 20px;
     color: #111111;
@@ -433,21 +435,33 @@ section.container header.title nav a {
     color: #999;
 }
 
+.post-content .post-title h2::after {
+    border-bottom: 1px solid #ccc;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    padding: 22px 0 0;
+    width: 290px;
+}
+
 .post-content header h4 {
     background-color: #fff;
-    display: inline-block;
-    font-family: 'Playfair Display', serif;
-    text-transform: none;
-    font-size: 14px;
-    margin: 0;
-    padding: 0 15px;
-    position: relative;
     color: #ccc;
-    top: -23px;
+    display: inline-block;
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
     font-weight: 600;
+    margin: 0;
+    padding: 0 13px;
+    position: relative;
+    text-transform: none;
+    top: -43px;
 }
 
 @media ( max-width: 375px) {
+    .post-content header h4 {
+        top: -43px;
+    }
     .glyphicon-chevron-left:before,
     .glyphicon-chevron-right:before {
         font-size: 25px;
@@ -458,16 +472,16 @@ section.container header.title nav a {
     .post-content {
         padding: 0 5%;
     }
-    .post-img {
-        width: 90%;
-    }
     .post-list.home {
         padding: 0
     }
 }
+@media ( max-width: 768px) { 
+.post-list.home{ padding: 0 30px;}
 
+}
 .blog_contentcomments {
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 .post-option,
@@ -856,9 +870,28 @@ a .description:hover {
     width: 100%;
 }
 
-@media ( max-width: 325px) {
+    .post-list .deco1 {
+        border-top: 15px solid #ececec;
+        margin: 75px 0;
+        width: 100%;
+    }
+
+@media ( max-width: 375px) {
+    .post-list .deco1 {
+        border-top: 15px solid #ececec;
+        margin: 35px 0;
+        width: 100%;
+    }
+    .post-content {
+        margin: 0;
+        padding: 0
+    }
+    .col-md-9.post-list .post-img,
+    .col-md-9.post-list .post-entry p img {
+        width: 100%;
+        height: auto
+    }
     .archive-cat,
-    .post-content img,
     #portadas .archive-cat {
         padding: 8px;
         height: 168px;
@@ -873,15 +906,14 @@ a .description:hover {
 }
 
 @media ( max-width: 375px) {
+    .home.post-list {
+        padding: 0 15px;
+    }
     section.container header.title h1 {
         font-size: 30px;
         line-height: 160%;
     }
-}
-
-@media ( max-width: 375px) {
     .archive-cat,
-    .post-content img,
     #portadas .archive-cat {
         padding: 8px;
     }
@@ -942,8 +974,12 @@ a .description:hover {
     .category-editorial .archive-cat {
         height: 168px;
     }
-    .category-publicidad .archive-cat {        height: 150px;}
-    .category-videos .archive-cat {height: 255px;}
+    .category-publicidad .archive-cat {
+        height: 150px;
+    }
+    .category-videos .archive-cat {
+        height: 255px;
+    }
 }
 
 #instafeed {
@@ -973,44 +1009,6 @@ footer p {
     font-size: 14px;
     line-height: 100%;
     margin-top: 0;
-}
-
-@media ( max-width: 325px) {
-    footer p {
-        margin-top: 20px;
-        text-align: center;
-    }
-    .navbar-brand h1 {
-        font-size: 21px;
-    }
-}
-
-.img-perfil {
-    border-bottom: 1px solid #ccc1;
-    border-radius: 200px;
-    overflow: hidden;
-}
-
-.img-perfil img {
-    width: 100%;
-}
-
-.perfildescription {
-    text-align: center;
-    margin-top: 30px;
-}
-
-aside .sidebar-box .perfildescription h3 {
-    margin-bottom: 0;
-    top: 0;
-    font-size: 18px;
-}
-
-aside .sidebar-box .perfildescription p {
-    font-size: 16px;
-    text-align: center;
-    line-height: 140%;
-    font-style: italic;
 }
 
 
@@ -1126,6 +1124,58 @@ ul.socialbuttons.share li.instant a {
     background-image: url(../images/sinst.png);
 }
 
+
+@media ( max-width: 375px) {
+    footer .col-md-6 {
+        text-align: center;
+    }
+    ul.socialbuttons.social-footer {
+        float: initial;
+        margin-bottom: 20px;
+    }
+    footer h1 {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    footer p {
+        margin-top:0px;
+        text-align: center;
+    }
+    .navbar-brand h1 {
+        font-size: 21px;
+    }
+}
+
+.img-perfil {
+    border-bottom: 1px solid #ccc1;
+    border-radius: 200px;
+    overflow: hidden;
+}
+
+.img-perfil img {
+    width: 100%;
+}
+
+.perfildescription {
+    text-align: center;
+    margin-top: 30px;
+}
+
+aside .sidebar-box .perfildescription h3 {
+    margin-bottom: 0;
+    top: 0;
+    font-size: 18px;
+}
+
+aside .sidebar-box .perfildescription p {
+    font-size: 16px;
+    text-align: center;
+    line-height: 140%;
+    font-style: italic;
+}
+
+
 .comment-form {}
 
 .comment-form p {
@@ -1226,6 +1276,12 @@ span.wpcf7-not-valid-tip {
     font-size: 13px;
     padding: 6px;
     text-align: center;
+}
+
+@media ( max-width: 375px) {
+    .comment-form p {
+        width: 100%
+    }
 }
 
 #slider {
