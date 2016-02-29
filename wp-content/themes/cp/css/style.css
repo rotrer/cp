@@ -687,6 +687,9 @@ aside h2 a {
 }
 
 
+
+
+
 /* Archivos */
 
 .archive-cat {
@@ -877,6 +880,7 @@ a .description:hover {
     }
 
 @media ( max-width: 375px) {
+    .perfil-blog { display: none}
     .post-list .deco1 {
         border-top: 15px solid #ececec;
         margin: 35px 0;
