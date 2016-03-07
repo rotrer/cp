@@ -976,6 +976,10 @@ a .description:hover {
 
 .wp-caption .post-content img { margin-bottom: 10px;}
 
+.wp-caption-text {font-size: 15px;
+    margin: 0;
+    line-height: 100%;
+}
 @media ( max-width: 510px) {
     .deco1 {
         width: 90%
