@@ -374,6 +374,8 @@ section.container header.title nav a {
     margin: 0 auto
 }
 
+.post-img img{ width: 100%;}
+
 .post-entry img {
     width: auto;
 }
