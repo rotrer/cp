@@ -972,6 +972,7 @@ a .description:hover {
     }
     .post-content img {}
 }
+.wp-caption.alignnone {    margin: 0 auto;}
 
 .wp-caption .post-content img { margin-bottom: 10px;}
 
