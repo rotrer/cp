@@ -976,7 +976,7 @@ a .description:hover {
 
 .wp-caption .post-content img { margin-bottom: 10px;}
 
-.wp-caption-text {font-size: 15px;
+p.wp-caption-text {font-size: 15px;
     margin: 0;
     line-height: 100%;
 }
