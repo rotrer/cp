@@ -980,6 +980,7 @@ p.wp-caption-text {font-size: 15px;
     margin: 0;
     line-height: 100%;
 }
+p.wp-caption-text + p.wp-caption-text { margin-bottom: 30px;}
 @media ( max-width: 510px) {
     .deco1 {
         width: 90%
