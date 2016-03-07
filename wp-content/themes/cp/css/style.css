@@ -397,27 +397,14 @@ section.container header.title nav a {
 
 .post-content .post-img {}
 
-.post-img img {
-    width: 100%
-}
 
-.post-content img {
-    margin: 10px;
+
+.post-content p img {
     padding: 8px;
-    border: 1px solid #C4C4C4;
-}
-
-.post-content img:before {
-    content: '';
-    border: 1px solid #ccc;
-}
-
-.post-content img {
-
-    padding: 8px;
-    background-color: #f1f1f1;
     border: 1px solid #e2e2e2;
 }
+
+
 
 .post-title {
     margin-bottom: -23px;
@@ -972,6 +959,8 @@ a .description:hover {
     }
     .post-content img {}
 }
+
+
 .wp-caption.alignnone {    margin: 0 auto;}
 
 .wp-caption .post-content img { margin-bottom: 10px;}
@@ -982,6 +971,8 @@ p.wp-caption-text {font-size: 15px;
 }
 .wp-caption + .wp-caption { margin: 30px auto; }
 
+
+p img + p img{ margin-top: 20px;}
 @media ( max-width: 510px) {
     .deco1 {
         width: 90%
