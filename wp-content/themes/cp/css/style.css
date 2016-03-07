@@ -980,7 +980,7 @@ p.wp-caption-text {font-size: 15px;
     margin: 0;
     line-height: 100%;
 }
-.wp-caption + .wp-caption { margin-bottom: 30px;}
+.wp-caption + .wp-caption { margin: 30px auto; }
 
 @media ( max-width: 510px) {
     .deco1 {
