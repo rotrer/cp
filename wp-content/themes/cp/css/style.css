@@ -73,7 +73,11 @@ p {
     font-size: 21px;
     font-weight: 300;
     line-height: 30px;
-    margin-bottom: 24px;
+    margin: 21px 0 ;
+}
+
+p + p {
+    margin: 30px 0 30px;
 }
 
 .navbar-wrapper {
@@ -398,7 +402,7 @@ section.container header.title nav a {
 }
 
 .post-content img {
-    margin-bottom: 24px;
+    margin: 10px;
     padding: 8px;
     border: 1px solid #C4C4C4;
 }
@@ -409,7 +413,7 @@ section.container header.title nav a {
 }
 
 .post-content img {
-    margin-bottom: 30px;
+
     padding: 8px;
     background-color: #f1f1f1;
     border: 1px solid #e2e2e2;
@@ -457,6 +461,27 @@ section.container header.title nav a {
     text-transform: none;
     top: -43px;
 }
+
+
+.post-list  h2 {
+    font-size: 24px;
+    margin-top: 0;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 30px auto 30px;
+}
+
+.post-list  h3 {
+    font-size: 22px;
+    margin-top: 0;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin: 30px auto 30px;
+}
+
+.post-list small {}
+
+
 
 @media ( max-width: 375px) {
     .post-content header h4 {
@@ -947,6 +972,8 @@ a .description:hover {
     }
     .post-content img {}
 }
+
+.wp-caption .post-content img { margin-bottom: 10px;}
 
 @media ( max-width: 510px) {
     .deco1 {

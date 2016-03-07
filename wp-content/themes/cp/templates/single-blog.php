@@ -97,10 +97,10 @@
 						$args = array(
 						  'id_form'           => 'commentform',
 						  'id_submit'         => 'submit',
-						  'title_reply'       => __( 'Leave a Reply' ),
-						  'title_reply_to'    => __( 'Leave a Reply to %s' ),
-						  'cancel_reply_link' => __( 'Cancel Reply' ),
-						  'label_submit'      => __( 'Post Comment' ),
+						  'title_reply'       => __( 'Deja un comentario Reply' ),
+						  'title_reply_to'    => __( 'Deja una respuesta to %s' ),
+						  'cancel_reply_link' => __( 'Cancelar respuesta' ),
+						  'label_submit'      => __( 'Envia comentario' ),
 
 						  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">Comentario
 						  	</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
