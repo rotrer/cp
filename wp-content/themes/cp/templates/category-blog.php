@@ -22,9 +22,7 @@
 		<section class="col-md-9 post-list">
 			<?php $post_counter = 0; ?>
 			<?php if ( have_posts() ) : ?>
-
 				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
 				<?php $post_counter++; ?>
 				<article class="post-content">
 					<header class="post-title">

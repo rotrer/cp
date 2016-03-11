@@ -396,7 +396,7 @@ section.container header.title nav a {
 
 .post-content .post-title h2 {
     // border-bottom: 1px solid #ccc;
-
+    text-transform:uppercase;
     margin-bottom: 10px;
     padding-bottom: 20px;
     color: #111111;
