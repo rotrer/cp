@@ -612,7 +612,7 @@ aside {
     margin-top: 45px;
 }
 
-aside .sidebar-box {}
+
 
 aside nav ul {
     color: #414141;
@@ -642,7 +642,7 @@ aside nav ul li a {
 }
 
 aside .sidebar-box {
-    padding: 15px
+    padding: 15px 0
 }
 
 aside .sidebar-box {}
@@ -866,7 +866,7 @@ a .description:hover {
 
 .post-list .deco1 {
     border-top: 15px solid #ececec;
-    margin: 0;
+    margin: 35px 0;
     width: 100%;
 }
 
@@ -1195,6 +1195,7 @@ aside .sidebar-box .perfildescription p {
     text-align: center;
     line-height: 140%;
     font-style: italic;
+       margin: 10px 0 30px;
 }
 
 .comment-form {}

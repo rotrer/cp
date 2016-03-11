@@ -7,7 +7,7 @@
 		 				<img class="first-slide" src="http://dev.lcasesoria.cl/carolina-parsons/wp-content/uploads/2016/02/editorial.jpg" >
 			</div>
 			<div class="perfildescription">
-				<h3>@Carolinaparsons</h3>
+				<h3><a href="https://twitter.com/caroparsons?lang=es">@Carolinaparsons</a></h3>
 					<p>
 						Ven conmigo a mis viajes y eventos, te mostrare lugares maravillosos, famosos,  gente divertida y lo que se esta usando, Te invito a mi mundo, el mundo de Carolina.
 						<a href="">Contactar</a> 
