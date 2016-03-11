@@ -9,7 +9,7 @@
 			<div class="perfildescription">
 				<h3>@Carolinaparsons</h3>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						Ven conmigo a mis viajes y eventos, te mostrare lugares maravillosos, famosos,  gente divertida y lo que se esta usando, Te invito a mi mundo, el mundo de Carolina.
 						<a href="">Contactar</a> 
 
 					</p>
