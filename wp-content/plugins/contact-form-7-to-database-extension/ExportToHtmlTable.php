@@ -67,7 +67,7 @@ class ExportToHtmlTable extends ExportBase implements CFDBExport {
                 }
                 if (isset($options['edit'])) {
                     $this->dereferenceOption('edit');
-                    $editMode = 'true' == $this->options['edit'];
+                    $editMode = 'true' == $this->options['edit'] || 'cells' == $this->options['edit'];
                 }
             }
 
@@ -87,6 +87,11 @@ class ExportToHtmlTable extends ExportBase implements CFDBExport {
 
         // Headers
         $this->echoHeaders('Content-Type: text/html; charset=UTF-8');
+
+        // Query DB for the data for that form
+        $submitTimeKeyName = 'Submit_Time_Key';
+        $this->setDataIterator($formName, $submitTimeKeyName);
+        //$this->clearOutputBuffer(); // will mess up the admin table view
 
         if ($this->isFromShortCode) {
             ob_start();
@@ -112,10 +117,6 @@ class ExportToHtmlTable extends ExportBase implements CFDBExport {
                 wp_print_styles(array('jquery-ui.css', 'datatables-demo'));
             }
         }
-
-        // Query DB for the data for that form
-        $submitTimeKeyName = 'Submit_Time_Key';
-        $this->setDataIterator($formName, $submitTimeKeyName);
 
         // Break out sections: Before, Content, After
         $before = '';
@@ -150,7 +151,7 @@ class ExportToHtmlTable extends ExportBase implements CFDBExport {
                         <?php
                             echo $dtJsOptions;
                             if ($editMode) {
-                                do_action_ref_array('cfdb_edit_fnDrawCallbackJsonForSC', array($this->htmlTableId));
+                                do_action_ref_array('cfdb_edit_fnDrawCallbackJsonForSC', array($this->htmlTableId, $this->options['edit']));
                             }
                         ?> })
                 });
@@ -219,7 +220,7 @@ class ExportToHtmlTable extends ExportBase implements CFDBExport {
             <tr>
             <?php if ($canDelete) { ?>
             <th id="delete_th">
-                <button id="delete" name="delete" onclick="this.form.submit()"><?php _e('Delete', 'contact-form-7-to-database-extension')?></button>
+                <button id="delete" name="cfdbdel" onclick="this.form.submit()"><?php echo htmlspecialchars(__('Delete', 'contact-form-7-to-database-extension'))?></button>
                 <input type="checkbox" id="selectall"/>
                 <script type="text/javascript">
                     jQuery(document).ready(function() {

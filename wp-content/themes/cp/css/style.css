@@ -19,11 +19,11 @@ body {
 a {
     color: #111;
     text-decoration: none;
-}
+    outline: 0 none;}
 
-a:hover {
+a:hover, a:active {
     color: #999;
-    text-decoration: none;
+    text-decoration: none;  outline: 0 none;
 }
 
 .col-md-8 a {
@@ -369,15 +369,19 @@ section.container header.title nav a {
 
 .section {}
 
-
-
 .post-list {
     margin-top: 28px;
 }
 
-.post-list img { border: 1px solid #e6e6e6; padding: 10px; margin: 10px;}
+.post-list img {
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    margin: 10px;
+}
 
-.post-list .post-img img { width: 60%;}
+.post-list .post-img img {
+    width: 60%;
+}
 
 .post-list.home {
     padding: 0 80px;
@@ -392,11 +396,9 @@ section.container header.title nav a {
     margin-bottom: -23px;
 }
 
-
-
 .post-content .post-title h2 {
     // border-bottom: 1px solid #ccc;
-    text-transform:uppercase;
+    text-transform: uppercase;
     margin-bottom: 10px;
     padding-bottom: 20px;
     color: #111111;
@@ -404,7 +406,8 @@ section.container header.title nav a {
     font-family: oswald;
     letter-spacing: 1px;
     font-weight: 300;
-    font-size: 38px;
+    font-size: 28px;
+    line-height: 130%;
 }
 
 .post-content .post-title h2 a:hover {
@@ -440,18 +443,17 @@ section.container header.title nav a {
     font-weight: 300;
     letter-spacing: -1px;
     margin: 30px auto 30px;
-     font-family: "Playfair Display",serif;
-
+    font-family: "Playfair Display", serif;
 }
 
 .post-list h3 {
     font-size: 22px;
     margin-top: 0;
-    font-weight: 700;
+    font-weight: 300;
     letter-spacing: -1px;
-    margin: 30px auto 30px;
+    margin: 30px auto 0px;
+    text-transform: uppercase;
 }
-
 .post-list small {}
 
 @media ( max-width: 375px) {
@@ -483,6 +485,35 @@ section.container header.title nav a {
     padding: 0 5%;
 }
 
+ol.comment-list {
+    display: inline-block;
+    width: 100%;
+    margin-top: 30px;
+    list-style: none;
+    font-size: 16px;
+    margin: 15px 0;
+    padding: 0;
+}
+.post-content.post-comments {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+.comment-awaiting-moderation {
+    background-color: yellow;
+  
+}
+
+.comment-author {
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+}
+.comment-meta.commentmetadata {
+    font-size: 11px;
+}
+
 .post-option,
 .pagination a {
     display: inline-block;
@@ -490,11 +521,17 @@ section.container header.title nav a {
     margin: 0;
     font-family: 'oswald', sans-serif
 }
-
 .post-option .post-readmore {
     display: inline-block;
 }
-
+.comment-body {
+    background-color: #f2f2f2;
+    border: 1px solid #e1e1e1;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 100%;
+}
 .post-option a,
 .pagination a {
     text-transform: uppercase;
@@ -502,11 +539,23 @@ section.container header.title nav a {
     font-size: 17px;
     color: #c2c2c2;
 }
-
+ul.children {
+    padding: 0 0 0 20px;
+    margin: 0;
+    list-style: none;
+}
+.reply {
+    float: right;
+}
+.comment-reply-link {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    float: right;
+}
 .pagination2 {
     text-align: right;
 }
-
 .pagination2 a {
     font-family: 'oswald', sans-serif;
     text-transform: uppercase;
@@ -516,60 +565,49 @@ section.container header.title nav a {
     text-align: right;
     margin-left: 10px;
 }
-
 .post-option a:hover {
     color: #000
 }
-
 .post-option .post-social {
     display: none;
 }
-
 .pagination {
     width: 100%;
     text-align: right;
 }
-
 .pagination a {
     width: auto;
     margin-left: 20px;
 }
-
 .deco1 {
     width: 100%;
     margin: 0 auto;
     border-top: 1px solid #ccc;
     display: flex;
 }
-
 .deco2 {
     width: 100%;
     margin: 0 auto;
     border-top: 1px solid #ccc;
     display: flex;
 }
-
 .contact-info h3 {
     font-weight: 700
 }
-
 .contact-info p {
     font-size: 16px;
     float: left;
     width: 100%;
     margin-bottom: 30px;
 }
-
 .contact-info p span {
     width: 100%;
     float: left;
     line-height: 132%;
 }
-
 .wpcf7-form small {
     font-size: 12px;
 }
-
 
 /* Blog interiior
 
@@ -580,12 +618,10 @@ section.container header.title nav a {
     padding: 0;
 }
 */
-
 .col-md-9 .pagination {
     text-align: center;
     margin: 0 auto;
 }
-
 ul.menu-blog {
     font-size: 18px;
     float: left;
@@ -593,27 +629,20 @@ ul.menu-blog {
     margin-bottom: 0;
     padding: 0;
 }
-
 ul.menu-blog li {
     float: left;
     padding: 5px 10px;
     margin: 0 5px;
 }
-
 ul.menu-blog li a {
     float: left;
     list-style: none;
 }
 
-
 /* ASIDE */
-
 aside {
     margin-top: 45px;
 }
-
-
-
 aside nav ul {
     color: #414141;
     text-transform: uppercase;
@@ -622,16 +651,13 @@ aside nav ul {
     list-style: none;
     margin-bottom: 0
 }
-
 aside nav ul li {
     text-align: left;
     margin: 8px auto;
 }
-
 aside nav ul li:before {
     content: '-';
 }
-
 aside nav ul li a {
     color: #414141;
     font-family: oswald;
@@ -640,19 +666,17 @@ aside nav ul li a {
     text-decoration: none;
     letter-spacing: 3px;
 }
-
 aside .sidebar-box {
     padding: 15px 0
 }
-
 aside .sidebar-box {}
-
 aside .sidebar-box h3 {
     margin: 0;
     text-align: center;
     text-transform: uppercase;
     top: -28px;
     /* margin-bottom: 20px; */
+    
     position: relative;
     background-color: #fff;
     font-size: 12px;
@@ -660,29 +684,23 @@ aside .sidebar-box h3 {
     padding: 0 10px;
     margin: 0 auto;
 }
-
 aside .content {
     position: relative;
     top: -24px;
     padding: 20px 0 0 0px;
     text-align: center;
 }
-
 aside .sidebar-box {}
-
 aside h2 {
     font-size: 22px;
     text-align: center;
 }
-
 aside h2 a {
     border-bottom: 1px dotted;
     margin: 0;
 }
 
-
 /* Archivos */
-
 .archive-cat {
     margin-bottom: 30px;
     padding: 8px;
@@ -690,7 +708,6 @@ aside h2 a {
     background-color: #f1f1f1;
     border: 1px solid #e2e2e2;
 }
-
 .archive-cat a {
     border: 1px solid #c6c6c6;
     height: 242px;
@@ -700,14 +717,13 @@ aside h2 a {
     width: 100%;
     position: relative;
 }
-
 .archive-cat a img {
     position: absolute;
     top: -12px;
     /* left: -10px; */
+    
     width: 100%;
 }
-
 #portadas .archive-cat a {
     border: 1px solid #c6c6c6;
     height: 100%;
@@ -716,7 +732,6 @@ aside h2 a {
     float: left;
     position: relative;
 }
-
 #portadas .archive-cat {
     background-color: #f1f1f1;
     border: 1px solid #e2e2e2;
@@ -724,24 +739,22 @@ aside h2 a {
     padding: 8px;
     height: 338px;
 }
-
 #portadas .archive-cat a img {
     position: absolute;
     top: 0;
     z-index: 1;
 }
-
 @media ( max-width: 991px) {
     #portadas .archive-cat {
         height: 265px;
         position: relative;
     }
+    
     #portadas .archive-cat a {
         width: 100%;
         height: 232px;
     }
 }
-
 a .description {
     z-index: 500;
     text-align: center;
@@ -759,7 +772,6 @@ a .description {
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
-
 a .description:hover {
     background-color: rgba(0, 0, 0, 0.1);
     -webkit-transition: all 0.2s ease-in-out;
@@ -768,7 +780,6 @@ a .description:hover {
     transition: all 0.2s ease-in-out;
     color: #fff;
 }
-
 .description h2 {
     display: table-cell;
     font-family: 'Oswald', sans-serif;
@@ -777,7 +788,6 @@ a .description:hover {
     font-size: 22px;
     font-weight: 100;
 }
-
 .description h2:hover {
     opacity: 0;
     -webkit-transition: all 0.2s ease-in-out;
@@ -785,19 +795,15 @@ a .description:hover {
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
-
 @media ( max-width: 768px) {}
-
 .archive-cat {
     position: relative;
 }
-
 .archive-cat > iframe {
     background-color: #000;
     position: relative;
     z-index: 0;
 }
-
 .description-video {
     background-color: #000;
     bottom: 14px;
@@ -807,7 +813,6 @@ a .description:hover {
     position: absolute;
     z-index: 10000;
 }
-
 .description-video h2 {
     font-family: 'Oswald', sans-serif;
     vertical-align: bottom;
@@ -818,44 +823,34 @@ a .description:hover {
     margin: 0;
 }
 
-
 /* RECORTES */
-
 #flex .archive-cat a {
     height: 100%;
     width: 100%;
     border: 0 none;
 }
-
 #flex .archive-cat {
     padding: 0;
     border: none 0;
     height: 100%;
     margin-bottom: 0;
 }
-
 #flex .item.col-md-4 {
     margin: 0;
     padding: 0
 }
-
 #flex .archive-cat a img {
     top: 0;
 }
-
 #flex .archive-cat a img:hover {
     -webkit-filter: none (0);
     filter: none (0)
 }
-
 #flex .archive-cat a .description h2 {
     padding: 5px;
 }
-
 #flex .archive-cat a .description {}
-
 #portadas div {}
-
 .deco3 {
     border-top: 1px solid#111111;
     background-color: #f5f5f5;
@@ -863,91 +858,105 @@ a .description:hover {
     float: left;
     width: 100%;
 }
-
 .post-list .deco1 {
     border-top: 15px solid #ececec;
     margin: 35px 0;
     width: 100%;
 }
 
+.alignleft {float: left;}
+.alignright +p, p +.alignright   { float: right;} 
+.alignleft + p, p + .alignleft  { float: left; }
+
+
 @media ( max-width: 375px) {
     .perfil-blog {
         display: none
     }
+    
     .post-list .deco1 {
         border-top: 15px solid #ececec;
         margin: 35px 0;
         width: 100%;
     }
+    
     .post-content {
         margin: 0;
         padding: 0
     }
+    
     .col-md-9.post-list .post-img,
     .col-md-9.post-list .post-entry p img {
         width: 100%;
         height: auto
     }
+    
     .archive-cat,
     #portadas .archive-cat {
         padding: 8px;
         height: 168px;
     }
+    
     #portadas .archive-cat a {
         width: 100%;
         height: 117px;
     }
+    
     .description h2 {
         font-size: 12px
     }
 }
-
 @media ( max-width: 375px) {
     .home.post-list {
         padding: 0 15px;
     }
+    
     section.container header.title h1 {
         font-size: 30px;
         line-height: 160%;
     }
+    
     .archive-cat,
     #portadas .archive-cat {
         padding: 8px;
     }
+    
     #portadas .archive-cat a {
         width: 100%;
         height: 177px;
     }
+    
     aside .sidebar-box {
         border-left: 0 none
     }
+    
     .instan-blog,
     .redes-blog,
     .hidden-sm {
         display: none
     }
+    
     #portadas .archive-cat a {
         width: 100%;
         height: 100%;
     }
+    
     .categorias-blog {
         text-align: center;
     }
+    
     .archive-cat,
     #portadas .archive-cat {
         padding: 8px;
         height: 190px;
     }
+    
     .post-content img {}
 }
-
 .wp-caption.alignnone {
     margin: 0 auto;
     width: 100%!important;
 }
-
-
-
 p.wp-caption-text {
     color: #999;
     display: inline-block;
@@ -957,58 +966,61 @@ p.wp-caption-text {
     margin: 11px auto;
     width: 100%;
 }
-
-
 .wp-caption + .wp-caption {
     margin: 30px auto;
 }
-
 p img + p img {
     margin-top: 20px;
 }
-
 @media ( max-width: 510px) {
     .deco1 {
         width: 90%
     }
+    
     .category-archivos .archive-cat {
         margin-bottom: 10px;
         padding: 8px;
         height: 264px;
     }
+    
     .archive-cat a {
         height: 100%;
     }
+    
     #portadas .archive-cat {
         height: 190px;
         position: relative;
         padding: 8px;
     }
+    
     #portadas .archive-cat a {
         width: 100%;
         height: 100%;
     }
+    
     .archive-cat a img {
         top: 0;
     }
+    
     .description h2 {
         font-size: 15px;
     }
+    
     .category-editorial .archive-cat {
         height: 168px;
     }
+    
     .category-publicidad .archive-cat {
         height: 150px;
     }
+    
     .category-videos .archive-cat {
         height: 255px;
     }
 }
-
 #instafeed {
     text-align: left;
 }
-
 #instafeed a img {
     padding: 0%;
     width: 44%;
@@ -1016,17 +1028,14 @@ p img + p img {
     background-color: #f4f4f4;
     border: 1px solid #c1c1c1;
 }
-
 footer {
     margin: 40px auto;
     padding: 40px auto;
 }
-
 footer h1 {
     font-size: 18px;
     margin: 0;
 }
-
 footer p {
     margin: 5px 0;
     font-size: 14px;
@@ -1034,19 +1043,15 @@ footer p {
     margin-top: 0;
 }
 
-
 /* SOCIAl */
-
 .readmore-social {
-    padding: 15px;
+    padding: 35px;
     float: left;
     width: 100%;
 }
-
 ul.socialbuttons.social-footer {
     float: right;
 }
-
 ul.socialbuttons {
     margin: 0 auto;
     margin-top: 4px;
@@ -1055,17 +1060,14 @@ ul.socialbuttons {
     list-style: none;
     display: inline-block;
 }
-
 ul.socialbuttons.share {
     width: auto;
 }
-
 ul.socialbuttons li {
     display: inline-block;
     float: left;
     padding: 0;
 }
-
 ul.socialbuttons li a {
     display: inline-block;
     float: left;
@@ -1077,7 +1079,6 @@ ul.socialbuttons li a {
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
-
 ul.socialbuttons li a:hover {
     opacity: 1;
     -webkit-transition: all 0.2s ease-in-out;
@@ -1085,7 +1086,6 @@ ul.socialbuttons li a:hover {
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
-
 ul.socialbuttons li a {
     background: transparent url("../images/fb.png") no-repeat scroll 0 0;
     border: 0 none;
@@ -1095,36 +1095,29 @@ ul.socialbuttons li a {
     text-shadow: none;
     width: 26px;
 }
-
 ul.socialbuttons li.facebook a {
     background-image: url(../images/fb.png);
 }
-
 ul.socialbuttons li.twitter a {
     background-image: url(../images/tw.png);
 }
-
 ul.socialbuttons li.instant a {
     background-image: url(../images/inst.png);
 }
-
 ul.socialbuttons li.yout a {
     background-image: url(../images/yout.png);
 }
-
 ul.socialbuttons.share {
     display: inline-block;
     margin: 0 auto;
     width: auto;
 }
-
 ul.socialbuttons.share li {
     display: inline-block;
     margin: 0 auto;
     width: auto;
     float: left;
 }
-
 ul.socialbuttons.share li a {
     background: transparent url(../images/sfb.png) no-repeat scroll 0 0;
     border: 0 none;
@@ -1134,77 +1127,70 @@ ul.socialbuttons.share li a {
     text-shadow: none;
     width: 22px;
 }
-
 ul.socialbuttons.share li.facebook a {
     background-image: url(../images/sfb.png);
 }
-
 ul.socialbuttons.share li.twitter a {
     background-image: url(../images/stw.png);
 }
-
 ul.socialbuttons.share li.instant a {
     background-image: url(../images/sinst.png);
 }
-
 @media ( max-width: 375px) {
     footer .col-md-6 {
         text-align: center;
     }
+    
     ul.socialbuttons.social-footer {
         float: initial;
         margin-bottom: 20px;
     }
+    
     footer h1 {
         display: inline-block;
         text-align: center;
         width: 100%;
     }
+    
     footer p {
         margin-top: 0px;
         text-align: center;
     }
+    
     .navbar-brand h1 {
         font-size: 21px;
     }
 }
-
 .img-perfil {
     border-bottom: 1px solid #ccc1;
     border-radius: 200px;
     overflow: hidden;
 }
-
 .img-perfil img {
     width: 100%;
 }
-
 .perfildescription {
     text-align: center;
     margin-top: 30px;
 }
-
 aside .sidebar-box .perfildescription h3 {
     margin-bottom: 0;
     top: 0;
     font-size: 18px;
 }
-
 aside .sidebar-box .perfildescription p {
     font-size: 16px;
     text-align: center;
     line-height: 140%;
     font-style: italic;
-       margin: 10px 0 30px;
+    margin: 10px 0 30px;
 }
-
 .comment-form {}
-
 .comment-form p {
     width: 48%;
     float: left;
+    margin: 0;
 }
-
 .comment-form p label,
 .wpcf7-form label {
     background-color: #fff;
@@ -1219,20 +1205,18 @@ aside .sidebar-box .perfildescription p {
     top: 18px;
     width: auto;
 }
-
 .comment-form p.comment-notes {
     width: 100%;
+    font-size: 15px;
+    margin: 0;
 }
-
 .comment-form p.comment-form-email {
     float: right;
 }
-
 .comment-form label {
     width: 100%;
     float: left
 }
-
 .comment-form input,
 .comment-form input,
 textarea {
@@ -1245,35 +1229,34 @@ textarea {
     padding: 12px;
     width: 100%;
 }
-
 .comment-form input:hover,
 textarea:hover {
     background-color: #f1f1f1
 }
-
 .comment-form p.form-submit {
     float: right;
+    margin-top: 25px;
 }
-
 .comment-form p.form-submit input {
     padding: 8px 10px;
     background-color: #fff;
 }
-
 .comment-form .comment-form-comment {
     width: 100%;
 }
-
 .comment-form .comment-form-comment textarea {
     width: 100%;
 }
-
 .wpcf7-form input,
 .wpcf7-form textarea {
     width: 100%;
+    font-family: 'Baskerville', 'Libre Baskerville', serif;
+    color: #666;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #ccc;
 }
-
-.wpcf7-form .wpcf7-submit {
+.wpcf7-submit {
     padding: 8px 20px;
     margin: 10px 0;
     background-color: #fff;
@@ -1281,16 +1264,14 @@ textarea:hover {
     width: auto;
     float: right;
 }
-
+.wpcf7-form input:hover,
 .wpcf7-form .wpcf7-submit:hover,
 .comment-form p.form-submit input:hover {
     background-color: #fff;
     color: #111111;
-    border-color: #000
+    border: 1px solid #666
 }
-
 form p {}
-
 span.wpcf7-not-valid-tip {
     background-color: #000;
     color: #ccc;
@@ -1299,30 +1280,24 @@ span.wpcf7-not-valid-tip {
     padding: 6px;
     text-align: center;
 }
-
 @media ( max-width: 375px) {
     .comment-form p {
         width: 100%
     }
 }
-
 #slider {
     margin-bottom: 25px;
 }
-
 .slider-carusel {
     margin: 0 15px;
 }
-
 .slider-pro {
     padding: 15px;
     margin: 20px auto 0
 }
-
 .sp-image-container {
     padding: 0 30px;
 }
-
 
 }
 .sp-image-container img {
@@ -1377,11 +1352,9 @@ span.wpcf7-not-valid-tip {
     .sp-image-container {
         padding: 0;
     }
-    
     .sp-thumbnails-container {}
     /* .sp-image { margin:auto!important; }
 */
-    
     .sp-mask.sp-grab,
     .sp-slide,
     .sp-image-container {}
@@ -1409,7 +1382,6 @@ span.wpcf7-not-valid-tip {
     0% {
         opacity: 0;
     }
-    
     100% {
         opacity: 1;
     }
@@ -1418,7 +1390,6 @@ span.wpcf7-not-valid-tip {
     0% {
         opacity: 0;
     }
-    
     100% {
         opacity: 1;
     }
@@ -1427,7 +1398,6 @@ span.wpcf7-not-valid-tip {
     0% {
         opacity: 0;
     }
-    
     100% {
         opacity: 1;
     }
@@ -1450,7 +1420,6 @@ span.wpcf7-not-valid-tip {
     0% {
         opacity: 0;
     }
-    
     100% {
         opacity: 1;
     }
@@ -1459,7 +1428,6 @@ span.wpcf7-not-valid-tip {
     0% {
         opacity: 0;
     }
-    
     100% {
         opacity: 1;
     }
@@ -1468,7 +1436,6 @@ span.wpcf7-not-valid-tip {
     0% {
         opacity: 0;
     }
-    
     100% {
         opacity: 1;
     }

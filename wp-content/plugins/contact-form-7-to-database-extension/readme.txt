@@ -5,8 +5,8 @@ Tags: contact form,database,contact form database,save contact form,form databas
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 3.2.1
-Tested up to: 4.1
-Stable tag: 2.8.29
+Tested up to: 4.4.1
+Stable tag: 2.10.0
 
 Saves submitted form data to the database. Export the data to a file or use short codes to display it.
 
@@ -15,20 +15,24 @@ Saves submitted form data to the database. Export the data to a file or use shor
 The "CFDB" plugin saves contact form submissions to your WordPress database and provides and administration page and short codes to view and display the data.
 Video tutorial on the <a href="http://cfdbplugin.com/">CFDB Plugin Site</a>
 
-By simply installing the plugin, it will automatically begin to capture submissions from:
+By simply installing the plugin, it will automatically begin to capture form submissions from:
 
-* JetPack Contact Form plugin
-* Contact Form 7 (CF7) plugin
-* Fast Secure Contact Form (FSCF) plugin
-* Gravity Forms plugin
-* WR ContactForm plugin (BETA)
+* <a href="https://wordpress.org/plugins/contact-form-7/">Contact Form 7 (CF7) plugin</a>
+* <a href="https://wordpress.org/plugins/si-contact-form/">Fast Secure Contact Form (FSCF) plugin</a>
+* <a href="https://wordpress.org/plugins/jetpack/">JetPack Contact Form plugin</a>
+* <a href="http://www.gravityforms.com">Gravity Forms plugin</a>
+* <a href="https://wordpress.org/plugins/wr-contactform/">WR ContactForm plugin</a>
+* <a href="https://wordpress.org/plugins/formidable/">Formidable Forms (BETA)</a>
+* <a href="http://codecanyon.net/item/quform-wordpress-form-builder/706149/">Quform plugin (BETA)</a>
+* <a href="https://wordpress.org/plugins/ninja-forms/">Ninja Forms plugin (BETA)</a>
+* <a href="https://wordpress.org/plugins/caldera-forms/">Caldera Forms plugin (BETA)</a>
+* <a href="https://wordpress.org/plugins/cforms2/">CFormsII (BETA)</a>
+* <a href="http://themeforest.net/item/enfold-responsive-multipurpose-theme/4519990">Enfold theme forms</a>
 
 Other form submissions can be saved with the addition of the <a href="http://cfdbplugin.com/?page_id=508">[cfdb-save-form-post]</a> short code on the target submission page.
 
 Contact form plugins are great but generally one thing...the ability to save and retrieve the form data to/from the database.
 If you get a lot of form submissions, then you end up sorting through a lot of email.
-
-Looking at your data in the WP Admin Area
 
 This plugin provides three administration pages in the administration area under the "Contact form DB" submenu.
 
@@ -44,7 +48,7 @@ Use the short code builder page to set short code options.
 == Installation ==
 
 1. Your WordPress site must be running PHP5 or better. This plugin will fail to activate if your site is running PHP4.
-1. Be sure that any of Contact Form 7, Fast Secure Contact Form, JetPack, and/or Gravity Forms is installed and activated
+1. Be sure that one or more of the supported form plugins installed and activated.
 
 == Frequently Asked Questions ==
 
@@ -81,6 +85,109 @@ You can always deactivate the plugin without loosing data.
 1. Admin Panel view of submitted form data
 
 == Changelog ==
+
+= 2.10.1 =
+* Bug Fix: Extra output generated (possibly by other plugins or debug) ahead of export file download made export file corrupt. (Not seen on most sites)
+
+= 2.10.0 =
+* New: Now supports exports to .xlsx and .ods file formats
+* Update: Can now specify the delimiter for CSV exports
+* Update: Added support for multisite (BETA)
+* Update: Variable substitution enabled for form name in shortcodes
+
+= 2.9.16 =
+* Bug Fix: [cfdb-export-link] is now processing filter $_GET, $_POST, $_COOKIE values before creating the URL
+* Bug Fix: To Formidable Forms integration (BETA)
+
+= 2.9.15 =
+* Bug Fix: Where WP installations that output debug would add text to ajax return value
+* Bug Fix: When WPML plugin is also installed, export and ajax URLs were incorrect
+
+= 2.9.14 =
+* New: Formidable Forms integration added (BETA)
+* New: CFormsII integration added (BETA)
+* Bug Fix: Ninja Form integration (BETA) - warning messages seen when using PayPal
+* Performance enhancement: related to accessing options
+
+= 2.9.13 =
+* Bug Fix: on some WP installations, delete operations were being blocked
+
+= 2.9.12 =
+* Added <a href="http://cfdbplugin.com/?page_id=1167#SummationRow">SummationRow</a> transform
+
+= 2.9.11 =
+* Bug fix: where download files can be corrupted (2nd fix)
+
+= 2.9.10 =
+* Bug fix: where download files can be corrupted
+
+= 2.9.9 =
+* Bug fix: fixing rare stripslash() error
+* Bug fix: fixes to permissions
+
+= 2.9.8 =
+* Bug fix: Capturing Gravity Forms List element when it has columns
+
+= 2.9.7 =
+* Bug Fix: Capturing file uploads from WR Contact Form 1.1.10
+
+= 2.9.6 =
+* Bug fix: Occasional problem with language translations being initialized
+* Minor update to Contact Form 7 integration
+
+= 2.9.5 =
+* Bug fix to Google Spreadsheet Live Data export (failing to login)
+* Bug fix for exporting forms with a single quote in the name
+
+= 2.9.4 =
+* Added spreadsheet-like transforms:
+** Sum rows: trans="total=field1,field2,field3"
+** Sum columns: trans=TotalField(field1,field2,field3)
+** Sum both: trans="total=field1,field2&&TotalField(field1,field2,total)"
+** Sum product prices: trans="p1_total=multiply(p1,9.99)&&p2_total=multiply(p2,8.99)&&line_total=sum(p1_total,p2_total)&&TotalField(line_total)"
+
+= 2.9.3 =
+* Fix error on systems where php_uname() is not available
+* Allowing various PHP math functions in "trans"
+
+= 2.9.2 =
+* Fix for some cases where cannot delete row in administration page
+
+= 2.9.1 =
+* Fix for some cases where cannot delete row in administration page
+
+= 2.9 =
+* Additional HTML-injection protections
+* New option when Editor is installed [cfdb-datatable edit="cells"] enables editing of table cells but not column headers
+
+= 2.8.38 =
+* NaturalSortByMultiField transform now supports up to 10 fields to sort on
+
+= 2.8.37 =
+* Now captures form submission from Caldera Forms
+* Formatting changes on CFDB Options page
+
+= 2.8.36 =
+* Now captures form submission from Quform plugin
+* Now captures form submission from Ninja Forms plugin
+
+= 2.8.35 =
+* Reduced cell padding in admin table
+* Fixed typo in new option
+
+= 2.8.34 =
+* Now captures Enfold Theme forms
+* New on Options page: "Use fixed width in Admin datatable"
+* Taiwanese language update
+
+= 2.8.33 =
+* Fixed Delete button on Admin entry detail page
+
+= 2.8.32 =
+* Security patch
+
+= 2.8.31 =
+* Fix to work with Gravity Forms 1.9.1.2
 
 = 2.8.30 =
 * Minor fix to short code builder page
@@ -491,6 +598,15 @@ See "Database Options" -> "Save Cookie Data with Form Submissions" and "Save onl
 * Initial Revision.
 
 == Upgrade Notice ==
+
+= 2.9.2 =
+For users of the CFDB Editor, CFDB 2.9.x will require and upgrade of the CFDB Editor 1.4 as well. See admin notice after upgrade of CFDB.
+
+= 2.9.1 =
+For users of the CFDB Editor, CFDB 2.9.x will require and upgrade of the CFDB Editor 1.4 as well. See admin notice after upgrade of CFDB.
+
+= 2.9 =
+For users of the CFDB Editor, CFDB 2.9 will require and upgrade of the CFDB Editor 1.4 as well. See admin notice after upgrade of CFDB.
 
 = 1.6 =
 New cool DataTable

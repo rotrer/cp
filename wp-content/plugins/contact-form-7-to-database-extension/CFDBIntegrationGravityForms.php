@@ -70,9 +70,13 @@ class CFDBIntegrationGravityForms {
             return true;
         }
         foreach ($form['fields'] as $field) {
-            if (!is_array($field)) {
-                continue;
+
+            // Gravity Forms 1.8.5 $field was an array
+            // Gravity Forms 1.9.1.2 $field is an object
+            if (is_object($field)) {
+                $field = (array)$field;
             }
+
             $fieldName = $field['label'];
 
             if (!empty($field['inputs']) && is_array($field['inputs'])) {
@@ -105,19 +109,49 @@ class CFDBIntegrationGravityForms {
                 $fieldId = $field['id'];
                 switch ($field['type']) {
                     case 'list' :
-                        if (!isset($postedData[$fieldName]) || $postedData[$fieldName] === '') { // handle duplicate empty hidden fields
-                            // List - value is serialized array
-                            $valueArray = @unserialize($entry[$fieldId]);
-                            if (is_array($valueArray)) {
-                                //$postedData[$fieldName] = '';
-                                // Array of (Array of column-name => value)
-                                $tmpArray = array();
-                                foreach ($valueArray as $listArray) {
-                                    $tmpArray[] = implode(',', array_values($listArray));
+                        $list = unserialize($entry[$fieldId]);
+                        if ($list) {
+                            // $list may be a list of strings or
+                            // or in the case of Gravity Form List with columns,
+                            /*
+                             Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [Column 1] => hi
+                                            [Column 2] => there
+                                            [Column 3] => howdy
+                                        )
+                                )
+                             */
+                            if (! empty($list) && is_array($list[0])) {
+                                $colMatrix = array();
+                                foreach ($list as $colArray) {
+                                    $colList = array();
+                                    foreach ($colArray as $colKey => $colValue) {
+                                        $colList[] = $colKey . '=' . $colValue;
+                                    }
+                                    $colMatrix[] = implode('|', $colList);
                                 }
-                                $postedData[$fieldName] = implode('|', $tmpArray);
+                                $postedData[$fieldName] = implode("\n", $colMatrix);
                             } else {
-                                $postedData[$fieldName] = $entry[$fieldId];
+                                $postedData[$fieldName] = implode('|', $list);
+                            }
+                        } else {
+                            if (!isset($postedData[$fieldName]) || $postedData[$fieldName] === '') { // handle duplicate empty hidden fields
+                                // List - value is serialized array
+                                $valueArray = @unserialize($entry[$fieldId]);
+                                if (is_array($valueArray)) {
+                                    //$postedData[$fieldName] = '';
+                                    // Array of (Array of column-name => value)
+                                    $tmpArray = array();
+                                    foreach ($valueArray as $listArray) {
+                                        $tmpArray[] = implode(',', array_values($listArray));
+                                    }
+                                    $postedData[$fieldName] = implode('|', $tmpArray);
+                                } else {
+                                    $postedData[$fieldName] = $entry[$fieldId];
+                                }
                             }
                         }
                         break;

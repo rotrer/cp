@@ -62,21 +62,17 @@
 					</div>
 
 				</article>
-
-				<div class="deco1"></div>
-
 				<div class="row">
-
-				<div class ="blog_content readmore-social">
-					<div class="pagination">
-					<?php
-						echo get_previous_post_link('%link', 'Anterior');
-						echo get_next_post_link('%link', 'Siguiente');
-					?>
+					<div class="deco2"></div>
+					<div class ="blog_content readmore-social">
+						<div class="pagination">
+						<?php
+							echo get_previous_post_link('%link', 'Anterior');
+							echo get_next_post_link('%link', 'Siguiente');
+						?>
+						</div>
 					</div>
-				</div>
-				
-				<div class="deco1"></div>
+					<div class="deco2"></div>
 				<div class="blog_contentcomments">
 					
 					<?php
@@ -97,10 +93,10 @@
 						$args = array(
 						  'id_form'           => 'commentform',
 						  'id_submit'         => 'submit',
-						  'title_reply'       => __( 'Deja un comentario Reply' ),
+						  'title_reply'       => __( 'Deja un comentario' ),
 						  'title_reply_to'    => __( 'Deja una respuesta to %s' ),
 						  'cancel_reply_link' => __( 'Cancelar respuesta' ),
-						  'label_submit'      => __( 'Envia comentario' ),
+						  'label_submit'      => __( 'Enviar comentario' ),
 
 						  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">Comentario
 						  	</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
@@ -117,7 +113,7 @@
 						    ) . '</p>',
 
 						  'comment_notes_before' => '<p class="comment-notes">' .
-						    __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) .
+						    __( 'Tu email no sera publicado' ) . ( $req ? $required_text : '' ) .
 						    '</p>',
 
 						  'comment_notes_after' => '',
@@ -129,7 +125,7 @@
 				</div>
 
 				<?php endwhile; ?>
-			<?php else : ?>
+				<?php else : ?>
 
 				<article id="post-0" class="post no-results not-found">
 					<header class="post-title">
@@ -142,11 +138,13 @@
 					</div><!-- .entry-content -->
 				</article><!-- #post-0 -->
 
-			<?php endif; ?>
+				<?php endif; ?>
 
-			<?php if ( get_comments() ) : ?>
+				<?php if ( get_comments() ) : ?>
 
-				<div class="post-content">			
+				<div class="post-content post-comments">	
+
+				<h3>Comentarios</h3>	
 
 
 					<ol class="comment-list">
@@ -167,6 +165,7 @@
 					<?php endif; ?>
 
 			</div>
+		</div>
 		</div>
 		
 		<aside class="col-md-3">
