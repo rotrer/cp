@@ -864,8 +864,16 @@ a .description:hover {
     width: 100%;
 }
 
-.alignleft {float: left;}
-.alignright +p, p +.alignright   { float: right;} 
+img.alignleft {
+    float: left;
+    margin: 20px 20px 20px 0;
+}
+
+img.alignright {
+    float: left;
+    margin: 20px 0px 20px 20px;
+}
+p +.alignright   { float: right;} 
 .alignleft + p, p + .alignleft  { float: left; }
 
 
