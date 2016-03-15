@@ -1,17 +1,17 @@
 <!-- Content -->
 <div class="container section">
 	<div class="row">
-	<div class="col-md-12">
-		<div class="deco2"></div>
-		<!--<?php $categories_blog = get_categories(array('parent' => 2, 'hide_empty' => 0)); ?>
-			<nav>
-				 <ul class="menu-blog">
-					<?php if ( $categories_blog ) foreach ($categories_blog as $key => $cat) { ?>
-					<li><a href="<?php echo get_category_link( $cat->term_id ); ?>"><?php echo $cat->name ?></a></li>
-					<?php } ?>
-				</ul>
-			</nav>
-			<div class="deco2"></div>-->
+		<div class="col-md-12">
+			<div class="deco2"></div>
+			<!--<?php $categories_blog = get_categories(array('parent' => 2, 'hide_empty' => 0)); ?>
+				<nav>
+					 <ul class="menu-blog">
+						<?php if ( $categories_blog ) foreach ($categories_blog as $key => $cat) { ?>
+						<li><a href="<?php echo get_category_link( $cat->term_id ); ?>"><?php echo $cat->name ?></a></li>
+						<?php } ?>
+					</ul>
+				</nav>
+				<div class="deco2"></div>-->
 		</div>
 
 		<div class=" post-list col-md-9">
@@ -62,6 +62,8 @@
 					</div>
 
 				</article>
+
+
 				<div class="row">
 					<div class="deco2"></div>
 					<div class ="blog_content readmore-social">
@@ -73,7 +75,7 @@
 						</div>
 					</div>
 					<div class="deco2"></div>
-				<div class="blog_contentcomments">
+					<div class="blog_contentcomments">
 					
 					<?php
 						$fields =  array(
@@ -143,10 +145,7 @@
 				<?php if ( get_comments() ) : ?>
 
 				<div class="post-content post-comments">	
-
-				<h3>Comentarios</h3>	
-
-
+					<h3>Comentarios</h3>	
 					<ol class="comment-list">
 						<?php
 							wp_list_comments( array(
@@ -154,19 +153,15 @@
 							), get_comments() );
 						?>
 					</ol><!-- .comment-list -->
-
 					<?php endif; // have_comments() ?>
-
 					<?php
 						// If comments are closed and there are comments, let's leave a little note, shall we?
 						if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 					?>
-						<p class="no-comments">Comentarios cerrados</p>
+					<p class="no-comments">Comentarios cerrados</p>
 					<?php endif; ?>
-
+				</div>
 			</div>
-		</div>
-		</div>
 		</div>
 		
 		<aside class="col-md-3">
