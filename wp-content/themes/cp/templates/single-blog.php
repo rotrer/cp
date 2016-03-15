@@ -167,6 +167,7 @@
 			</div>
 		</div>
 		</div>
+		</div>
 		
 		<aside class="col-md-3">
 			
