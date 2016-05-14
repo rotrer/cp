@@ -26,6 +26,11 @@
   <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css">
   <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/jquery.flex-images.css">
   <link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/images/favicon.png" />
+  <?php wp_head(); ?>
+  <script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.flex-images.min.js"></script>
+  <script>
+  $('#flex').flexImages({ rowHeight: 320, maxRows: 8, truncate: true });
+  </script>
 
 </head>
   <body <?php body_class(); ?>>
