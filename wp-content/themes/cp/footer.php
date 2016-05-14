@@ -41,6 +41,21 @@ effect : "fadeIn"
 	</div>
 	</div>
 </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/libs/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/sliderpro-min.js"></script>
+  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.flex-images.min.js"></script>
+  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.lazyload.js"></script>
+  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/scripts.js"></script>
+  <?php wp_head(); ?>
+  <script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.flex-images.min.js"></script>
+  <script>
+  $('#flex').flexImages({ rowHeight: 320, maxRows: 8, truncate: true });
+  </script>
+
+  
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

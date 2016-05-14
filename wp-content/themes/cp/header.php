@@ -26,22 +26,7 @@
   <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css">
   <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/jquery.flex-images.css">
   <link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ); ?>/images/favicon.png" />
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
-  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/libs/fancybox/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/sliderpro-min.js"></script>
-  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.flex-images.min.js"></script>
-  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.lazyload.js"></script>
-  <!-- LOAD DE IMAGENES 
-  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social2.js"></script>
-  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/social3.js"></script>
-  -->
-  <script type="text/javascript" src="<?php bloginfo( 'template_directory' ); ?>/js/scripts.js"></script>
-  <?php wp_head(); ?>
-  <script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.flex-images.min.js"></script>
-  <script>
-  $('#flex').flexImages({ rowHeight: 320, maxRows: 8, truncate: true });
-  </script>
+
 </head>
   <body <?php body_class(); ?>>
   <div id="fb-root"></div>
