@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /category
+Allow: /category/archivos
+Allow: /category/blog
+Allow: /contacto
+Disallow: /wp/wp-admin/
+
+Sitemap: http://www.carolinaparsons.com/sitemap.xml
