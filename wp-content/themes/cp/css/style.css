@@ -370,9 +370,13 @@ section.container header.title nav a {
     padding: 10px;
     margin: 10px
 }
-
+@media(max-width:1900px) {
 .post-list .post-img img {
-    width: 60%
+    width: 450px
+}
+
+@media(max-width:768px) {
+    .home .post-list .post-img img {width: 70%}
 }
 
 @media(max-width:375px) {
