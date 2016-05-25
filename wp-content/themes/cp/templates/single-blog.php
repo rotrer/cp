@@ -157,6 +157,7 @@
         <?php endif; ?>
       </div>
     </div>
+  </div>
   <!--</div> CUANDO ENTRA UN COMENTARIO SE ROMPE!!! --> 
 
   <aside class="col-md-3">
