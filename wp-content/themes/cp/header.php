@@ -20,7 +20,7 @@
 
   ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta http-equiv="Cache-Control" content="max-age= 172800" forua= true />
+<!--   <meta http-equiv="Cache-Control" content="max-age= 172800" forua= true /> -->
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
   <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/bootstrap-3.3.6-dist/css/bootstrap.css">
   <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css">

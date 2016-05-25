@@ -1,9 +1,3 @@
-
-
-
-
-
-
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -15,3 +9,12 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+RewriteCond %{HTTP_HOST} ^carolinaparsons\.com$
+RewriteRule ^/?$ "http\:\/\/www\.carolinaparsons\.com" [R=301,L]
+
+
+RewriteCond %{HTTP_HOST} ^carolinaparsons\.cl$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.carolinaparsons\.cl$
+RewriteRule ^/?$ "http\:\/\/www\.carolinaparsons\.com\/" [R=301,L]
+
