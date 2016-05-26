@@ -376,11 +376,11 @@ section.container header.title nav a {
 }
 
 @media(max-width:768px) {
-    .home .post-list .post-img img , .post-list .post-img img {width: 70%}
+    .home .post-list .post-img img , .post-list .post-img img, .post-list img {width: 70%}
 }
 
 @media(max-width:375px) {
-    .home .post-list .post-img img, .post-list .post-img img  {width: 90%}
+    .home .post-list .post-img img, .post-list .post-img img, .post-list img  {width: 90%}
 }
 
 .post-list.home {
