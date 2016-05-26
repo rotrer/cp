@@ -377,10 +377,12 @@ section.container header.title nav a {
 }
 
 @media(max-width:768px) {
+        iframe { width: 100%;}
     .home .post-list .post-img img , .post-list .post-img img, .post-list img {width: 70%; height: auto;}
 }
 
 @media(max-width:375px) {
+    iframe { width: 100%;}
     .home .post-list .post-img img, .post-list .post-img img, .post-list img  {width: 90%; height: auto;}
 }
 
