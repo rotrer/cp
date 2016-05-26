@@ -362,46 +362,53 @@ section.container header.title nav a {
 }
 
 .post-list {
-    margin-top: 28px
+    margin-top: 28px;
+    text-align: center;
 }
 
 .post-list img {
     border: 1px solid #e6e6e6;
     padding: 10px;
-    margin: 10px
+    margin: 10px 0;
 }
+
 @media(max-width:1900px) {
-.post-list .post-img img {
-    width: 450px;
-    height: auto;
+    .post-list.col-md-12 img {
+        width: 450px;
+        height: auto;
+    }
+    .post-list.col-md-9 img {
+        width: 450px;
+        height: auto;
+    }
 }
 
 @media(max-width:768px) {
-        iframe { width: 100%;}
-    .home .post-list .post-img img , .post-list .post-img img, .post-list img {width: 70%; height: auto; }
+    iframe {
+        width: 100%;
+    }
+    .post-list.col-md-12 img {
+        width: 450px;
+        height: auto;
+    }
+    .post-list.col-md-9 img {
+        width: 80%;
+        height: auto;
+    }
 }
 
 @media(max-width:414px) {
-    iframe { width: 100%;}
-    .post-list .home .post-img img, 
-    .post-list .post-img img, 
-    .post-list img  {
-        width: 100%; 
-        height: auto; 
-        margin: 0;
+    iframe {
+        width: 100%;
     }
-     
-    .col-md-9.post-list .post-img img,
-    .col-md-9.post-list .post-entry p img {
-        width: 100%!important;
+    .post-list.col-md-12 img {
+        width: 100%;
         height: auto;
-        margin: 0;
     }
-
-}
-
-.post-list.home {
-    padding: 0 80px
+    .post-list.col-md-9 img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .post-list .post-content {
@@ -471,12 +478,6 @@ section.container header.title nav a {
     text-transform: uppercase
 }
 
-
-@media(max-width:768px) {
-    .post-list.home {
-        padding: 0 30px
-    }
-}
 @media(max-width:414px) {
     .post-content header h4 {
         top: -43px
@@ -491,10 +492,9 @@ section.container header.title nav a {
     .post-content {
         padding: 0 5%
     }
-    .post-list.home {
-        padding: 0!important;
-    }
 }
+
+@media(max-width:768px) {}
 
 .blog_contentcomments {
     padding: 0 5%
@@ -904,7 +904,7 @@ a .description:hover {
 }
 
 .post-list .deco1 {
-    border-top: 15px solid #ececec;
+    border-top: none;
     margin: 35px 0;
     width: 100%
 }
@@ -942,7 +942,6 @@ p+.alignleft {
         margin: 0;
         padding: 0
     }
-
     .archive-cat,
     #portadas .archive-cat {
         padding: 8px;
@@ -958,9 +957,6 @@ p+.alignleft {
 }
 
 @media(max-width:414px) {
-    .home.post-list {
-        padding: 0 15px
-    }
     section.container header.title h1 {
         font-size: 30px;
         line-height: 160%
