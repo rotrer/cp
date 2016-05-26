@@ -219,7 +219,7 @@ p+p {
     }
 }
 
-@media(max-width:375px) {
+@media(max-width:414px) {
     .carousel-control {
         width: 10%
     }
@@ -381,7 +381,7 @@ section.container header.title nav a {
     .home .post-list .post-img img , .post-list .post-img img, .post-list img {width: 70%; height: auto;}
 }
 
-@media(max-width:375px) {
+@media(max-width:414px) {
     iframe { width: 100%;}
     .home .post-list .post-img img, .post-list .post-img img, .post-list img  {width: 90%; height: auto;}
 }
@@ -457,7 +457,7 @@ section.container header.title nav a {
     text-transform: uppercase
 }
 
-@media(max-width:375px) {
+@media(max-width:414px) {
     .post-content header h4 {
         top: -43px
     }
@@ -915,7 +915,7 @@ p+.alignleft {
     float: left
 }
 
-@media(max-width:375px) {
+@media(max-width:414px) {
     .perfil-blog {
         display: none
     }
@@ -947,7 +947,7 @@ p+.alignleft {
     }
 }
 
-@media(max-width:375px) {
+@media(max-width:414px) {
     .home.post-list {
         padding: 0 15px
     }
@@ -1185,7 +1185,7 @@ ul.socialbuttons.share li.instant a {
     background-image: url(../images/sinst.png)
 }
 
-@media(max-width:375px) {
+@media(max-width:414px) {
     footer .col-md-6 {
         text-align: center
     }
@@ -1344,7 +1344,7 @@ span.wpcf7-not-valid-tip {
     text-align: center
 }
 
-@media(max-width:375px) {
+@media(max-width:414px) {
     .comment-form p {
         width: 100%
     }
