@@ -408,10 +408,11 @@ section.container header.title nav a {
         width: 100%;
         height: auto;
     }
-    .post-list.col-md-9 img {
+    .post-list.col-md-9 img, .twitter-iframe  {
         width: 100%;
         height: auto;
     }
+
 }
 
 .post-list .post-content {
