@@ -383,7 +383,21 @@ section.container header.title nav a {
 
 @media(max-width:414px) {
     iframe { width: 100%;}
-    .home .post-list .post-img img, .post-list .post-img img, .post-list img  {width: 100%; height: auto; margin: 0;}
+    .home .post-list .post-img img, 
+    .post-list .post-img img, 
+    .post-list img  {
+        width: 100%; 
+        height: auto; 
+        margin: 0;
+    }
+     
+    .col-md-9.post-list .post-img img,
+    .col-md-9.post-list .post-entry p img {
+        width: 100%!important;
+        height: auto;
+        margin: 0;
+    }
+
 }
 
 .post-list.home {
@@ -928,12 +942,7 @@ p+.alignleft {
         margin: 0;
         padding: 0
     }
-    .col-md-9.post-list .post-img,
-    .col-md-9.post-list .post-entry p img {
-        width: 100%;
-        height: auto
-        margin: 0;
-    }
+
     .archive-cat,
     #portadas .archive-cat {
         padding: 8px;
