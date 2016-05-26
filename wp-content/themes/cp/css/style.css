@@ -383,7 +383,7 @@ section.container header.title nav a {
 
 @media(max-width:414px) {
     iframe { width: 100%;}
-    .home .post-list .post-img img, 
+    .post-list .home .post-img img, 
     .post-list .post-img img, 
     .post-list img  {
         width: 100%; 
@@ -471,6 +471,12 @@ section.container header.title nav a {
     text-transform: uppercase
 }
 
+
+@media(max-width:768px) {
+    .post-list.home {
+        padding: 0 30px
+    }
+}
 @media(max-width:414px) {
     .post-content header h4 {
         top: -43px
@@ -486,13 +492,7 @@ section.container header.title nav a {
         padding: 0 5%
     }
     .post-list.home {
-        padding: 0
-    }
-}
-
-@media(max-width:768px) {
-    .post-list.home {
-        padding: 0 30px
+        padding: 0!important;
     }
 }
 
