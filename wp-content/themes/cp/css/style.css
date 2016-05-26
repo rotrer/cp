@@ -378,12 +378,12 @@ section.container header.title nav a {
 
 @media(max-width:768px) {
         iframe { width: 100%;}
-    .home .post-list .post-img img , .post-list .post-img img, .post-list img {width: 70%; height: auto;}
+    .home .post-list .post-img img , .post-list .post-img img, .post-list img {width: 70%; height: auto; }
 }
 
 @media(max-width:414px) {
     iframe { width: 100%;}
-    .home .post-list .post-img img, .post-list .post-img img, .post-list img  {width: 90%; height: auto;}
+    .home .post-list .post-img img, .post-list .post-img img, .post-list img  {width: 100%; height: auto; margin: 0;}
 }
 
 .post-list.home {
@@ -932,6 +932,7 @@ p+.alignleft {
     .col-md-9.post-list .post-entry p img {
         width: 100%;
         height: auto
+        margin: 0;
     }
     .archive-cat,
     #portadas .archive-cat {
