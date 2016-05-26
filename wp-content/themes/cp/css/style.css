@@ -386,7 +386,7 @@ section.container header.title nav a {
 
 @media(max-width:768px) {
         .home .post-entry{ padding: 0 30px}
-    iframe {
+    iframe, .twitter-iframe   {
         width: 100%;
     }
     .post-list.col-md-12 img {
@@ -401,14 +401,15 @@ section.container header.title nav a {
 
 @media(max-width:414px) {
        .home .post-entry{ padding: 0 px}
-    iframe {
+       
+    iframe,  .twitter-iframe   {
         width: 100%;
     }
     .post-list.col-md-12 img {
         width: 100%;
         height: auto;
     }
-    .post-list.col-md-9 img, .twitter-iframe  {
+    .post-list.col-md-9 img {
         width: 100%;
         height: auto;
     }
