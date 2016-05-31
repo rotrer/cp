@@ -1030,6 +1030,16 @@ img + p.wp-caption-text {
     font-family: "Playfair Display", serif;
 }
 
+p.wp-caption-text {
+    color: #999;
+    display: inline-block;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 100%;
+    width: 100%;
+    font-family: "Playfair Display", serif;
+}
+
 p img + p img {
     margin: 15px 0px
 }
