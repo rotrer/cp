@@ -1010,12 +1010,14 @@ p+.alignleft {
 .wp-caption > img
 { margin-top: 37px;}
 
-.alignnone + .alignnone { margin-bottom: 37px;}
+.alignnone + .alignnone { margin-bottom: 20px;}
+
+.alignnone  p { margin-top: 0;}
 
 p.wp-caption-text {
     color: #999;
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     font-style: italic;
     line-height: 100%;
     margin: 0 auto 10px;
