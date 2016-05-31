@@ -69,19 +69,17 @@ h4 {
 }
 
 p {
-        margin: 0 0 40px 0;
+    margin: 15px 0;
     font-size: 20px;
     font-weight: 300;
     line-height: 30px;
-
 }
 
 
-
-div + p, img + p {  margin: 0;}
+div + p, img + p { 15px 0;}
 
 p + p {
-    margin: 0 0 30px
+    margin:15px 0;
 }
 
 .navbar-wrapper {
@@ -1010,15 +1008,15 @@ p+.alignleft {
 }
 
 .post-entry img + img {
-    margin-bottom: 20px;
+    margin: 15px 0;
 }
 
 .post-img {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 img.alignnone {
-    margin-bottom: 20px;
+    margin: 15px 0px;
 }
 
 div.wp-caption + img.alignnone {
