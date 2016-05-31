@@ -1008,7 +1008,8 @@ p.wp-caption-text {
     font-style: italic;
     line-height: 100%;
     margin: 0 auto 10px;
-    width: 100%
+    width: 100%;
+    font-family: "Playfair Display",serif;
 }
 
 .wp-caption+.wp-caption {
