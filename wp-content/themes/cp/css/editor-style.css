@@ -1005,7 +1005,7 @@ p+.alignleft {
 
 
 img.alignnone  { margin-bottom: 40px; }
-div.wp-caption  + img.alignnone  { margin-bottom: 0;}
+div.wp-caption  + img.alignnone  { margin-bottom: 40px;}
 
 
 p.wp-caption-text {
