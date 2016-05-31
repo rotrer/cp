@@ -61,7 +61,7 @@ h2 {
 
 h3 {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 h4 {
@@ -475,12 +475,8 @@ section.container header.title nav a {
 }
 
 .post-list h3 {
-    font-size: 22px;
-    margin-top: 0;
-    font-weight: 300;
-    letter-spacing: -1px;
-    margin: 30px auto 0;
-    text-transform: uppercase
+
+
 }
 
 @media(max-width:414px) {
