@@ -1012,7 +1012,7 @@ p.wp-caption-text {
     font-size: 14px;
     font-style: italic;
     line-height: 100%;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     width: 100%;
     font-family: "Playfair Display",serif;
 }
