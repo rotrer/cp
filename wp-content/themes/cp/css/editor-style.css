@@ -1023,19 +1023,19 @@ div.wp-caption + img.alignnone {
     margin-bottom: 20px;
 }
 
-p.wp-caption-text {
+img + p.wp-caption-text {
     color: #999;
     display: inline-block;
     font-size: 14px;
     font-style: italic;
     line-height: 100%;
-    margin: 10px auto 40px;
+    margin: 10px auto 15px;
     width: 100%;
     font-family: "Playfair Display", serif;
 }
 
-p img+p img {
-    margin-top: 20px
+p img + p img {
+    margin: 15px 0px
 }
 
 @media(max-width:510px) {
