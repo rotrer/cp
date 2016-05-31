@@ -69,16 +69,16 @@ h4 {
 }
 
 p {
+        margin: 0 0 40px 0;
     font-size: 20px;
     font-weight: 300;
     line-height: 30px;
-    margin: 0 0 40px 0
+
 }
 
 
 
-div + p, 
-img + p {  margin-bottom: 0;}
+div + p, img + p {  margin: 0;}
 
 p + p {
     margin: 0 0 30px
