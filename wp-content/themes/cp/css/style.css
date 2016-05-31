@@ -1007,7 +1007,7 @@ p.wp-caption-text {
     font-size: 15px;
     font-style: italic;
     line-height: 100%;
-    margin: 11px auto;
+    margin: 0 auto 10px;
     width: 100%
 }
 
