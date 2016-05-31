@@ -370,7 +370,6 @@ section.container header.title nav a {
 .post-list img {
     border: 1px solid #e6e6e6;
     padding: 10px;
-    margin: 10px 0;
 }
 
 @media(max-width:1900px) {
@@ -1002,23 +1001,10 @@ p+.alignleft {
     width: 100%!important
 }
 
-.wp-caption img{ margin-top:0;}
 
-.wp-caption + img
-{ margin-top: 37px;}
+img.alignnone  { margin-bottom: 30px; }
+div.wp-caption  + img.alignnone  { margin-bottom: 0;}
 
-.wp-caption + img
-{ margin-top: 37px;}
-
-.alignnone + .alignnone {
-    margin-bottom: 20px;
-    margin-top: 0;}
-
-img.alignnone + img.alignnone {
-    margin-bottom: 20px;
-    margin-top: 37px;
-}
-.alignnone  p { margin-top: 0;}
 
 p.wp-caption-text {
     color: #999;
@@ -1026,14 +1012,11 @@ p.wp-caption-text {
     font-size: 14px;
     font-style: italic;
     line-height: 100%;
-    margin: 0 auto 10px;
+    margin: 0 auto;
     width: 100%;
     font-family: "Playfair Display",serif;
 }
 
-.wp-caption+.wp-caption {
-    margin: 30px auto
-}
 
 p img+p img {
     margin-top: 20px
