@@ -72,7 +72,7 @@ p {
     font-size: 20px;
     font-weight: 300;
     line-height: 30px;
-    margin:0  0 40px 0
+    margin: 0 0 40px 0
 }
 
 p + p {
@@ -373,7 +373,9 @@ section.container header.title nav a {
 }
 
 @media(max-width:1900px) {
-    .home .post-entry{ padding: 0 50px}
+    .home .post-entry {
+        padding: 0 50px
+    }
     .post-list.col-md-12 img {
         width: 450px;
         height: auto;
@@ -385,8 +387,11 @@ section.container header.title nav a {
 }
 
 @media(max-width:768px) {
-        .home .post-entry{ padding: 0 30px}
-    iframe, .twitter-iframe   {
+    .home .post-entry {
+        padding: 0 30px
+    }
+    iframe,
+    .twitter-iframe {
         width: 100%!important;
     }
     .post-list.col-md-12 img {
@@ -400,9 +405,11 @@ section.container header.title nav a {
 }
 
 @media(max-width:414px) {
-       .home .post-entry{ padding: 0 px}
-
-    iframe,  .twitter-iframe   {
+    .home .post-entry {
+        padding: 0 px
+    }
+    iframe,
+    .twitter-iframe {
         width: 100%!important;
     }
     .post-list.col-md-12 img {
@@ -413,7 +420,6 @@ section.container header.title nav a {
         width: 100%;
         height: auto;
     }
-
 }
 
 .post-list .post-content {
@@ -474,12 +480,12 @@ section.container header.title nav a {
     font-family: "Playfair Display", serif
 }
 
-.post-list h3 {
+.post-list h3 {}
 
+.wp-caption + p {
+    margin: 0;
 }
 
-.wp-caption + p {margin:0;
-}
 @media(max-width:414px) {
     .post-content header h4 {
         top: -43px
@@ -997,13 +1003,22 @@ p+.alignleft {
     margin: 0 auto;
     width: 100%!important
 }
-.post-entry img + img { margin-bottom: 40px;}
-.post-img { margin-bottom: 40px;}
 
+.post-entry img + img {
+    margin-bottom: 40px;
+}
 
-img.alignnone  { margin-bottom: 40px; }
-div.wp-caption  + img.alignnone  { margin-bottom: 40px;}
+.post-img {
+    margin-bottom: 40px;
+}
 
+img.alignnone {
+    margin-bottom: 40px;
+}
+
+div.wp-caption + img.alignnone {
+    margin-bottom: 40px;
+}
 
 p.wp-caption-text {
     color: #999;
@@ -1011,11 +1026,10 @@ p.wp-caption-text {
     font-size: 14px;
     font-style: italic;
     line-height: 100%;
-    margin:10px auto 40px;
+    margin: 10px auto 40px;
     width: 100%;
-    font-family: "Playfair Display",serif;
+    font-family: "Playfair Display", serif;
 }
-
 
 p img+p img {
     margin-top: 20px
