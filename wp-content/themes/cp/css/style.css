@@ -480,15 +480,13 @@ section.container header.title nav a {
     margin-top: 0;
     font-weight: 300;
     letter-spacing: -1px;
-    margin: 30px auto 30px;
+    margin: 50px auto 30px;
     font-family: "Playfair Display", serif
 }
 
 .post-list h3 {}
 
-.wp-caption + p {
-    margin: 0;
-}
+
 
 @media(max-width:414px) {
     .post-content header h4 {
@@ -1004,10 +1002,7 @@ p+.alignleft {
     }
 }
 
-.wp-caption.alignnone {
-    margin: 0 auto;
-    width: 100%!important
-}
+
 
 .post-entry img + img {
     margin: 15px 0;
@@ -1031,7 +1026,6 @@ img + p.wp-caption-text {
     font-size: 14px;
     font-style: italic;
     line-height: 100%;
-    margin: 10px auto 15px;
     width: 100%;
     font-family: "Playfair Display", serif;
 }
@@ -1039,6 +1033,15 @@ img + p.wp-caption-text {
 p img + p img {
     margin: 15px 0px
 }
+
+.wp-caption{
+    margin: 0 auto;
+    width: 100%!important
+}
+.wp-caption { margin-bottom: 35px;}
+.wp-caption img{ margin-bottom:0px;}
+.wp-caption p{ margin:20px auto 0;}
+
 
 @media(max-width:510px) {
     .deco1 {
