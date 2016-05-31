@@ -75,8 +75,13 @@ p {
     margin: 0 0 40px 0
 }
 
+
+
+div + p, 
+img + p {  margin-bottom: 0;}
+
 p + p {
-    margin: 0 0 40px
+    margin: 0 0 30px
 }
 
 .navbar-wrapper {
@@ -1005,19 +1010,19 @@ p+.alignleft {
 }
 
 .post-entry img + img {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .post-img {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 img.alignnone {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 div.wp-caption + img.alignnone {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 p.wp-caption-text {
