@@ -478,6 +478,8 @@ section.container header.title nav a {
 
 }
 
+.wp-caption + p {margin:0;
+}
 @media(max-width:414px) {
     .post-content header h4 {
         top: -43px
