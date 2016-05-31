@@ -1023,7 +1023,7 @@ div.wp-caption + img.alignnone {
 img + p.wp-caption-text {
     color: #999;
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     font-style: italic;
     line-height: 100%;
     width: 100%;
@@ -1033,7 +1033,7 @@ img + p.wp-caption-text {
 p.wp-caption-text {
     color: #999;
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     font-style: italic;
     line-height: 100%;
     width: 100%;
