@@ -528,7 +528,8 @@ ol.comment-list {
 }
 
 .comment-awaiting-moderation {
-    background-color: yellow
+    background-color: yellow;
+    display: none;
 }
 
 .comment-author {
