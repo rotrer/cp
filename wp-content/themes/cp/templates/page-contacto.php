@@ -20,10 +20,11 @@
 			<a href="http://www.parsons.cl/web/">
 				<img class="contact-logo" src="<?php bloginfo( 'template_directory' ); ?>/images/pfm.jpg" alt="PARSONS FASHION MANAGEMENT">
 			</a>
+			<a href="mailto:booking@carolinaparsons.com">booking@carolinaparsons.com</a>
 			<a href="http://www.parsons.cl/web/">www.parsons.cl</a>
 			<p><span>Santiago de Chile </span>	
 			<span>T: 562 – 29515214</span></p>
-
+<!--
 			<a href="http://www.parsons.cl/web/">
 				<img class="contact-logo" src="<?php bloginfo( 'template_directory' ); ?>/images/mc2.jpg" alt="MC2">
 			</a>
@@ -42,7 +43,7 @@
 			<span>Sao Paulo, Brazil</span>
 			<span>T: 55 11 5083 9539</span>
 			<span>T: 55 11 5571 0168</span>
-			</p>
+			</p>-->
 		</div>
 	</div>
 </section>
