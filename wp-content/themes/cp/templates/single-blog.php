@@ -71,7 +71,7 @@
         </div>
       </div>
       <div class="deco2"></div>
-      <div  class="blog_contentcomments">
+      <div class="blog_contentcomments">
         <?php
         $fields =  array(
 
@@ -137,11 +137,29 @@
 
       <?php endif; ?>
 
+      <?php if ( get_comments() ) : ?>
 
-
+      <div class="post-content post-comments">    
+        <h3>Comentarios</h3>    
+        <ol class="comment-list">
+        <?php
+        wp_list_comments( array(
+        'style'       => 'ul',  
+        ), get_comments() );
+        ?>
+        </ol><!-- .comment-list -->
+        <?php endif; // have_comments() ?>
+        <?php
+        // If comments are closed and there are comments, let's leave a little note, shall we?
+        if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+        ?>
+        <p class="no-comments">Comentarios cerrados</p>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
- 
+  <!--</div> CUANDO ENTRA UN COMENTARIO SE ROMPE!!! --> 
+
   <aside class="col-md-3">
     <?php get_sidebar(); ?>
   </aside>
