@@ -17,14 +17,26 @@
 			<?php endwhile; ?>
 		</div>
 		<div class="col-md-5 contact-info">
-			<a href="http://www.parsons.cl/web/">
-				<img class="contact-logo" src="<?php bloginfo( 'template_directory' ); ?>/images/pfm.jpg" alt="PARSONS FASHION MANAGEMENT">
-			</a>
+			<div class="row">
+			<div class="col-md-6">
+				<a href="http://www.parsons.cl/web/">
+					<img class="contact-logo" src="<?php bloginfo( 'template_directory' ); ?>/images/pfm.jpg" alt="PARSONS FASHION MANAGEMENT">
+				</a>
+			</div>
+			<div class="col-md-6">
+				<p><span>Santiago de Chile </span>	
+			<span>T: 562 – 29515214</span></p>
+
+			</div>
+
 			<a href="mailto:booking@carolinaparsons.com">booking@carolinaparsons.com</a>
 			<a href="http://www.parsons.cl/web/">www.parsons.cl</a>
-			<p><span>Santiago de Chile </span>	
-			<span>T: 562 – 29515214</span></p>
-<!--
+			</div>
+
+			
+
+			
+<!--		
 			<a href="http://www.parsons.cl/web/">
 				<img class="contact-logo" src="<?php bloginfo( 'template_directory' ); ?>/images/mc2.jpg" alt="MC2">
 			</a>
