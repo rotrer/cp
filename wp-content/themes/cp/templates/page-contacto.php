@@ -26,8 +26,8 @@
 				<p><span>Santiago de Chile </span>	
 				<span>T: 562 – 29515214</span></p>
 
-				<p><span>Carolina Parsons</span></p>	
-				<a href="mailto:booking@carolinaparsons.com">booking@carolinaparsons.com</a>
+				<p><span>Carolina Parsons</span>	
+				<a href="mailto:booking@carolinaparsons.com">booking@carolinaparsons.com</a></p>
 			</div>
 
 			
