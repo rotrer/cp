@@ -636,14 +636,12 @@ ul.children {
 .contact-info h3 {
     font-weight: 700
 }
-
 .contact-info p {
-    font-size: 16px;
     float: left;
+    font-size: 19px;
+    margin-bottom: 30px;
     width: 100%;
-    margin-bottom: 30px
 }
-
 .contact-info p span {
     width: 100%;
     float: left;
@@ -1360,7 +1358,12 @@ textarea:hover {
     color: #666;
     font-size: 14px;
     background-color: #fff;
-    border: 1px solid #ccc
+    border: 1px solid #ccc;
+
+    font-size: 18px;
+    padding: 13px;
+
+
 }
 
 .wpcf7-submit {
@@ -1589,6 +1592,7 @@ span.wpcf7-not-valid-tip {
     width: 100%
 }
 .contact-info a {
+    font-size: 19px;
     width: 100%;
     float: left;
     font-style: italic;

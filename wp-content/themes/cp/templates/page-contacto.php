@@ -17,8 +17,8 @@
 			<?php endwhile; ?>
 		</div>
 		<div class="col-md-5 contact-info">
-			
-			<div class="col-md-6">
+			<br>
+			<div class="col-md-12">
 				<a href="http://www.parsons.cl/web/">
 					<img class="contact-logo" src="<?php bloginfo( 'template_directory' ); ?>/images/pfm.jpg" alt="PARSONS FASHION MANAGEMENT">
 				</a>
