@@ -59,9 +59,8 @@
       </div>
     </article>
 
-
     <div class="row">
-      <div class="deco2"></div>
+          <div class="deco2"></div>
       <div class ="blog_content readmore-social">
         <div class="pagination">
           <?php
@@ -70,6 +69,11 @@
           ?>
         </div>
       </div>
+    </div>
+
+
+    <div class="row" style="display: none">
+
       <div class="deco2"></div>
       <div class="blog_contentcomments">
         <?php
