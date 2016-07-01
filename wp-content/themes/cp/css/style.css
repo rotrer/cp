@@ -1616,3 +1616,9 @@ span.wpcf7-not-valid-tip {
 .social-2 { margin-bottom: 100px;}
 
 .social-2 h3  { font-size: 35px;  border-top: 1px solid #ccc;  }
+
+
+.fb-comments {
+    display: block;
+    margin: 40px 0;
+}
