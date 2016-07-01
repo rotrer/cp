@@ -54,6 +54,9 @@
           ?>
                     </div>
                 </div>
+                                <div class="deco2"></div>
+
+                <?php echo do_shortcode('[fbcomments]'); ?>
             </div>
 
             <div class="row" style="display: none">
