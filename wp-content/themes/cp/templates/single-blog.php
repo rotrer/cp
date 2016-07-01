@@ -44,18 +44,17 @@
                     </ul>
                 </div>
             </article>
-            <div class="row">
+            <div class="row social-2">
                 <div class="deco2"></div>
                 <div class="blog_content readmore-social">
                     <div class="pagination">
                         <?php
-          echo get_previous_post_link('%link', 'Anterior');
-          echo get_next_post_link('%link', 'Siguiente');
-          ?>
+                          echo get_previous_post_link('%link', 'Anterior');
+                          echo get_next_post_link('%link', 'Siguiente');
+                          ?>
                     </div>
                 </div>
-                                <div class="deco2"></div>
-
+             <div class="deco2"></div>
                 <?php echo do_shortcode('[fbcomments]'); ?>
             </div>
 
