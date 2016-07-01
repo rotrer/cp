@@ -55,12 +55,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="deco2"></div>
-                <div class="blog_contentcomments">
-                    <?php echo do_shortcode('[fbcomments url="http://peadig.com/wordpress-plugins/facebook-comments/" width="375" count="off" num="3" countmsg="wonderful comments!"]'); ?>
-                </div>
-            </div>
+
             <div class="row" style="display: none">
                 <div class="deco2"></div>
                 <div class="blog_contentcomments">
@@ -147,6 +142,13 @@
         ?>
                         <p class="no-comments">Comentarios cerrados</p>
                         <?php endif; ?>
+                </div>
+            </div>
+
+              <div class="row">
+                <div class="deco2"></div>
+                <div class="blog_contentcomments">
+                    <?php echo do_shortcode('[fbcomments url="http://peadig.com/wordpress-plugins/facebook-comments/" width="375" count="off" num="3" countmsg="wonderful comments!"]'); ?>
                 </div>
             </div>
         </div>
