@@ -376,12 +376,12 @@ section.container header.title nav a {
     margin: 15px 0;
 }
 
-@media(max-width:1900px) {
+@media(max-width:1980px) {
     .home .post-entry {
         padding: 0 50px
     }
     .post-list.col-md-12 img {
-        width: 450px;
+        width: 600px;
         height: auto;
     }
     .post-list.col-md-9 img {
