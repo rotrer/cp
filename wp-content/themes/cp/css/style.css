@@ -375,6 +375,16 @@ section.container header.title nav a {
     padding: 10px;
     margin: 15px 0;
 }
+@media(max-width:1600px) {
+    .post-list.col-md-12 img {
+        width:450px;
+        height: auto;
+    }
+    .post-list.col-md-9 img {
+        width: 450px;
+        height: auto;
+    }
+}
 
 @media(max-width:1980px) {
     .home .post-entry {
